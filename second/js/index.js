@@ -435,13 +435,16 @@ $(function () {
 //自身状态
 $(function(){
     var span=$(".portlet-body .out-box .box span");
-    for(var i=0;i<span.length;i++){
-        var img=span[i].dataset.img;
-        if(img==="0"){
-            span[i].innerHTML="<img src='imgs/down.png'>";
-        }else{
-            span[i].innerHTML="<img src='imgs/up.png'>";
+    setInterval(function() {
+        for (var i = 0; i < span.length; i++) {
+            span[i].dataset.img=Math.random()>0.5?1:0;
+            var img = span[i].dataset.img;
+            console.log(img);
+            if (img === "0") {
+                span[i].innerHTML = "<img src='imgs/down.png'>";
+            } else {
+                span[i].innerHTML = "<img src='imgs/up.png'>";
+            }
         }
-    }
-
+    },1000);
 });
