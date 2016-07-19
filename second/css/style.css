@@ -1,3 +1,6 @@
+body,html{
+    font-family:Microsoft YaHei;
+}
 a{
     color:#000;
 }
@@ -32,6 +35,7 @@ ul{
 }
 .menu-toggler.responsive-toggler.fa.fa-bars{
     text-align: center;
+    font-size: 24px;
 }
 .dropdown-menu.dropdown-menu-default.user li{
     background-color:#B4D0FF;
@@ -49,7 +53,7 @@ ul{
     background-color:#F5F5F5;
     color:#000;
 }
-.dashboard-stat:after, .dashboard-stat:after,.out-box .box:after{
+.dashboard-stat:after, .dashboard-stat:after,.out-box .box:after,.portlet-body:after,.left:after{
     content:"";
     display:block;
     clear:both;
@@ -104,10 +108,14 @@ ul{
 .portlet-title ul>li:hover a,.portlet-title ul .active a{
     color:#fff;
 }
+.portlet-title ul>li a{
+    font-size: 14px;
+}
 .portlet-title ul>li img{
     width:25px;
     height:25px;
     margin:0 5px;
+    /*visibility: hidden;*/
 }
 table.portlet-body{
     width:100%;
@@ -122,27 +130,22 @@ table.portlet-body td a img{
     width:20px;
     height:20px;
 }
-.portlet-body thead td{
+table.portlet-body thead td{
     background-color:#D8E8FF;
     border-color:transparent;
 }
-.portlet-body tfoot ul{
+table.portlet-body tfoot ul{
     margin:10px;
     margin-left:25%;
 }
-.portlet-body tfoot ul:after{
+table.portlet-body tfoot ul:after{
     content:"";
     display:block;
     clear:both;
 }
-.portlet-body tfoot li{
+table.portlet-body tfoot li{
     float:left;
     margin:0 10px;
-}
-.portlet-body .out-box{
-    border:1px solid #ddd;
-    margin:40px 30px 20px;
-    padding:20px 25px;
 }
 .details.legend{
     position:absolute;
@@ -169,17 +172,32 @@ table.portlet-body td a img{
 #net,#application,#net1,#application1{
     display: none;
 }
-.box{
-    padding:5px;
+.separate{
+    margin-top:60px;
 }
 .inner-box{
-    width:90px;
-    border:1px solid #B4D1FF;
-    float:right;
-    margin:0 10px;
+    border:1px solid #BACAFF;
 }
-.separate{
+.portlet-body .state{
+    margin:60px 20px 20px;
+    padding:20px;
+    border:1px solid #CDCDCD;
+}
+.portlet-body .state span{
+    padding:0;
+}
+.blue{
     float:left;
-    margin-left:45px;
-    margin-top:22px;
+    width:180px;
+    height:5px;
+    background-color:#3A6FD1;
+    margin-top:23px;
+}
+.left{
+    margin-left:180px;
+    background-color:#ECEFF6;
+}
+.act{
+    color:#B5D0E8;
+    text-decoration: blink;
 }

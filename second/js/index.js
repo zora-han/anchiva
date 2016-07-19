@@ -7,92 +7,144 @@ $(function(){
     setInterval(function(){
         $("#clock").text(moment().format("h:mm:ss"));
     },10);
-    //表格切换
-    //function tab(idName){
-    //    var virus=[
-    //        {id:0,ip:"1.1.1.1",count:1000},
-    //        {id:1,ip:"1.1.1.1",count:1000},
-    //        {id:2,ip:"1.1.1.1",count:1000},
-    //        {id:3,ip:"1.1.1.1",count:1000},
-    //        {id:4,ip:"1.1.1.1",count:1000},
-    //        {id:5,ip:"1.1.1.1",count:1000},
-    //        {id:6,ip:"1.1.1.1",count:1000},
-    //        {id:7,ip:"1.1.1.1",count:1000},
-    //        {id:8,ip:"1.1.1.1",count:1000},
-    //        {id:9,ip:"1.1.1.1",count:1000}
-    //    ];
-    //    var net=[
-    //        {id:0,ip:"1.1.2.2",count:1000},
-    //        {id:1,ip:"1.1.1.1",count:1000},
-    //        {id:2,ip:"1.1.1.1",count:1000},
-    //        {id:3,ip:"1.1.1.1",count:1000},
-    //        {id:4,ip:"1.1.1.1",count:1000},
-    //        {id:5,ip:"1.1.1.1",count:1000},
-    //        {id:6,ip:"1.1.1.1",count:1000},
-    //        {id:7,ip:"1.1.1.1",count:1000},
-    //        {id:8,ip:"1.1.1.1",count:1000},
-    //        {id:9,ip:"1.1.1.1",count:1000}
-    //    ];
-    //    var application=[
-    //        {id:0,ip:"1.1.3.3",count:1000},
-    //        {id:1,ip:"1.1.1.1",count:1000},
-    //        {id:2,ip:"1.1.1.1",count:1000},
-    //        {id:3,ip:"1.1.1.1",count:1000},
-    //        {id:4,ip:"1.1.1.1",count:1000},
-    //        {id:5,ip:"1.1.1.1",count:1000},
-    //        {id:6,ip:"1.1.1.1",count:1000},
-    //        {id:7,ip:"1.1.1.1",count:1000},
-    //        {id:8,ip:"1.1.1.1",count:1000},
-    //        {id:9,ip:"1.1.1.1",count:1000}
-    //    ];
-    //    var virus1=[
-    //        {id:123113,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
-    //    ];
-    //    var net1=[
-    //        {id:14678641,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
-    //    ];
-    //    var application1=[
-    //        {id:1546542,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
-    //    ];
-    //    switch (idName){
-    //        case "virus":return virus;break;
-    //        case "application":return application;break;
-    //        case "net":return net;break;
-    //        case "virus1":return virus1;break;
-    //        case "net1":return net1;break;
-    //        case "application1":return application1;
-    //    }
-    //}
+    //页面表格所需数据
+    function tab(idName){
+        var virus = {
+            'record_count':50,	/*总记录数*/
+            'page_size':10,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:0,ip:"1.1.1.1",count:1000},
+                {id:1,ip:"1.1.1.1",count:1000},
+                {id:2,ip:"1.1.1.1",count:1000},
+                {id:3,ip:"1.1.1.1",count:1000},
+                {id:4,ip:"1.1.1.1",count:1000},
+                {id:5,ip:"1.1.1.1",count:1000},
+                {id:6,ip:"1.1.1.1",count:1000},
+                {id:7,ip:"1.1.1.1",count:1000},
+                {id:8,ip:"1.1.1.1",count:1000},
+                {id:9,ip:"1.1.1.1",count:1000}
+            ]
+        };
+        var net = {
+            'record_count':50,	/*总记录数*/
+            'page_size':10,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:0,ip:"2.2.2.2",count:1000},
+                {id:1,ip:"2.2.2.2",count:1000},
+                {id:2,ip:"2.2.2.2",count:1000},
+                {id:3,ip:"2.2.2.2",count:1000},
+                {id:4,ip:"2.2.2.2",count:1000},
+                {id:5,ip:"2.2.2.2",count:1000},
+                {id:6,ip:"2.2.2.2",count:1000},
+                {id:7,ip:"2.2.2.2",count:1000},
+                {id:8,ip:"2.2.2.2",count:1000},
+                {id:9,ip:"2.2.2.2",count:1000}
+            ]
+        };
+        var application = {
+            'record_count':50,	/*总记录数*/
+            'page_size':10,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:0,ip:"3.3.3.3",count:1000},
+                {id:1,ip:"3.3.3.3",count:1000},
+                {id:2,ip:"3.3.3.3",count:1000},
+                {id:3,ip:"3.3.3.3",count:1000},
+                {id:4,ip:"3.3.3.3",count:1000},
+                {id:5,ip:"3.3.3.3",count:1000},
+                {id:6,ip:"3.3.3.3",count:1000},
+                {id:7,ip:"3.3.3.3",count:1000},
+                {id:8,ip:"3.3.3.3",count:1000},
+                {id:9,ip:"3.3.3.3",count:1000}
+            ]
+        };
+        var virus1 = {
+            'record_count':25,	/*总记录数*/
+            'page_size':8,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:123113,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
+            ]
+        };
+        var net1 = {
+            'record_count':25,	/*总记录数*/
+            'page_size':8,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:123113,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
+            ]
+        };
+        var application1 = {
+            'record_count':25,	/*总记录数*/
+            'page_size':8,		/*每页的记录数*/
+            'page_count':5,		/*总页数*/
+            'cur_page':1,		/*当前页号*/
+            'data':[			/*当前页中的数据*/
+                {id:123113,time:"2016/7/14 16：39：02",type:"Trojan",name:"Trojan/Agent.9fe1!drop"}
+            ]
+        };
+        switch (idName){
+            case "virus":return virus;break;
+            case "application":return application;break;
+            case "net":return net;break;
+            case "virus1":return virus1;break;
+            case "net1":return net1;break;
+            case "application1":return application1;
+        }
+    }
+    function addData(name){
+        var tabName=tab(name);
+        var str="",c=name.charAt(name.length-1);
+        if(c.toString()==="1"){
+            $.each(tabName.data,function(i,n){
+                str+='<tr><td>'
+                +n.id+'</td><td>'
+                +n.time+'</td><td>'
+                +n.type+'</td><td>'
+                +n.name+'</td></tr>';
+            });
+            var ye=8-tabName.data.length;
+            for(var i=0;i<ye;i++){
+                str+='<tr><td></td><td></td><td></td><td></td></tr>';
+            }
+        }else{
+            $.each(tabName.data,function(i,n){
+                str+='<tr><td>' +n.ip+'</td><td>' +n.count+'</td>'
+                +'<td><a href="#"><img src="imgs/u300.png" alt=""/></a></td>'
+                +'<td><a href="#"><img src="imgs/u298.png" alt=""/></a></td>'
+                +'<td><a href="#"><img src="imgs/u296.png" alt=""/></a></td>'
+                +'</tr>';
+            });
+        }
+        $('#'+name+' tbody').html(str);
+        str='<li><a href="javascript:;"><i class="fa fa-chevron-left"></i></a></li>'
+        +'<li><a href="javascript:;">首页</a></li>';
+        for(var m=1;m<=tabName.page_count;m++){
+            if(m==tabName.cur_page){
+                str+='<li><a href="javascript:;" class="act">'+m+'</a></li>';
+            }else{
+                str+='<li><a href="javascript:;">'+m+'</a></li>';
+            }
+        }
+        str+='<li><a href="javascript:;">末页</a></li>'
+        +'<li><a href="javascript:;"><i class="fa fa-chevron-right"></i></a></li>';
+        $('#'+name+' tfoot ul').html(str);
+    }
+    addData('virus');
+    addData('virus1');
     $(".portlet-title ul li").click(function(e){
         e.preventDefault();
         var href=$(this).children("a").attr("href");
         $(href).show().siblings("table").hide();
         $(this).attr("class","active").siblings("li").removeClass("active");
-        //var data=tab(href.slice(1));
-        //var fragment=document.createDocumentFragment();
-        //for(var i=0;i<data.length;i++){
-        //    var tr=document.createElement("tr");
-        //    console.log(data[0].length);
-        //    if(data[0].length==3){
-        //        var td=document.createElement("td");
-        //        for(var key in data[i]) {
-        //            console.log("sadsad");
-        //            if(key==="id"){continue;}
-        //            td.innerHTML=data[i][key];
-        //            tr.appendChild(td);
-        //        }
-        //    }else if(data[0].length==4){
-        //        for(var key in data[i]) {
-        //            console.log("4534");
-        //            if(key==="id"){continue;}
-        //            td.innerHTML=data[i][key];
-        //            tr.appendChild(td);
-        //        }
-        //    }
-        //    fragment.appendChild(tr);
-        //    console.log(tr);
-        //}
-        //$(href).children("tbody").append(fragment);
+        addData(href.slice(1));
     });
     //左侧导航栏切换
     $(".page-sidebar-menu>.nav-item a").click(function(){
@@ -102,9 +154,10 @@ $(function(){
     $(".sub-menu>.nav-item a").click(function(e){
         e.preventDefault();
     })
+
 });
-//表格数据载入
-//饼图
+
+//饼图 echarts
 $(function(){
     var eventChart = echarts.init(document.getElementById('event'));
     option = {
@@ -159,9 +212,9 @@ $(function(){
         ]
     };
     eventChart.setOption(option);
-    window.onresize = eventChart.resize;
+    window.onresize=eventChart.resize;
 });
-//仪表盘
+//仪表盘 echarts
 $(function(){
     var healthChart = echarts.init(document.getElementById('health'));
     option = {
@@ -172,7 +225,7 @@ $(function(){
             text: '自身健康',
             subtext: '当前健康状况',
             left:"right",
-            top:50,
+            top:30,
             textStyle:{
                 fontSize:20
             },
@@ -227,7 +280,8 @@ $(function(){
                     textStyle:{
                         color:"#fff",
                         fontWeight:"bold",
-                        fontSize:10
+                        fontSize:10,
+                        fontFamily:"Microsoft YaHei"
                     }
                 },
                 data: {value: 0}
@@ -242,9 +296,9 @@ $(function(){
         healthChart.setOption(option, true);
     },2000);
     healthChart.setOption(option);
-    window.onresize = healthChart.resize;
+    window.addEventListener("resize",healthChart.resize);
 });
-//两个面积图
+//两个面积图 highcharts
 $(function () {
     $(document).ready(function () {
         Highcharts.setOptions({
@@ -273,8 +327,9 @@ $(function () {
                 text: '威胁风险',
                 style:{
                     color:"#333",
-                    fontSize:25,
-                    fontWeight: 'bold'
+                    fontSize:20,
+                    fontWeight: 'bold',
+                    fontFamily:"Microsoft YaHei"
                 },
                 floating: true,
                 align:"right",
@@ -285,7 +340,8 @@ $(function () {
                 align:"right",
                 style:{
                     color:"#333",
-                    fontSize:18
+                    fontSize:15,
+                    fontFamily:"Microsoft YaHei"
                 },
                 y:50
             },
@@ -337,7 +393,6 @@ $(function () {
                 }())
             }]
         });
-        console.log($('#risk').highcharts.series);
         $('#safe').highcharts({
             chart: {
                 type: 'areaspline',
@@ -359,8 +414,9 @@ $(function () {
                 text: '安全事件',
                 style:{
                     color:"#333",
-                    fontSize:25,
-                    fontWeight: 'bold'
+                    fontSize:20,
+                    fontWeight: 'bold',
+                    fontFamily:"Microsoft YaHei"
                 },
                 floating: true,
                 align:"right",
@@ -371,7 +427,8 @@ $(function () {
                 align:"right",
                 style:{
                     color:"#333",
-                    fontSize:18
+                    fontSize:15,
+                    fontFamily:"Microsoft YaHei"
                 },
                 y:50
             },
@@ -434,12 +491,11 @@ $(function () {
 });
 //自身状态
 $(function(){
-    var span=$(".portlet-body .out-box .box span");
+    var span=$(".portlet-body .row.state span");
     setInterval(function() {
         for (var i = 0; i < span.length; i++) {
             span[i].dataset.img=Math.random()>0.5?1:0;
             var img = span[i].dataset.img;
-            console.log(img);
             if (img === "0") {
                 span[i].innerHTML = "<img src='imgs/down.png'>";
             } else {
