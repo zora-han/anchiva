@@ -186,6 +186,7 @@ table.portlet-table tfoot li{
 .page-sidebar-menu-closed.page-sidebar-menu>li>a{
      background-color: #364150;
  }
+.fixed{position:fixed;}
 
 /*8.下拉选项框*/
 p.pull-right{
