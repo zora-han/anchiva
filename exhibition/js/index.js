@@ -691,10 +691,19 @@ function format(date){
     return y+"-"+M+"-"+d+" "+h+":"+m+":"+s;
 }
 upData();
+function up(){
+    $(".dashboard-stat-right").addClass(" animated infinite flipInX");
+    upData();
+    setTimeout(function(){
+        $(".dashboard-stat-right").removeClass(" animated infinite flipInX");
+    },1000);
+}
+var upTime=setInterval(up,2000);
 $(".pull-down").click(function(){
+    clearInterval(upTime);
     $(this).siblings().addClass(" animated infinite flipInX");
     upData();
     setTimeout(function(){
-        $(".dashboard-stat-right").removeClass("flipInX");
+        $(".dashboard-stat-right").removeClass(" animated infinite flipInX");
     },1000);
 });

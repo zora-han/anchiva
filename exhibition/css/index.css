@@ -203,6 +203,7 @@ footer{
 .charts-down-left{
     margin-left: 70px;
 }
+
 .charts-down-left .morris{
     padding:10px;
     width: 250px;
@@ -212,7 +213,11 @@ footer{
 }
 .morris div{
     border-right:1px solid #262D4B;
-    height:250px;
+    height:245px;
+    padding: 10px;
+}
+.charts-down-left .morris div{
+    height:235px;
 }
 .charts-down .morris:last-child div{
     border-right: none;
