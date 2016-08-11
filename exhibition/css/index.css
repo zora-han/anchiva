@@ -7,6 +7,7 @@ body{
     opacity: .8;
     padding-top: 15px;
     padding-bottom: 12px;
+    min-width: 1920px;
 }
 .navbar-brand>img{
     display: inline-block;
@@ -53,6 +54,7 @@ body{
 }
 .row-me{
     margin-bottom:20px;
+    min-width: 1920px;
 }
 .row-me>div{
     width:930px;
@@ -73,11 +75,12 @@ body{
     height:264px;
 }
 footer{
-    height: 50px;
+    height: 40px;
     background:url(../imgs/bg.png);
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     color:#3d4c60;
+    min-width: 1920px;
 }
 .dashboard-stat{
     float:left;
