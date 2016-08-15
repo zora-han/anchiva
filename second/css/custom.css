@@ -1,0 +1,384 @@
+/*****************全局样式******************/
+a{color:#333}
+a:hover{text-decoration: none}
+a:active{text-decoration: none}
+ul{list-style: none}
+body{font-family:"Microsoft YaHei" !important}
+
+/*****************header样式******************/
+/*1.logo*/
+.page-logo a{margin-top:11px}
+.page-logo img{vertical-align:middle}
+
+/*2.框收缩按钮,响应式按钮*/
+.page-header.navbar .menu-toggler.sidebar-toggler,.menu-toggler.responsive-toggler{
+    margin-top:20px;
+    text-align:center;
+    font-size:24px;
+    color:#313F79
+}
+
+/*3.右侧导航栏时间显示框*/
+.clock{
+    background-color:#3971D1;
+    color:#fff;
+    border:none;
+    text-align: center;
+}
+
+/*4.右侧导航栏用户信息显示框*/
+.user li{
+    background-color:#B4D0FF;
+    border-top:1px solid #fff;
+    border-left:2px solid #B4D0FF;
+}
+.user li:hover{border-left:2px solid #4273CD}
+.user li:hover>a{background-color: #B4D0FF}
+
+/***************page-container样式*********************/
+/*所有需要清除浮动的父元素*/
+.dashboard-stat:after,.p-bar li:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*1.一行三个的模块*/
+/*1.1蓝色边框*/
+.dashboard-stat{
+    border-left:10px solid #7BA7DA;
+    background-color:#F5F5F5;
+    margin-bottom: 25px;
+    position:relative;
+}
+.dashboard-stat .visual div,.dashboard-stat .visual{
+    height:175px;
+    margin:0;
+}
+/*1.2灰色边角*/
+.dashboard-stat.waf{
+    background-color: #F1F2F6;
+    border:1px solid #ddd;
+    border-radius: 0;
+}
+.angle{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #E1E1E1;
+}
+
+/*2.带标题框的标题样式*/
+.caption{width:100%}
+.caption>span{
+    float:left;
+    padding:10px;
+}
+/*2.1标题旁切换按钮列表*/
+.caption .table-bars{width:80%}
+/*2.2没有标题的切换按钮列表*/
+.table-bars{
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+/*2.3标题中按钮*/
+.portlet-title .table-bars>li{
+    float:left;
+    width:33%;
+    padding:9px;
+    text-align: center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.table-bars>li a{font-size: 14px}
+.portlet-title .table-bars>li img{
+    width:25px;
+    height:25px;
+    margin:0 5px;
+}
+.table-bars>li:hover,.table-bars .active{background-color:#3B70D5}
+.table-bars>li:hover a,.table-bars .active a{color:#fff}
+
+/*3表格样式*/
+/*3.1独立成块表格*/
+table.portlet-table.portlet-body{
+    width:100%;
+    text-align: center;
+    display: none;
+    border-collapse:collapse;
+}
+table.portlet-table.active{display:table}
+table.portlet-table td{
+    border:1px solid #ddd;
+    line-height:21px;
+    height:21px;
+}
+table.portlet-table td img{
+    width:20px;
+    height:20px;
+}
+table.portlet-table thead td{
+    background-color:#D8E8FF;
+    border-color:transparent;
+}
+table.portlet-table tfoot ul{
+    margin:5px auto;
+    display:inline-block;
+}
+table.portlet-table tfoot li{
+    float:left;
+    margin:0 10px;
+}
+.act{
+    color:#BAC8FC;
+    text-decoration: underline;
+}
+/*3.2图表旁表格*/
+.portlet-body table.portlet-table{
+    text-align: center;
+    border-collapse:collapse;
+    margin-top: 25px;
+    margin-right:5px;
+}
+
+/*4.echarts绘图框大小*/
+/*4.1一行两个模块*/
+.portlet>.portlet-body .canvas{height:292px}
+/*4.2一行一个模块两个图*/
+.portlet>.portlet-body .two{height:438px}
+/*4.3一行一个模块一个图*/
+.portlet>.portlet-body .one{height:300px}
+
+/*5.块内切换页签*/
+.portlet.bordered>.tab{padding-left:0}
+.nav-tabs .active .selected{
+    display: block;
+    float: right;
+    position: absolute;
+    right: 64px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #F9BC01;
+    border-right: 15px solid transparent;
+}
+.page-content.s-page{padding-top:0}
+.portlet>.portlet-title>.nav-tabs>li>a{
+    padding: 4px 48px;
+    font-size: 16px;
+}
+.nav-tabs>li>a{margin-right:1px}
+
+/*6.right-content*/
+.right-content>div{display:none}
+.right-content>div.active{display:block}
+
+/*7.左侧导航栏样式*/
+.page-sidebar-menu-closed.page-sidebar-menu>li>a{
+     background-color: #364150;
+ }
+.fixed{position:fixed;}
+
+/*8.下拉选项框*/
+p.pull-right{
+    margin: 7px;
+    font-size: 16px;
+}
+p.pull-right select{
+    margin:5px;
+    padding:0 10px;
+}
+li.pull-right select{
+    margin:3px;
+    padding:0 10px;
+}
+
+/*9.输入框*/
+p.pull-right input{width:150px}
+/*******************各个模块的特殊样式*****************/
+/*1.配置导向*/
+
+/*2.控制面板*/
+/*2.1自身健康的标识*/
+.legend{
+    position:absolute;
+    top:40px;
+    left:0;
+    font-size: 10px;
+    padding-left:15px;
+}
+.legend i{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    margin-right:5px;
+}
+.dangerous-c{background-color:#EB625F}
+.sub-health-c{background-color:#4F5CB7}
+.health-c{background-color:#22A700}
+/*2.2自身状态*/
+.separate{margin-top:90px}
+.inner-box{
+    border:1px solid #BACAFF;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.state{
+    margin:60px 10px 13px;
+    padding:20px 5px;
+    border:1px solid #CDCDCD;
+}
+.state span{padding:2px 2px 0 2px}
+.state span img{  display: table-cell}
+/*2.3威胁风险+安全事件*/
+.details.r,.details.v{
+    position:absolute;
+    left:40%;
+    top:30%;
+    font-size:35px;
+    padding-right:15px;
+}
+
+/*3.基本配置*/
+
+/*4.状态监控*/
+/*4.1系统状态*/
+/*4.1.1系统信息*/
+/*4.1.1.1主机信息*/
+.h-text,.p-bar{
+    padding: 10px 0;
+    margin: 10px 5px;
+}
+.h-text li{margin:5px}
+.p-bar{border-left:1px solid #D9D9D9}
+.p-bar p,.p-bar .progress{
+    float:left;
+    padding: 2px;
+}
+.p-bar p{margin:10px}
+.p-bar li div{margin:0}
+.progress{
+    width:450px;
+    height:15px;
+    border-radius: 50px;
+    border:1px solid #D9D9D9;
+}
+.progress-bar{border-radius:50px}
+.success-color{background-color:#93D36C}
+.warning-color{background-color:#E1CD7B}
+.danger-color{background-color:#F49994}
+
+/*4.1.1.2 版本信息+许可状态*/
+.v-information,.s-license{
+    -webkit-background-size:cover !important;
+    background-size:cover !important;
+    background:url(../imgs/v-information.png) no-repeat;
+}
+.s-license{
+    background:url(../imgs/s-license.png) no-repeat;
+}
+.information{
+    padding:10px;
+}
+.btn-blue{
+    margin:40px 35px;
+    padding:5px;
+    width:120px;
+    border:none;
+    color:#fff;
+    background-color:#3871D1;
+}
+.btn-blue:hover{
+    color:#fff;
+}
+
+/*4.2检测防御*/
+/*第一行*/
+.visual img{margin:45px 25px}
+.details.t,.details.d,.details.h,.details.f,.details.l,.details.b{
+    position:absolute;
+    top:25%;
+    right:15%;
+    text-align: right;
+}
+.details.t p,.details.d p,.details.h p{margin:0}
+.details.h{
+    top:30%;
+    right:5%;
+}
+.details.t span,.details.d span,.details.f span,.details.l span,.details.b span{font-size:48px}
+.details.h span{font-size:25px}
+/*第二行*/
+.canvas.pull-left{width:60%}
+.portlet-table.pull-right{width:39%}
+.map .canvas.pull-left{width:70%}
+.map .portlet-table.pull-right{width:29%}
+/*4.2.1攻击统计分析*/
+.tab-pane-attack .portlet-body{
+    background:url(../imgs/1_04.jpg) no-repeat;
+    background-size: cover;
+}
+#attack-system-analysis-relationship+p{
+    position: absolute;
+    top: 100px;
+    padding: 5px 15px;
+    background-color: #C1D6FB;
+}
+
+.btn-left,.btn-right{
+    position: absolute;
+    top: 265px;
+    color: #fff;
+    background: #C6D8FB;
+    padding: 3px 31px;
+    border-radius: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    border:none;
+    outline: 0;
+}
+.btn-left:hover,.btn-right:hover{color:#fff}
+.btn-right{right:12%}
+.btn-left{margin-left:11%}
+button[disabled]{cursor: not-allowed}
+
+/*4.3WAF*/
+/*页签中的四个图标*/
+.waf-tabs li:first-child a{background:url(../imgs/waf-1.png) no-repeat 17px 0}
+.waf-tabs li:nth-child(2) a{background: url(../imgs/waf-2.png) no-repeat 17px 0}
+.waf-tabs li:nth-child(3) a{background: url(../imgs/waf-3.png) no-repeat 17px 0}
+.waf-tabs li:nth-child(4) a{background: url(../imgs/waf-4.png) no-repeat 17px 0}
+/*4.4访问统计*/
+
+/*4.5AV*/
+
+/*4.6流量*/
+
+/*******************page-footer样式*****************/
+.blue{
+    width:180px;
+    height:5px;
+    background-color:#3A6FD1;
+    margin-top:25px;
+}
+.left{
+    margin-left:180px;
+    padding-top:2px;
+    background-color:#ECEFF6;
+}
+
+/*****************通过媒体查询进行的自适应********************/
+@media (min-width: 1400px){.v-information,.s-license{padding:5px}}
+@media (min-width: 1600px){.v-information,.s-license{padding:15px}}
+@media (min-width: 1760px){.v-information,.s-license{padding:20px}}
+@media (min-width: 1920px){.v-information,.s-license{padding:30px}}
