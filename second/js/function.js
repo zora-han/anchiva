@@ -1,6 +1,7 @@
 /*Created by Secret on 2016/7/28.*/
 //1.动态添加表格
 var filter;
+var filter1;
 function tab(idName){
     //病毒感染源
     var virus = {
@@ -228,13 +229,32 @@ function tab(idName){
         case "mapData":return mapData;
         case "mapData2":return mapData;
         case "filter":return filter;
+        case "filter1":return filter1;
         case "session":return session;
     }
 }
 function addData(name){
     var tabName=tab(name);
     var str="",c=name.charAt(name.length-1);
-    if(name==="attackSystemData"||name==="attackSystemDataAttack"||name==="attackSystemDataSource"||name==="filter"){
+    if(name==="attackSystemDataSource"||name==="filter1"){
+        $.each(tabName.data,function(i,n){
+            str+='<tr><td>'
+            +n.id+'</td><td>'
+            +n.target+'</td><td><a href="#source">'
+            +n.source+'</a></td><td><a href="#type">'
+            +n.type+'</a></td><td>'
+            +n.account+'</td><td><a href="#name">'
+            +n.name+'</a></td>'
+            +'<td><a href="#"><img src="imgs/u300.png" alt=""/></a></td>'
+            +'<td><a href="#"><img src="imgs/u298.png" alt=""/></a></td>'
+            +'<td><a href="#"><img src="imgs/u296.png" alt=""/></a></td>'
+            +'</tr>';
+        });
+        var n=10-tabName.data.length;
+        for(var i=0;i<n;i++){
+            str+='<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
+        }
+    }else if(name==="attackSystemData"||name==="attackSystemDataAttack"||name==="filter"){
         $.each(tabName.data,function(i,n){
             str+='<tr><td>'
             +n.id+'</td><td><a href="#source">'

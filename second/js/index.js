@@ -360,6 +360,7 @@ $(document).ready(function () {
     });
     $("#attackSource,#attackSource2").delegate("a:first-child", "click", function(e){
         e.preventDefault();//阻止跳转
+        $(".filter-conditions ul li:first-child").siblings("li").removeClass("active");//清空过滤项
         var source="attackSystemDataSource",//攻击源排名
             href=$(this)[0].hash;//所点击a的href属性
         attackData=tab(source);//返回攻击源排名的对象
@@ -381,7 +382,7 @@ $(document).ready(function () {
                 attackRelationship(attackData);
             }
         });
-        $("#"+source+" tbody,#filter tbody").delegate("a", "click", function(e){//表格过滤事件
+        $("#"+source+" tbody,#filter1 tbody").delegate("a", "click", function(e){//表格过滤事件
             e.preventDefault();
             var href=$(this)[0].hash.slice(1);
             var value=$(this).text();
@@ -390,6 +391,80 @@ $(document).ready(function () {
                 if(n[href]===value){
                     arr.push(n)
                 }
+            });
+            attackData.data=arr;
+            filter1=attackData;
+            if(relationship.css("display")==="block"){
+                attackRelationship(attackData);
+            }else{
+                attackRelationshipPie(attackData);
+            }
+            $("#filter1").addClass("active").siblings("table").removeClass("active");
+            addData("filter1");
+            $("#"+href+" p").text(value).parent().addClass("active");
+        });
+        $(".filter-conditions ul li i").click(function(){
+            attackData=tab(source);
+            var li=$(this).parent().siblings().has("i");
+            var lArr=[];
+            var arr=[];
+            $.each(li,function(i,n){
+                if(n.className==="active"){
+                    lArr.push({name:n.id,value:n.childNodes[1].innerHTML});
+                }
+            });
+            if(lArr.length==2){
+                $.each(attackData.data,function(i,n){
+                    (n[lArr[0]["name"]]===lArr[0]["value"]&&n[lArr[0]["name"]]===lArr[0]["value"])&& arr.push(n);
+                });
+                attackData.data=arr;
+            }else if(lArr.length==1){
+                $.each(attackData.data,function(i,n){
+                    (n[lArr[0]["name"]]===lArr[0]["value"])&& arr.push(n);
+                });
+                attackData.data=arr;
+            }
+            if(relationship.css("display")==="block"){
+                attackRelationship(attackData);
+            }else{
+                attackRelationshipPie(attackData);
+            }
+            $(this).parent().removeClass("active");
+            filter1=attackData;
+            addData("filter1");
+        })
+    });
+    $("#attackPurposes,#attackPurposes2").delegate("a", "click", function(e){
+        e.preventDefault();//阻止跳转
+        $(".filter-conditions ul li:first-child").siblings("li").removeClass("active");
+        var source="attackSystemDataAttack",//攻击目的排名
+            href=$(this)[0].hash;//所点击a的href属性
+        attackData=tab("attackSystemDataAttack");
+        $(href).addClass("active").siblings("div").removeClass("active");//显示关系图页面
+        (relationship.css("display")==="block")? attackRelationship(attackData):attackRelationshipPie(attackData);//画图
+        $(".filter-conditions ul li:first-child p").text("当前目的："+attackData.data[0].target);//在页面上显示当前目的
+        $("#"+source).addClass("active").siblings("table").removeClass("active");//显示攻击目的排名表格
+        addData(source);//填充表格中内容
+        $("#attack-system-analysis-relationship~button").click(function(){
+            $(this).siblings("button").removeAttr("disabled");//让另一个按钮可用
+            $(this).attr("disabled","true");//让自己不可用
+            if($(this)[0].className==="btn-right"){//画饼图
+                relationship.removeClass("active");
+                relationshipPie.addClass("active");
+                attackRelationshipPie(attackData);
+            }else{                                  //画关系图
+                relationshipPie.removeClass("active");
+                relationship.addClass("active");
+                attackRelationship(attackData);
+            }
+        });
+        $("#"+source+" tbody,#filter tbody").delegate("a", "click", function(e){//表格过滤事件
+            e.preventDefault();
+            var href=$(this)[0].hash.slice(1);
+            var value=$(this).text();
+            var arr=[];
+            $.each(attackData.data,function(i,n){
+                (n[href]===value)&& arr.push(n)
             });
             attackData.data=arr;
             filter=attackData;
@@ -432,29 +507,5 @@ $(document).ready(function () {
             filter=attackData;
             addData("filter");
         })
-    });
-    $("#attackPurposes,#attackPurposes2").delegate("a", "click", function(e){
-        e.preventDefault();
-        attackData=tab("attackSystemDataAttack");
-        var href=$(this)[0].hash;
-        $(href).addClass("active").siblings("div").removeClass("active");
-        attackRelationship(attackData);
-        $(".filter-conditions ul li:first-child p").text("当前目的："+attackData.data[0].target);
-        $("#attackSystemDataAttack").addClass("active").siblings("table").removeClass("active");
-        addData("attackSystemDataAttack");
-        $("#attack-system-analysis-relationship~button").click(function(){
-            $(this).siblings("button").removeAttr("disabled");
-            $(this).attr("disabled","true");
-            var div=$(this).siblings("div");
-            if($(this)[0].className==="btn-right"){
-                relationship.removeClass("active");
-                relationshipPie.addClass("active");
-                attackRelationshipPie(tab("attackSystemDataAttack"));
-            }else{
-                relationshipPie.removeClass("active");
-                relationship.addClass("active");
-                attackRelationship(tab("attackSystemDataAttack"));
-            }
-        });
     });
 });
