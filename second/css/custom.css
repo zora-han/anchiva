@@ -324,6 +324,9 @@ p.pull-right input{width:150px}
 .map .canvas.pull-left{width:70%}
 .map .portlet-table.pull-right{width:29%}
 /*4.2.1¹¥»÷Í³¼Æ·ÖÎö*/
+.tab-pane table td img{
+    cursor: pointer;
+}
 .tab-pane-attack .portlet-body{
     background:url(../imgs/1_04.jpg) no-repeat;
     background-size: cover;

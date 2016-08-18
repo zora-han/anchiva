@@ -245,9 +245,9 @@ function addData(name){
             +n.type+'</a></td><td>'
             +n.account+'</td><td><a href="#name">'
             +n.name+'</a></td>'
-            +'<td><a href="#"><img src="imgs/u300.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u298.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u296.png" alt=""/></a></td>'
+            +'<td><img src="imgs/u300.png" alt=""/></td>'
+            +'<td><img src="imgs/u298.png" alt=""/></td>'
+            +'<td><img src="imgs/u296.png" alt=""/></td>'
             +'</tr>';
         });
         var n=10-tabName.data.length;
@@ -263,9 +263,9 @@ function addData(name){
             +n.type+'</a></td><td>'
             +n.account+'</td><td><a href="#name">'
             +n.name+'</a></td>'
-            +'<td><a href="#"><img src="imgs/u300.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u298.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u296.png" alt=""/></a></td>'
+            +'<td><img src="imgs/u300.png" alt=""/></td>'
+            +'<td><img src="imgs/u298.png" alt=""/></td>'
+            +'<td><img src="imgs/u296.png" alt=""/></td>'
             +'</tr>';
         });
         var n=10-tabName.data.length;
@@ -323,9 +323,9 @@ function addData(name){
     }else{
         $.each(tabName.data,function(i,n){
             str+='<tr><td>' +n.ip+'</td><td>' +n.count+'</td>'
-            +'<td><a href="#"><img src="imgs/u300.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u298.png" alt=""/></a></td>'
-            +'<td><a href="#"><img src="imgs/u296.png" alt=""/></a></td>'
+            +'<td><a href="javascript:;"><img src="imgs/u300.png" alt=""/></a></td>'
+            +'<td><a href="javascript:;"><img src="imgs/u298.png" alt=""/></a></td>'
+            +'<td><a href="javascript:;"><img src="imgs/u296.png" alt=""/></a></td>'
             +'</tr>';
         });
     }
