@@ -1104,4 +1104,19 @@ $(document).ready(function () {
         invasionProtectionCustom.push(copy);
         $.fn.zTree.init($("#treeType2"), setting, invasionProtectionCustom);
     });
+    function position(){
+        var top = ($(window).height() - $(".tip").height()-84)/2;
+        var left = ($(window).width() - $(".tip").width()-180)/2;
+        var scrollTop = $(document).scrollTop();
+        var scrollLeft = $(document).scrollLeft();
+        $(".tip, .tip1").css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } );
+    }
+    position();
+    window.addEventListener("resize",function(){
+        var top = ($(window).height() - $(".tip").height()-84)/2;
+        var left = ($(window).width() - $(".tip").width()-180)/2;
+        var scrollTop = $(document).scrollTop();
+        var scrollLeft = $(document).scrollLeft();
+        $(".tip, .tip1").css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } );
+    });
 });
