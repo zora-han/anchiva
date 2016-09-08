@@ -1059,50 +1059,75 @@ $(document).ready(function () {
         });
     });
     $("#characteristics .row:last-child .col-xs-3 .portlet-title a:nth-child(4) img").click(function(){
-        $.each(invasionProtectionCustom,function(i,n){
-            if(n.name===selectInput[0].value&& n.id==selectInput[1].value){
-                for(var j=i;j<invasionProtectionCustom.length;j++){
-                    invasionProtectionCustom[j]=invasionProtectionCustom[j+1];
-                }
+        var arrV=[],i;
+        for(i=0;i<4;i++){
+            if(i==1){continue;}
+            if(selectInput[i].value===""){
+                arrV.push(1);
             }
-        });
-        invasionProtectionCustom.pop();
+        }
+        if(arrV.length!=0||selectTextarea[0].value===""){
+            return ;
+        }else {
+            $.each(invasionProtectionCustom, function (i, n) {
+                if (n.name === selectInput[0].value && n.id == selectInput[1].value) {
+                    for (var j = i; j < invasionProtectionCustom.length; j++) {
+                        invasionProtectionCustom[j] = invasionProtectionCustom[j + 1];
+                    }
+                }
+            });
+            invasionProtectionCustom.pop();
+            for (i = 0; i < 4; i++) {
+                selectInput[i].value = ""
+            }
+            selectTextarea[0].value = "";
+            $.fn.zTree.init($("#treeType2"), setting, invasionProtectionCustom);
+        }
+    });
+    $("#characteristics .row:last-child .col-xs-3 .portlet-title a:nth-child(5) img").click(function(){
+        var copy={},arr=[],cId=random(10000,99999),arrV=[],i;
+        for(i=0;i<4;i++){
+            if(i==1){continue;}
+            if(selectInput[i].value===""){
+                arrV.push(1);
+            }
+        }
+        if(arrV.length!=0||selectTextarea[0].value===""){
+            return ;
+        }else {
+            $.each(invasionProtectionCustom, function (i, n) {
+                if (n.id == selectInput[1].value) {
+                    copy.pId = n.pId;
+                    copy.icon = n.icon;
+                    copy.ty = n.ty;
+                    copy.l = n.l;
+                    copy.detail = n.detail;
+                }
+                if (selectInput[0].value.indexOf("副本") == -1) {
+                    if (n.name.indexOf(selectInput[0].value + "副本") != -1) {
+                        arr.push(n.name);
+                    }
+                } else if (n.name.indexOf(selectInput[0].value.slice(0, selectInput[0].value.indexOf("副本") + 2)) != -1) {
+                    arr.push(n.name);
+                }
+                arr.sort(function (a, b) {
+                    return parseInt(b.slice(b.indexOf("副本") + 3)) - parseInt(a.slice(a.indexOf("副本") + 3))
+                })
+            });
+            (arr.length == 0) ?
+                copy.name = selectInput[0].value + "副本(1)"
+                : copy.name = arr[0].slice(0, arr[0].indexOf("副本") + 2) + "(" + (parseInt(arr[0].slice(arr[arr.length - 1].indexOf("副本") + 3)) + 1) + ")";
+            while (idArr.indexOf(cId) != -1) {
+                cId = random(10000, 99999);
+            }
+            copy.id = cId;
+            invasionProtectionCustom.push(copy);
+            $.fn.zTree.init($("#treeType2"), setting, invasionProtectionCustom);
+        }
         for(var i=0;i<4;i++){
             selectInput[i].value=""
         }
         selectTextarea[0].value="";
-        $.fn.zTree.init($("#treeType2"), setting, invasionProtectionCustom);
-    });
-    $("#characteristics .row:last-child .col-xs-3 .portlet-title a:nth-child(5) img").click(function(){
-        var copy={},arr=[],cId=random(10000,99999);
-        $.each(invasionProtectionCustom,function(i,n){
-            if(n.id==selectInput[1].value){
-                copy.pId= n.pId;
-                copy.icon=n.icon;
-                copy.ty=n.ty;
-                copy.l=n.l;
-                copy.detail=n.detail;
-            }
-            if(selectInput[0].value.indexOf("副本")==-1){
-                if(n.name.indexOf(selectInput[0].value+"副本")!=-1){
-                    arr.push(n.name);
-                }
-            }else if(n.name.indexOf(selectInput[0].value.slice(0,selectInput[0].value.indexOf("副本")+2))!=-1){
-                arr.push(n.name);
-            }
-            arr.sort(function(a,b){
-                return parseInt(b.slice(b.indexOf("副本")+3))-parseInt(a.slice(a.indexOf("副本")+3))
-            })
-        });
-        (arr.length==0)?
-            copy.name=selectInput[0].value+"副本(1)"
-            :copy.name=arr[0].slice(0,arr[0].indexOf("副本")+2)+"("+(parseInt(arr[0].slice(arr[arr.length-1].indexOf("副本")+3))+1)+")";
-        while(idArr.indexOf(cId)!=-1){
-            cId=random(10000,99999);
-        }
-        copy.id=cId;
-        invasionProtectionCustom.push(copy);
-        $.fn.zTree.init($("#treeType2"), setting, invasionProtectionCustom);
     });
     function position(){
         var top = ($(window).height() - $(".tip").height()-84)/2;
