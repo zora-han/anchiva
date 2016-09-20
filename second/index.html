@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!--tree样式-->
     <link rel="stylesheet" href="css/zTreeStyle.css"/>
+    <link rel="stylesheet" href="css/jquery.treetable.css"/>
     <!--tip样式-->
     <link rel="stylesheet" href="css/tip-yellowsimple.css"/>
     <!--基本样式-->
@@ -107,7 +108,7 @@
                 </li>
                 <!--配置向导-->
                 <li class="nav-item">
-                    <a href="#" class="nav-link nav-toggle">
+                    <a href="#configuration-wizard" class="nav-link nav-toggle">
                         <i class="icon-cursor"></i>
                         <span class="title">配置向导</span>
                     </a>
@@ -147,81 +148,6 @@
                         <li class="nav-item  ">
                             <a href="#WAF" class="nav-link ">
                                 <span class="title">WAF</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!--网络配置-->
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-globe"></i>
-                        <span class="title">网络配置</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                <span class="title">物理接口</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                <span class="title">桥接口</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">聚合接口</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">VLAN接口</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">路由配置</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">高可用性</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!--对象配置-->
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-hourglass "></i>
-                        <span class="title">对象配置</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">地址对象</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">时间对象</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">应用对象</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">服务对象</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">URL对象</span>
                             </a>
                         </li>
                     </ul>
@@ -352,38 +278,43 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">基本配置</span>
+                            <a href="#language" class="nav-link ">
+                                <span class="title">语言</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">用户管理</span>
+                            <a href="#host" class="nav-link ">
+                                <span class="title">主机</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">许可管理</span>
+                            <a href="#detect-patterns" class="nav-link ">
+                                <span class="title">侦测模式</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">升级维护</span>
+                            <a href="#email-configuration" class="nav-link ">
+                                <span class="title">邮件配置</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">存储维护</span>
+                            <a href="#system-report" class="nav-link ">
+                                <span class="title">报表</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">调试工具</span>
+                            <a href="#log" class="nav-link ">
+                                <span class="title">日志</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="#" class="nav-link ">
-                                <span class="title">关机重启</span>
+                            <a href="#warning-notice" class="nav-link ">
+                                <span class="title">警告通知</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="#advanced-options" class="nav-link ">
+                                <span class="title">高级选项</span>
                             </a>
                         </li>
                     </ul>
@@ -392,8 +323,97 @@
         </div>
     </aside>
     <!--右边正文-->
-    <div class="right-content">
+    <div class="right-content" >
         <!--1.配置向导-->
+        <div id="configuration-wizard" class="page-content-wrapper">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>配置流程</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content wizard">
+                    <div class="portlet">
+                        <div class="portlet-title wizard-step">
+                            <div>
+                                <div class="line"></div>
+                                <div class="step step1 selected">
+                                    <p>Step1</p>
+                                    <img src="imgs/step1s.png"/>
+                                    <p>欢迎</p>
+                                </div>
+                                <div class="step step2">
+                                    <p>Step2</p>
+                                    <img src="imgs/step2.png"/>
+                                    <p>部署模式</p>
+                                </div>
+                                <div class="step step3">
+                                    <p>Step3</p>
+                                    <img src="imgs/step3.png"/>
+                                    <p>网络配置</p>
+                                </div>
+                                <div class="step step4">
+                                    <p>Step4</p>
+                                    <img src="imgs/step4.png"/>
+                                    <p>策略配置</p>
+                                </div>
+                                <div class="step step5">
+                                    <p>Step5</p>
+                                    <img src="imgs/step5.png"/>
+                                    <p>升级配置</p>
+                                </div>
+                                <div class="step step6">
+                                    <p>Step6</p>
+                                    <img src="imgs/step6.png"/>
+                                    <p>概要</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body active" id="license">
+                            <p>
+                                <i></i>
+                                <span>许可证</span>
+                            </p>
+                            <div class="wizard-content">
+                                <p>&nbsp;&nbsp;&nbsp;许可证状态：<span>正式版</span></p>
+                                <p>许可证有效期：<span>2017年7月20日</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;许可证导入：
+                                    <input class="input-normal" name="copyFile"/>
+                                    <button class="btn-normal">导入</button>
+                                    <input type="file" class="upload-file" onchange="getFile(this,'copyFile')"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="portlet-body" id="">
+                            <p>
+                                <i></i>
+                                <span>许可证</span>
+                            </p>
+                            <div class="wizard-content">
+                                <p>&nbsp;&nbsp;&nbsp;许可证状态：<span>正式版</span></p>
+                                <p>许可证有效期：<span>2017年7月20日</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;许可证导入：
+                                    <input class="input-normal" name="copyFile"/>
+                                    <button class="btn-normal">导入</button>
+                                    <input type="file" class="upload-file" onchange="getFile(this,'copyFile')"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button class="btn-none">上一步</button>
+                            <button>下一步</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--2.控制面板-->
         <div id="control" class="page-content-wrapper active">
             <div class="page-content">
@@ -1361,7 +1381,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--攻击源排名-->
+                            <!--URL-TOP10-->
                             <div class="col-md-6 col-sm-6">
                                 <div class="portlet bordered">
                                     <div class="portlet-title">
@@ -1401,12 +1421,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--攻击目的排名-->
+                            <!--源URL-TOP10-->
                             <div class="col-md-6 col-sm-6">
                                 <div class="portlet bordered">
                                     <div class="portlet-title">
                                         <div class="caption">
-                                            <span class="caption-subject bold uppercase">源L-TOP10</span>
+                                            <span class="caption-subject bold uppercase">源URL-TOP10</span>
                                         </div>
                                     </div>
                                     <div class="portlet-body">
@@ -1499,10 +1519,8 @@
                 </div>
             </div>
         </div>
-        <!--5.网络配置-->
-        <!--6.对象配置-->
-        <!--7.1.安全策略-策略引用-->
-        <!--7.2.安全策略-入侵防护策略-->
+        <!--5.1.安全策略-策略引用-->
+        <!--5.2.安全策略-入侵防护策略-->
         <div id="intrusion-protection-strategy" class="page-content-wrapper">
             <div class="page-content st-page">
                 <!--第一行 页签-->
@@ -1787,7 +1805,7 @@
                 </div>
             </div>
         </div>
-        <!--7.3安全策略-应用安全策略-->
+        <!--5.3安全策略-应用安全策略-->
         <div id="application-security-policy" class="page-content-wrapper">
             <div class="page-content st-page">
                 <!--第一行 页签-->
@@ -1807,7 +1825,7 @@
                                 <span></span>
                             </li>
                             <li role="presentation">
-                                <a href="#WEB-leakage" aria-controls="home" role="tab" data-toggle="tab">WEB扫漏</a>
+                                <a href="#WEB-leakage" aria-controls="home" role="tab" data-toggle="tab">WEB漏扫</a>
                                 <span></span>
                             </li>
                             <li role="presentation">
@@ -1921,7 +1939,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <table class="portlet-table portlet-body active">
+                                <table class="portlet-table portlet-body active" id="basicCharacteristics">
                                     <thead>
                                     <tr>
                                         <td>启用</td>
@@ -1934,14 +1952,6 @@
                                     </thead>
                                     <tbody>
                                     </tbody>
-                                    <tfoot>
-                                    <tr>
-                                        <td colspan="10">
-                                            <ul>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                             <div role="tabpanel" class="portlet tab-pane sec" id="security-agreement">
@@ -2065,6 +2075,7 @@
                                                 <a href="javascript:;"><img src="imgs/4.png"/></a>
                                             </div>
                                             <div class="portlet-body">
+                                                <ul id="treeType3" class="ztree"></ul>
                                             </div>
                                         </div>
                                     </div>
@@ -2107,7 +2118,7 @@
                                                     <label>详细描述</label>
                                                     <textarea></textarea>
                                                 </div>
-                                                <button type="button" class="btn add-btn" disabled>添加下一个</button>
+                                                <button type="button" class="btn add-btn">添加下一个</button>
                                             </form>
                                         </div>
                                     </div>
@@ -2264,7 +2275,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--WEB扫漏-->
+                    <!--WEB漏扫-->
                     <div role="tabpanel" class="tab-pane leak" id="WEB-leakage">
                         <div class="portlet" >
                             <div class="portlet-title">
@@ -2381,7 +2392,10 @@
                                 </div>
                             </div>
                             <div class="portlet-body">
-                                <p>自学习内容</p>
+                                <p>
+                                    <i></i>
+                                    <span>自学习内容</span>
+                                </p>
                                 <div>
                                     <input type="checkbox" name="study" value="URL格式"/>URL格式
                                     <input type="checkbox" name="study" value="Cookie格式"/>Cookie格式
@@ -2424,6 +2438,918 @@
                 </div>
             </div>
         </div>
+        <!--6自学习-->
+        <!--7防篡改-->
+        <!--8日志报表-->
+        <!--9.1系统配置-语言设置-->
+        <div id="language" class="page-content-wrapper language">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>语言设置</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <span>语言</span>
+                            <select>
+                                <option value="0">简体中文</option>
+                                <option value="1">English</option>
+                            </select>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.2系统配置-主机-->
+        <div id="host" class="page-content-wrapper host">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>主机</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <div class="system-configuration-row">
+                                <p class="current">主机名</p>
+                                <div class="form-group">
+                                    <label>当前主机名称</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>新主机名</label>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>启用HA</span></p>
+                                <div class="form-group">
+                                    <label>只读共同体</label>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p class="current">手动设置日期</p>
+                                <div class="form-group">
+                                    <label>系统时钟</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <label>年</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>月</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>日</label>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <label>时</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>分</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>秒</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>时区</label>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>启用NTP服务</span></p>
+                                <div class="form-group">
+                                    <label>服务器名称</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>自动同步时间间隙</label>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row current">
+                                <div class="form-group">
+                                    <label>首选DNS服务器</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>备选DNS服务器</label>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.3系统配置-侦测模式-->
+        <div id="detect-patterns" class="page-content-wrapper detect">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>侦测模式</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <p>选择一个设备监控模式：<span>（改变模式需要重启设备）</span></p>
+                            <div class="detect-row">
+                                <label>
+                                    <input type="checkbox"> 旁路监听模式: 离线部署模式，监测并报告病毒。
+                                </label>
+                                <label>
+                                    <input type="checkbox"> 透明/反向代理模式: 在线部署模式，允许Anchiva WAF主动阻止病毒。
+                                </label>
+                            </div>
+                            <div class="detect-row">
+                                <label>
+                                    <input type="checkbox"> 透明模式
+                                </label>
+                                <label>
+                                    <input type="checkbox"> 反向代理模式
+                                </label>
+                                <button class="btn-normal">配置</button>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.4系统配置-邮件配置-->
+        <div id="email-configuration" class="page-content-wrapper">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>邮件配置</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <div class="system-configuration-row">
+                                <p class="current">收发邮件：</p>
+                                <div class="form-group">
+                                    <label>发送邮件地址</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>接收邮件地址</label>
+                                    <input type="text"/>
+                                    <img src="imgs/ad.png"/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p class="current">邮件转发服务器设置：</p>
+                                <div class="form-group">
+                                    <label>转发服务器地址或名称</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>服务器要求安全传输（SSL）</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>端口</label>
+                                    <input type="text"/>
+                                    <span>（0-65535）</span>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>SMTP认证</span></p>
+                                <div class="form-group">
+                                    <label>SMTP用户名</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>密码</label>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row ">
+                                <p class="current">使用邮件转发服务器发送：</p>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> 告警邮件
+                                    </label>
+                                    <label>
+                                        <input type="checkbox"> 扫描报告&报表邮件
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.5系统配置-报表-->
+        <div id="system-report" class="page-content-wrapper">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>报表</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <div class="system-configuration-row">
+                                <div class="form-group">
+                                    <label>报表保存天数</label>
+                                    <input type="text"/>
+                                    <span>（0-65535）</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>报表保存磁盘空间</label>
+                                    <input type="text"/>
+                                    <span>MB（0-65535）</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.6系统配置-日志-->
+        <div id="log" class="page-content-wrapper log">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#system-log" aria-controls="home" role="tab" data-toggle="tab">系统日志设置</a>
+                                <span class="selected"></span>
+                            </li>
+                            <li role="presentation">
+                                <a href="#Syslog" aria-controls="home" role="tab" data-toggle="tab">Syslog设置</a>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--第二行 页签切换块-->
+                <div class="tab-content">
+                    <!--系统日志设置-->
+                    <div role="tabpanel" class="tab-pane" id="system-log">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row">
+                                    <p class="current">日志管理</p>
+                                    <div class="form-group">
+                                        <label>最大保存天数</label>
+                                        <input type="text"/>
+                                        <span>（30-365）</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>最大磁盘空间</label>
+                                        <input type="text"/>
+                                        <span>（5000-35000）MB</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>最大使用率</label>
+                                        <input type="text"/>
+                                        <span>%</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>过滤关键字</label>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">启用系统日志</p>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>攻击事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>病毒事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>访问事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>爬虫事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>管理事件</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Syslog设置-->
+                    <div role="tabpanel" class="tab-pane" id="Syslog">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>启用Syslog日志</span></p>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>攻击事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>病毒事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>访问事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>爬虫事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>管理事件</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"> <span>系统事件</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">启用系统日志</p>
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>IP地址</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>端口</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline log-select">
+                                        <div class="form-group">
+                                            <label>级别</label>
+                                            <select>
+                                                <option value="0">紧急事件</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>指定日志方式</label>
+                                            <select>
+                                                <option value="0">本地</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>IP地址</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>端口</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline log-select">
+                                        <div class="form-group">
+                                            <label>级别</label>
+                                            <select>
+                                                <option value="0">紧急事件</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>指定日志方式</label>
+                                            <select>
+                                                <option value="0">本地</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>IP地址</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>端口</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline log-select">
+                                        <div class="form-group">
+                                            <label>级别</label>
+                                            <select>
+                                                <option value="0">紧急事件</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>指定日志方式</label>
+                                            <select>
+                                                <option value="0">本地</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="button-group">
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.7系统配置-警告通知-->
+        <div id="warning-notice" class="page-content-wrapper">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#email-warning" aria-controls="home" role="tab" data-toggle="tab">邮件警告</a>
+                                <span class="selected"></span>
+                            </li>
+                            <li role="presentation">
+                                <a href="#SMS-alarm" aria-controls="home" role="tab" data-toggle="tab">短信报警</a>
+                                <span></span>
+                            </li>
+                            <li role="presentation">
+                                <a href="#SNMP-traps" aria-controls="home" role="tab" data-toggle="tab">SNMP Traps</a>
+                                <span></span>
+                            </li>
+                            <li role="presentation">
+                                <a href="#alarm-redirect" aria-controls="home" role="tab" data-toggle="tab">告警或重定向</a>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--第二行 页签切换块-->
+                <div class="tab-content">
+                    <!--邮件警告-->
+                    <div role="tabpanel" class="tab-pane email" id="email-warning">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row">
+                                    <p class="current">警告门限设置</p>
+                                    <div class="text">
+                                        <span>对于病毒或关键字过滤事件的警告邮件可以一个统一的邮件形式发送，邮件最长为1024字节</span>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>发送统一的病毒警告信息</span></p>
+                                    <div class="text">
+                                        <span>启用这个功能后，系统将会发送统一的病毒警告信息。</span>
+                                        <p>发送病毒警告信息的条件设置</p>
+                                        每 <input/> 分钟<span>（1-1440）</span>内发生的病毒事件达到 <input/> 次 <span>（1-10000）</span>
+                                        <p>病毒提醒</p>
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>发送统一的WEB攻击警告信息</span></p>
+                                    <div class="text">
+                                        <span>启用这个功能后，系统将会发送统一的WEB攻击警告信息。</span>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"/>跨站脚本攻击
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>SQL注入攻击
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>WebShell攻击
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"/>CSRF攻击
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>盗链告警
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>弱口令攻击
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-row">
+                                        <label>
+                                            <input type="checkbox"/>命令注入攻击
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>关键字过滤告警
+                                        </label>
+                                        <label>
+                                            <input type="checkbox"/>任何攻击
+                                        </label>
+                                    </div>
+                                    <div  class="text">
+                                        <p>发送WEB攻击警告信息的条件设置</p>
+                                        每 <input/> 分钟<span>（1-1440）</span>内发生的病毒事件达到 <input/> 次 <span>（1-10000）</span>
+                                        <p>WEB攻击提醒</p>
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>发送统一的挂马事件警告信息</span></p>
+                                    <div class="text">
+                                        <span>启用这个功能后，系统将会发送统一的挂马事件警告信息。</span>
+                                        <p>发送挂马事件警告信息的条件设置</p>
+                                        每 <input/> 分钟<span>（1-1440）</span>内发生的病毒事件达到 <input/> 次 <span>（1-10000）</span>
+                                        <p>挂马事件提醒</p>
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>发送统一的篡改事件警告信息</span></p>
+                                    <div class="text">
+                                        <span>启用这个功能后，系统将会发送统一的篡改事件警告信息。</span>
+                                        <p>发送篡改事件警告信息的条件设置</p>
+                                        每 <input/> 分钟<span>（1-1440）</span>内发生的病毒事件达到 <input/> 次 <span>（1-10000）</span>
+                                        <p>篡改事件提醒</p>
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>启用HA警告</span></p>
+                                    <p><input type="checkbox"/><span>启用许可证警告</span></p>
+                                    <div class="text">
+                                        距离许可证过期 <input type="text"/><span>1-30天</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button class="current">默认配置</button>
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--短信报警-->
+                    <div role="tabpanel" class="tab-pane SMS" id="SMS-alarm">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row">
+                                    <p><input type="checkbox"/><span>启动短信报警</span></p>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">启用系统日志</p>
+                                    <div class="form-group">
+                                        <label>通关短信网关发送</label>
+                                        <select>
+                                            <option value="0">中国联通</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>业务小号</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>短信网关用户名</label>
+                                        <input type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>短信网关密码</label>
+                                        <input type="password"/>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">短信模版</p>
+                                    <div class="form-group">
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">短信接收人</p>
+                                    <div class="form-group">
+                                        <input type="text"/>
+                                        <img src="imgs/ad.png" alt=""/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <p class="current">报警配置</p>
+                                    <div class="form-group">
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <td>报警类型</td>
+                                                <td>事件类型</td>
+                                                <td>报警阈值</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>web攻击提醒</td>
+                                                <td>
+                                                    <div class="checkbox-row">
+                                                        <label>
+                                                            <input type="checkbox"/>跨站脚本攻击
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox"/>SQL注入攻击
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox"/>WebShell攻击
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-row">
+                                                        <label>
+                                                            <input type="checkbox"/>CSRF攻击
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox"/>盗链告警
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox"/>弱口令攻击
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-row">
+                                                        <label>
+                                                            <input type="checkbox"/>命令注入攻击
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox"/>关键字过滤告警
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text"/>
+                                                        <span>次（ 1-10000）</span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text"/>
+                                                        <span>分钟（1-1440）</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SNMP Traps-->
+                    <div role="tabpanel" class="tab-pane redirect" id="SNMP-traps">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row row-current">
+                                    <div class="form-group">
+                                        <label>Trap版本</label>
+                                        <select>
+                                            <option value="0">v2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>SNMP服务器 1#</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>IP</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>SNMP服务器 2#</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>IP</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <div class="form-group">
+                                            <label>SNMP服务器 3#</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>IP</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>共同体</label>
+                                            <input type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="button-group">
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--告警或重定向-->
+                    <div role="tabpanel" class="tab-pane redirect" id="alarm-redirect">
+                        <div class="portlet">
+                            <div class="portlet-body body-default">
+                                <div class="system-configuration-row">
+                                    <div class="form-group">
+                                        <label>阻止后动作</label>
+                                        <select>
+                                            <option value="0">告警</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <div class="form-group">
+                                        <label>告警内容</label>
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="system-configuration-row">
+                                    <div class="form-group">
+                                        <label>重定向URL</label>
+                                        <input/>
+                                        <sapn>（包含协议头，例如：http://www.aaa.bb/）</sapn>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button>应用</button>
+                                <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9.8系统配置-高级选项-->
+        <div id="advanced-options" class="page-content-wrapper">
+            <div class="page-content st-page">
+                <!--第一行 页签-->
+                <div class="portlet st-bordered">
+                    <div class="portlet-title">
+                        <ul class="nav nav-tabs st-nav">
+                            <li class="active">
+                                <a>高级配置</a>
+                                <span class="selected"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="portlet">
+                        <div class="portlet-body body-default">
+                            <div class="system-configuration-row">
+                                <p class="current">配置详情</p>
+                                <div class="form-group">
+                                    <label>HTTP连接超时时间</label>
+                                    <input type="text"/>
+                                    <span>（1-3600）秒</span>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>反向代理模式</span>
+                                    </label>
+                                </div>
+                                <p class="current">流量异常</p>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>异常流量检测并记录日志</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>专家模式（重启生效）</span></p>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>零日防护计划</span></p>
+                                <div class="text">
+                                    <span>加入Anchiva零日防护计划将进一步提高您的网络安全性。Anchiva web安全网关将会把所检测到的可疑请求自动提交到Anchiva RapidRx 实验室。Anchiva RapidRx 实验室的零时威胁监测系统将迅速分析和处理提交的相关数据，并及时提供升级更新服务，使客户网络免受潜在威胁的侵害。</span>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>启用严格的TCP连接检查</span></p>
+                                <div class="text">
+                                    <span>启用严格的TCP连接检查将允许系统对每个TCP连接进行严格检查,丢弃那些没有完成三次握手过程的TCP连接，有效提高系统安全性。</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!--页脚-->
@@ -2461,6 +3387,7 @@
 <script src="js/demo.min.js"></script>
 <script src="js/jquery.ztree.all.min.js"></script>
 <script src="js/jquery.poshytip.min.js"></script>
+<script src="js/jquery.treetable.js"></script>
 <!--2.7自定义js文件-->
 <script src="js/function.js"></script>
 <script src="js/index.js"></script>

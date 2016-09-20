@@ -4,6 +4,36 @@ a:focus, a:hover{text-decoration: none}
 ul{list-style: none}
 body{font-family:"Microsoft YaHei" !important}
 .page-content-wrapper .page-content{min-height: 860px}
+textarea { resize: none}
+.btn-normal{
+    background-color: #A1BDEC;
+    border:1px solid #A1BDEC;
+    border-radius: 5px;
+    padding:2px 10px;
+    color:#fff;
+}
+.btn-normal:hover{
+    background-color:#366ED2;
+    border:1px solid #366ED2;
+}
+.input-normal{
+    background-color: #fafafa;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+}
+.body-default{
+    border:1px solid #ddd;
+    background-color: #fff;
+    margin:10px;
+    padding:10px;
+}
+.portlet:before{
+    display: table;
+    content: "";
+}
+input[type=checkbox]{
+    vertical-align: text-bottom;
+}
 
 /*****************header样式******************/
 /*1.logo*/
@@ -51,7 +81,7 @@ body{font-family:"Microsoft YaHei" !important}
     margin-bottom: 25px;
     position:relative;
 }
-.dashboard-stat .visual div,.dashboard-stat .visual{
+.dashboard-stat .visual>div,.dashboard-stat .visual{
     height:175px;
     margin:0;
 }
@@ -390,7 +420,8 @@ button[disabled]{cursor: not-allowed}
 /*7.安全策略*/
 /*7.1整体样式*/
 .st-page .tab-content{
-    background-color: #F4F8FF;
+    /*background-color: #F4F8FF;*/
+    background-color: #F4F4F4;
     min-height: 827px;
 }
 .st-page .portlet .portlet-title{border:none}
@@ -424,15 +455,18 @@ button[disabled]{cursor: not-allowed}
 .form-inline{font-size: 14px}
 .form-inline label{margin-right:12px}
 .form-inline .form-group{margin-right: 30px}
-.form-inline .form-group select,.form-inline .form-group option,.form-group input,.pack span{background-color: #fafafa}
+.form-inline .form-group select,.form-inline .form-group option,.form-group input,.pack span,.cur textarea,.wizard input{background-color: #fafafa}
 .form-inline .form-group select{
     height:28px;
     border-radius:4px;
     border:1px solid #BDBDBD;
 }
-.form-group input{
+.form-group input,.wizard input{
     height:30px;
     border:1px solid #BDBDBD;
+}
+.form-group input[disabled],textarea[disabled]{
+    cursor: not-allowed;
 }
 .f-btn-blue{
     padding:5px;
@@ -509,8 +543,7 @@ button[disabled]{cursor: not-allowed}
 .cur textarea{
     height:150px;
     width:620px;
-    background-color: #fafafa;
-    border-color: #BDBDBD;
+    border:1px solid #BDBDBD;
 }
 .cur+button{margin-right: 40px}
 .st-page input[type=checkbox]{
@@ -604,6 +637,7 @@ button[disabled]{cursor: not-allowed}
     height: 75px;
     vertical-align: top;
     background-color: #fafafa;
+    border:1px solid #BDBDBD;
 }
 .st-page .row .curr .denger{margin-bottom: 15px}
 .chara .cur textarea{
@@ -614,7 +648,7 @@ button[disabled]{cursor: not-allowed}
 .con .form-inline .form-control{width:150px}
 .st-page .caption>p{margin:5px 30px 0 0}
 .st-page .caption>p span{vertical-align: middle}
-.st-page .caption>p i{
+.st-page .caption>p i,.stu .portlet-body p i,.wizard .portlet-body p i{
     display: inline-block;
     width: 4px;
     height: 18px;
@@ -629,7 +663,7 @@ button[disabled]{cursor: not-allowed}
 .stu .portlet .caption img{
     margin-left: 30px;
 }
-.stu .portlet-body{
+.stu .portlet-body,.wizard .portlet-body{
     border:1px solid #ddd;
     background-color: #fff;
     margin:0 10px;
@@ -641,11 +675,11 @@ button[disabled]{cursor: not-allowed}
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-.stu .portlet-body:last-child{
+.stu .portlet-body:last-child,.wizard .portlet-body{
     text-align: left;
     margin-top: 10px;
 }
-.stu .portlet-body:last-child p{
+.stu .portlet-body p,.wizard .portlet-body>p{
     margin-left: 10px;
     font-size: 16px;
     margin-top: 10px;
@@ -744,7 +778,7 @@ button[disabled]{cursor: not-allowed}
     margin-top: 10px;
     border-top: 1px solid #ddd;
 }
-.st-page .waf-add .portlet:first-child{
+.st-page .waf-add>.portlet{
     border-bottom: 1px solid #ddd;
 }
 .st-page .waf-add .portlet-title table{
@@ -793,6 +827,247 @@ button[disabled]{cursor: not-allowed}
     position: absolute;
     bottom: 4%;
     right: 7%;
+}
+.wizard:before{
+    content: "";
+    display: table;
+}
+
+.wizard-content{
+    width:40%;
+    margin:0 auto;
+}
+.wizard-content span{
+    color:#666;
+}
+.wizard-content p:last-child{
+    position: relative;
+}
+.wizard-content .input-normal{
+    height:26px;
+    width:220px;
+    margin-right: 10px;
+}
+.wizard .wizard-step{
+    padding:20px 10%;
+    height:180px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin: 10px 10px 0;
+}
+.wizard-step>div{
+    position:relative;
+}
+.wizard-step .line{
+    border:1px solid #ddd;
+    margin: 65px 0;
+}
+.wizard-step .step{
+    position: absolute;
+    top:-70px;
+    left:0;
+    text-align: center;
+}
+.wizard-step .step2{
+    left:18%;
+}
+.wizard-step .step3{
+    left:37%;
+}
+.wizard-step .step4{
+    left:56%;
+}
+.wizard-step .step5{
+    left:75%;
+}
+.wizard-step .step6{
+    left:93%;
+}
+.wizard-content .upload-file{
+    position: absolute;
+    left: 333px;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 54px;
+    height: 26px;
+    overflow: hidden;
+}
+.button-group{
+    margin:30px 10px 0 0;
+    text-align:right ;
+}
+.button-group button{
+    padding:2px 6px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width:100px;
+    border:1px solid #BDBDBD;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.btn-none{
+    display: none;
+}
+.language .body-default{
+    text-align: center;
+    padding:30px 10px;
+}
+.language select{
+    margin-left: 10px;
+    background-color: #F9F9F9;
+}
+
+.system-configuration-row{
+    padding:10px 0 10px 160px;
+    border-bottom: 1px solid #ddd;
+}
+.system-configuration-row .form-group>span,.text span{
+    color:#CFCFCF;
+}
+.system-configuration-row.current{
+    padding-top: 30px;
+}
+.system-configuration-row:last-child{
+    border-bottom: none;
+}
+.system-configuration-row>.form-group>label{
+    width:120px;
+    margin-left: 70px;
+    text-align: right;
+    margin-right: 10px;
+}
+.system-configuration-row .form-group img{
+    margin-left: 10px;
+}
+.system-configuration-row>.form-group>input{width: 220px;}
+.system-configuration-row p input{
+    margin-right: 10px;
+}
+.system-configuration-row .current{margin-left: 27px}
+.system-configuration-row .form-inline{margin-left: 173px}
+.log .system-configuration-row .form-inline{margin-left: 145px}
+.host .system-configuration-row .form-inline input{width: 70px}
+.log .system-configuration-row .form-inline input{width: 220px}
+.log .system-configuration-row .form-inline select{
+    width: 120px;
+    border-radius: 0;
+}
+.system-configuration-row textarea{
+    margin-left: 203px;
+    width: 400px;
+    height:90px;
+    background-color:#fafafa ;
+}
+.detect .portlet-body p{
+    margin-left: 40px;
+}
+.detect .portlet-body p span{
+    margin-left: 40px;
+    color:#CFCFCF;
+}
+.detect-row{
+    margin-left: 200px;
+}
+.detect-row:last-child{
+    margin-left: 300px;
+}
+.detect-row label{
+    display: block;
+}
+.detect-row:last-child label,.detect-row:last-child button{
+    display: inline-block;
+}
+.detect-row:last-child label:first-child{
+    display: block;
+}
+.detect-row:last-child button{
+    margin-left: 20px;
+}
+.checkbox-row{
+    margin-left: 203px;
+    margin-bottom: 10px;
+}
+.log-select .form-group{
+    margin-left: 13px;
+}
+.log-select .form-group:last-child{
+    margin-left: 45px;
+}
+.text{
+   margin-left: 96px;
+    width: 600px;
+}
+.text textarea,.redirect textarea{
+    margin-left: 0;
+    width: 650px;
+    height: 120px;
+}
+.text input{
+    width: 80px;
+    height: 26px;
+    background-color: #fafafa;
+    border:1px solid #BDBDBD;
+}
+.system-configuration-row .text p{
+    margin-top: 5px;
+}
+.email .checkbox-row {
+    margin:5px 0 5px 100px;
+}
+.email .checkbox-row label{
+    margin-right: 20px;
+    width: 120px;
+}
+.button-group .current{
+    margin-right: 55%;
+}
+.redirect .system-configuration-row label{
+    vertical-align: top;
+    margin-left: 0;
+}
+.redirect .system-configuration-row select,.SMS select{
+    width: 100px;
+    height: 26px;
+    background-color: #fafafa;
+}
+.redirect .form-group{
+    margin: 10px 0;
+}
+.redirect .form-inline .form-group{
+    margin-right: 5px;
+}
+.row-current .form-group{
+    margin-left: 20px;
+}
+.row-current .form-group select{
+    width: 140px;
+}
+.system-configuration-row table{
+    collapse: 0;
+    text-align: center;
+}
+.system-configuration-row table thead{
+    background-color: #fafafa;
+}
+.system-configuration-row table label{
+    width: 120px;
+    margin-right: 15px;
+}
+.system-configuration-row table td{
+    border: 1px solid #ddd;
+    padding:10px;
+}
+.system-configuration-row table .checkbox-row{
+    margin-left: 0;
+    text-align: left;
+}
+.SMS .system-configuration-row:nth-child(4) input,.system-configuration-row table,.SMS textarea{
+    margin-left: 95px;
+}
+.SMS select{
+    width: 220px;
 }
 /*******************page-footer样式*****************/
 .blue{

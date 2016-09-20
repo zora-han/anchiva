@@ -7,6 +7,7 @@ var filter,filter1,filter2,filter3={},
     //web扫漏页
     operationT='<td><img src="imgs/7.png" alt=""/></td><td><img src="imgs/p.png" alt=""/></td><td><img src="imgs/9.png" alt=""/></td><td><img src="imgs/4.png" alt=""/></td>',
     operationR='<td><img src="imgs/d.png" alt=""/></td><td><img src="imgs/s.png" alt=""/></td><td><img src="imgs/x.png" alt=""/></td><td><img src="imgs/4.png" alt=""/></td>',
+    operationA='<td><img src="imgs/host-add.png" alt=""/></td><td><img src="imgs/s.png" alt=""/></td>',
     //早前页面的操作标识
     operationOld='<td><img src="imgs/u300.png" alt=""/></td><td><img src="imgs/u298.png" alt=""/></td><td><img src="imgs/u296.png" alt=""/></td>',
     //九格
@@ -107,9 +108,9 @@ var filter,filter1,filter2,filter3={},
                 exceptionURL:["jquery.malsup.com"]
             }
         ]
-    };
+    },
     //WAF策略
-    var WAFIntrusion={
+    WAFIntrusion={
         'record_count':100,	/*总记录数*/
         'page_size':20,		/*每页的记录数*/
         'page_count':5,	    /*总页数*/
@@ -119,14 +120,14 @@ var filter,filter1,filter2,filter3={},
             {id:1,name:"增强防护",feature:"增强特征库",agreementSafe:"启用选项10",contentSafe:"启用选项12",reference:"10次",matching:"8次"},
             {id:2,name:"用户定义",feature:"用户定义",agreementSafe:"启用选项7",contentSafe:"启用选项9",reference:"30次",matching:"19次"}
         ]
-    };
+        },
     //任务列表
-    var task=[
+    task=[
         {id:1,name:"fsdfsdfsd",type:"每月",submit:"administrator",state:"2016-08-01 00:05:23 正常退出",url:"www.bootcss.com"},
         {id:2,name:"weeg",type:"每月",submit:"administrator",state:"2016-08-01 08:05:23 正常退出",url:"fontawesome.dashgame.com"}
-    ];
+    ],
     //报告列表
-    var report=[
+    report=[
         {id:1,name:"6_23502_1854749632.xml",url:"http://www.ed2000.com",count:6,time:"2016.08.12 08:23:56"},
         {id:2,name:"6_7570_1862347046.xml",url:"http://www.ed2000.com",count:0,time:"2016.07.12 08:23:56"},
         {id:3,name:"6_16568_1864569627.xml",url:"http://www.ed2000.com",count:0,time:"2016.03.12 08:23:56"},
@@ -135,9 +136,9 @@ var filter,filter1,filter2,filter3={},
         {id:6,name:"6_5031_1459452964.xml",url:"http://www.ed2000.com",count:38,time:"2015.05.18 08:23:56"},
         {id:7,name:"6_23616_1457582248.xml",url:"http://www.ed2000.com",count:0,time:"2015.03.09 08:23:56"},
         {id:8,name:"7_20440_1457592434.xml",url:"http://fa.163.com/s/o",count:0,time:"2015.01.25 08:23:56"}
-    ];
+    ],
     //入侵防护策略
-    var intrusion={
+    intrusion={
         'record_count':100,	/*总记录数*/
         'page_size':20,		/*每页的记录数*/
         'page_count':5,	    /*总页数*/
@@ -149,9 +150,9 @@ var filter,filter1,filter2,filter3={},
             {id:3,name:"策略4",feature:"启用/未启用 （1800/500）",reference:48,matching:40},
             {id:4,name:"策略5",feature:"启用/未启用 （1800/680）",reference:11,matching:6}
         ]
-    };
+    },
     //特例主机
-    var exceptions={
+    exceptions={
         'record_count':100,	/*总记录数*/
         'page_size':20,		/*每页的记录数*/
         'page_count':5,	    /*总页数*/
@@ -218,7 +219,25 @@ var filter,filter1,filter2,filter3={},
                 exceptionId:["172.109.104.245"]
             }
         ]
-    };
+    },
+    //事件分类
+    data=[
+        [
+            {value:335, name:'FTP',color:'#A1D768'},
+            {value:310, name:'XSS攻击',color:'#3FB1E3'},
+            {value:234, name:'SQL注入',color:'#EE9E47'},
+            {value:135, name:'HTTP Cetflood',color:'#DFD83C'},
+            {value:1048, name:'FTP Bounce',color:'#81A1EA'},
+            {value:251, name:'缓冲区溢出',color:'#4F5CB7'},
+            {value:147, name:'TCP SYN FLOOD',color:'#FFDC84'},
+            {value:102, name:'POP3',color:'#F18374'}
+        ],
+        [
+            {value:335, name:'病毒',color:'#9f81f0'},
+            {value:679, name:'应用安全',color:'#34aba5'},
+            {value:1548, name:'入侵防御',color:'#64b2cb'}
+        ]
+    ];
 function tab(idName){
     //病毒感染源
     var virus = {
@@ -432,6 +451,22 @@ function tab(idName){
             {id:11323,source:"168.172.193.234",target:"101.101.101.101",type:"类型1",account:3,name:"asdsfas"}
         ]
     };
+    //添加例外主机
+    var basicCharacteristics =[
+        {"id":1,"name":"CGT访问（654）","isParent":true},
+        {"id":2,"name":"CGT攻击（344）","isParent":true},
+        {"id":3,"name":"安全漏洞（789）","isParent":true},
+        {"id":4,"name":"安全扫描（789）","isParent":true},
+        {"id":5,"name":"安全审计（789）","isParent":true},
+        {"id":6,"name":"缓冲溢出（789）","isParent":true},
+        {"id":7,"name":"拒绝服务（789）","isParent":true},
+        {"id":8,"name":"木马后门（789）","isParent":true},
+        {"id":9,"name":"欺骗劫持（789）","isParent":true},
+        {"id":1055099, "pId":9, "name":"ARP_IP地址冲突","ty":"欺骗劫持"},
+        {"id":1055102, "pId":9, "name":"ARP_IP地址欺骗","ty":"欺骗劫持"},
+        {"id":10,"name":"协议分析（789）","isParent":true},
+        {"id":11,"name":"蠕虫病毒（789）","isParent":true}
+    ];
     switch (idName){
         case "virus":return virus;
         case "application":return application;
@@ -460,6 +495,7 @@ function tab(idName){
         case "configuration":return configuration;
         case "task":return task;
         case "report":return report;
+        case "basicCharacteristics":return basicCharacteristics;
     }
 }
 function addData(name){
@@ -468,7 +504,23 @@ function addData(name){
         c=name.charAt(name.length-1), //判断相似名称
         r,//页面剩余行数
         i;//循环起始点
-    if(name==="report"){
+    if(name==="basicCharacteristics"){
+        $.each(tabName,function(i,n){
+            if(n.isParent===true){
+                str+='<tr data-tt-id="'+n.id+'">'
+                +'<td><input type="checkbox"/></td><td></td><td>'
+                +n.name+'</td><td>'
+            }else{
+                str+='<tr data-tt-id="'+n.id+'" data-tt-parent-id="'+ n.pId+'">'
+                +'<td><input type="checkbox"/></td><td>'
+                +n.id+'</td><td>'
+                +n.name+'</td><td>'
+            }
+            str+='<select><option value="0">阻断</option></select></td><td>'
+            +'<select><option value="0">记录</option></select></td>'
+            +operationA+'</tr>';
+        });
+    }else if(name==="report"){
         $.each(tabName,function(i,n){
             str+='<tr><td><input type="checkbox"/></td><td  data-name="name">'
             +n.name+'</td><td>'
@@ -646,14 +698,14 @@ function addData(name){
 
 //2.计算天数差
 function timeDifference(oldTime,newTime){
-    var time=newTime-oldTime;
-    var days=Math.floor(time/(24*3600*1000));   //计算出相差天数
-    var leave1=time%(24*3600*1000);             //计算天数后剩余的毫秒数
-    var hours=Math.floor(leave1/(3600*1000));   //计算出小时数
-    var leave2=leave1%(3600*1000);              //计算小时数后剩余的毫秒数
-    var minutes=Math.floor(leave2/(60*1000));   //计算相差分钟数
-    var leave3=leave2%(60*1000);                //计算分钟数后剩余的毫秒数
-    var seconds=Math.round(leave3/1000);        //计算相差秒数
+    var time=newTime-oldTime,
+        days=Math.floor(time/(24*3600*1000)),   //计算出相差天数
+        leave1=time%(24*3600*1000),             //计算天数后剩余的毫秒数
+        hours=Math.floor(leave1/(3600*1000)),   //计算出小时数
+        leave2=leave1%(3600*1000),              //计算小时数后剩余的毫秒数
+        minutes=Math.floor(leave2/(60*1000)),   //计算相差分钟数
+        leave3=leave2%(60*1000),                //计算分钟数后剩余的毫秒数
+        seconds=Math.round(leave3/1000);        //计算相差秒数
     return days+"天"+hours+"小时"+minutes+"分钟"+seconds+"秒";
 }
 
@@ -665,21 +717,21 @@ function random(min,max){
 //4.时间格式
 //4.1只显示小时和分钟
 function format(date){
-    var h=date.getHours();//获得小时，保存在h中
+    var h=date.getHours(),//获得小时，保存在h中
+        m=date.getMinutes();//获得分钟，保存在m中
     h<10&&(h="0"+h);//如果h<10，就变为0+h
-    var m=date.getMinutes();//获得分钟，保存在m中
     m<10&&(m="0"+m);//如果m<10,就变为0+m
     return h+":"+m;
 }
 //4.2显示月、日、小时和分钟
 function format1(date){
-    var M=date.getMonth()+1;//获得月份，+1后保存在M中
+    var M=date.getMonth()+ 1,//获得月份，+1后保存在M中
+        d=date.getDate(),//获得日期，保存在d中
+        h=date.getHours(),//获得小时，保存在h中
+        m=date.getMinutes();//获得分钟，保存在m中
     M<10&&(M="0"+M);//如果M<10,就变为0+M
-    var d=date.getDate();//获得日期，保存在d中
     d<10&&(d="0"+d);//如果d<10,就变为0+d
-    var h=date.getHours();//获得小时，保存在h中
     h<10&&(h="0"+h);//如果h<10，就变为0+h
-    var m=date.getMinutes();//获得分钟，保存在m中
     m<10&&(m="0"+m);//如果m<10,就变为0+m
     return M+"-"+d+"\n"+h+":"+m;
 }
@@ -687,72 +739,72 @@ function format1(date){
 //5.echarts图表
 //5.1自身健康
 function health(){
-    var healthChart = echarts.init(document.getElementById('health'));
-    optionHealth = {
-        tooltip : {
-            formatter: "{a} <br/>{b} : {c}分"    //提示框样式
-        },
-        title: {//标题样式
-            text: '自身健康',
-            subtext: '当前健康状况',
-            left:"right",
-            top:19,
-            textStyle:{
-                fontSize:20
+    var healthChart = echarts.init(document.getElementById('health')),
+        optionHealth = {
+            tooltip : {
+                formatter: "{a} <br/>{b} : {c}分"    //提示框样式
             },
-            subtextStyle:{
-                fontSize:15,
-                color:"#333"
-            }
-        },
-        series: {
-            name: '健康指标',               //表名
-            type: 'gauge',                  //类型
-            center : ['40%', '90%'],        //表的位置
-            radius : '120%',                 //大小
-            min: 0,                         //最小值
-            max: 100,                       //最大值
-            startAngle: 180,                //起始角度
-            endAngle: 0,                    //终了角度
-            axisLine: {            // 坐标轴线
-                show: false,        // 默认显示，属性show控制显示与否
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    color: [[0.33, '#EB625F'],[0.66, '#4F5CB7'],[1, '#22A700']],
-                    width: 30
-                }
-            },
-            axisTick: {                     // 坐标轴小标记
-                show: false
-            },
-            splitLine: {                    // 分隔线
-                show:false
-            },
-            axisLabel: {                    //坐标标签
-                show:false
-            },
-            pointer: {
-                width:5
-            },
-            itemStyle:{
-                normal:{
-                    color:"#384372"
-                }
-            },
-            detail: {
-                formatter:"",
-                width:100,
-                height:25,
-                offsetCenter:[0, '-120%'],
+            title: {//标题样式
+                text: '自身健康',
+                subtext: '当前健康状况',
+                left:"right",
+                top:19,
                 textStyle:{
-                    color:"#fff",
-                    fontWeight:"bold",
-                    fontSize:10,
-                    fontFamily:"Microsoft YaHei"
+                    fontSize:20
+                },
+                subtextStyle:{
+                    fontSize:15,
+                    color:"#333"
                 }
             },
-            data: {value: 0}
-        }
-    };
+            series: {
+                name: '健康指标',               //表名
+                type: 'gauge',                  //类型
+                center : ['40%', '90%'],        //表的位置
+                radius : '120%',                 //大小
+                min: 0,                         //最小值
+                max: 100,                       //最大值
+                startAngle: 180,                //起始角度
+                endAngle: 0,                    //终了角度
+                axisLine: {            // 坐标轴线
+                    show: false,        // 默认显示，属性show控制显示与否
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: [[0.33, '#EB625F'],[0.66, '#4F5CB7'],[1, '#22A700']],
+                        width: 30
+                    }
+                },
+                axisTick: {                     // 坐标轴小标记
+                    show: false
+                },
+                splitLine: {                    // 分隔线
+                    show:false
+                },
+                axisLabel: {                    //坐标标签
+                    show:false
+                },
+                pointer: {
+                    width:5
+                },
+                itemStyle:{
+                    normal:{
+                        color:"#384372"
+                    }
+                },
+                detail: {
+                    formatter:"",
+                    width:100,
+                    height:25,
+                    offsetCenter:[0, '-120%'],
+                    textStyle:{
+                        color:"#fff",
+                        fontWeight:"bold",
+                        fontSize:10,
+                        fontFamily:"Microsoft YaHei"
+                    }
+                },
+                data: {value: 0}
+            }
+        };
     var value=function(){
         optionHealth.series.data.value = random(0,100);
         optionHealth.series.detail.formatter=optionHealth.series.data.value<35?"Dangerous"
@@ -767,124 +819,97 @@ function health(){
     window.addEventListener("resize",healthChart.resize);//自适应分辨率改变重画图形
 }
 //5.2事件分类
-var data=[
-    [
-        {value:335, name:'FTP',color:'#A1D768'},
-        {value:310, name:'XSS攻击',color:'#3FB1E3'},
-        {value:234, name:'SQL注入',color:'#EE9E47'},
-        {value:135, name:'HTTP Cetflood',color:'#DFD83C'},
-        {value:1048, name:'FTP Bounce',color:'#81A1EA'},
-        {value:251, name:'缓冲区溢出',color:'#4F5CB7'},
-        {value:147, name:'TCP SYN FLOOD',color:'#FFDC84'},
-        {value:102, name:'POP3',color:'#F18374'}
-    ],
-    [
-        {value:335, name:'病毒',color:'#9f81f0'},
-        {value:679, name:'应用安全',color:'#34aba5'},
-        {value:1548, name:'入侵防御',color:'#64b2cb'}
-    ]
-];
 function event(){
-    var eventChart = echarts.init(document.getElementById('event'));
-    optionEvent = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            top:20,
-            height:280,
-            data:function(){
-                var data1=[];
-                $.each(data[0],function(i,n){
-                    data1.push(n.name);
-                });
-                $.each(data[1],function(i,n){
-                    data1.push(n.name);
-                });
-                return data1;
-            }()
-        },
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                selectedMode: 'single',
-                radius: [0, '40%'],
-
-                label: {
-                    normal: {
-                        position: 'inner'
-                    }
-                },
-                labelLine: {
-                    normal: {
-                        show: false
-                    }
-                },
+    var eventChart = echarts.init(document.getElementById('event')),
+        optionEvent = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                top:20,
+                height:280,
                 data:function(){
                     var data1=[];
+                    $.each(data[0],function(i,n){
+                        data1.push(n.name);
+                    });
                     $.each(data[1],function(i,n){
-                        var obj={};
-                        obj.value= n.value;
-                        obj.name= n.name;
-                        obj.itemStyle={normal:{color: n.color}};
-                        data1.push(obj);
+                        data1.push(n.name);
                     });
                     return data1;
                 }()
             },
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['50%', '65%'],
-                data:function(){
-                    var data1=[];
-                    $.each(data[0],function(i,n){
-                        var obj={};
-                        obj.value= n.value;
-                        obj.name= n.name;
-                        obj.itemStyle={normal:{color: n.color}};
-                        data1.push(obj);
-                    });
-                    return data1;
-                }()
-            }
-        ]
-    };
+            series: [
+                {
+                    name:'访问来源',
+                    type:'pie',
+                    selectedMode: 'single',
+                    radius: [0, '40%'],
+
+                    label: {
+                        normal: {
+                            position: 'inner'
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:function(){
+                        var data1=[];
+                        $.each(data[1],function(i,n){
+                            var obj={};
+                            obj.value= n.value;
+                            obj.name= n.name;
+                            obj.itemStyle={normal:{color: n.color}};
+                            data1.push(obj);
+                        });
+                        return data1;
+                    }()
+                },
+                {
+                    name:'访问来源',
+                    type:'pie',
+                    radius: ['50%', '65%'],
+                    data:function(){
+                        var data1=[];
+                        $.each(data[0],function(i,n){
+                            var obj={};
+                            obj.value= n.value;
+                            obj.name= n.name;
+                            obj.itemStyle={normal:{color: n.color}};
+                            data1.push(obj);
+                        });
+                        return data1;
+                    }()
+                }
+            ]
+        };
     eventChart.setOption(optionEvent);
     window.onresize=eventChart.resize;
-
 }
 //5.3主机信息
 function hInformation(){
-    var HInformationChart = echarts.init(document.getElementById('h-information'));
-    var interval,count,now;
-    switch (arguments.length){
-        case 0:
-            interval=60000;//每一分钟一个数据
-            count=60;//一小时内有六十个数据
-            now=new Date(new Date()-3600*1000);
-            break;
-        case 1:
-            interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
-                :arguments[0]==3600000?60000//1小时前 1分钟一个数据
-                :arguments[0]==86400000?3600000//1天前 1小时一个数据
-                :(24*3600*1000);//1个月前 1天一个数据
-            count=arguments[0]/interval;
-            now=new Date(new Date()-arguments[0]);
+    var HInformationChart = echarts.init(document.getElementById('h-information')),
+        interval="",count=0,now="",date = [],data = [],data1= [];
+    if(arguments[0]===undefined||arguments[0]===""){
+        interval=60000;//每一分钟一个数据
+        count=60;//一小时内有六十个数据
+        now=new Date(new Date()-3600*1000);
+    }else{
+        interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
+            :arguments[0]==3600000?60000//1小时前 1分钟一个数据
+            :arguments[0]==86400000?3600000//1天前 1小时一个数据
+            :(24*3600*1000);//1个月前 1天一个数据
+        count=arguments[0]/interval;
+        now=new Date(new Date()-arguments[0]);
     }
-    var date = [];
-    var data = [];
-    var data1= [];
     function addData(shift) {
-        if(interval<=60000){
-            date.push(format(now));
-        }else{
-            date.push(format1(now));
-        }
+        (interval<=60000)?date.push(format(now)):date.push(format1(now));
         data.push(random(0,100));
         data1.push(random(0,100));
         if (shift) {
@@ -895,7 +920,7 @@ function hInformation(){
         now = new Date(+new Date(now) + interval);
     }
     for (var i = 0; i < count; i++) {addData();}
-    optionHInformation = {
+    var optionHInformation = {
         tooltip: {
             trigger: 'axis'
         },
@@ -1008,24 +1033,20 @@ function hInformation(){
 }
 //5.4HTTP并发连接数
 function httpConcurrent(){
-    var HConcurrentChart = echarts.init(document.getElementById('http-concurrent'));
-    var interval,count,now;
-    switch (arguments.length){
-        case 0:
-            interval=60000;//每一分钟一个数据
-            count=60;//一小时内有六十个数据
-            now=new Date(new Date()-3600*1000);
-            break;
-        case 1:
-            interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
-                :arguments[0]==3600000?60000//1小时前 1分钟一个数据
-                :arguments[0]==86400000?3600000//1天前 1小时一个数据
-                :(24*3600*1000);//1个月前 1天一个数据
-            count=arguments[0]/interval;
-            now=new Date(new Date()-arguments[0]);
+    var HConcurrentChart = echarts.init(document.getElementById('http-concurrent')),
+        interval,count,now,date = [],data = [];
+    if(arguments[0]===undefined||arguments[0]===""){
+        interval=60000;//每一分钟一个数据
+        count=60;//一小时内有六十个数据
+        now=new Date(new Date()-3600*1000);
+    }else{
+        interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
+            :arguments[0]==3600000?60000//1小时前 1分钟一个数据
+            :arguments[0]==86400000?3600000//1天前 1小时一个数据
+            :(24*3600*1000);//1个月前 1天一个数据
+        count=arguments[0]/interval;
+        now=new Date(new Date()-arguments[0]);
     }
-    var date = [];
-    var data = [];
     function addData(shift) {
         if(interval<=60000){
             date.push(format(now));
@@ -1040,7 +1061,7 @@ function httpConcurrent(){
         now = new Date(+new Date(now) + interval);
     }
     for (var i = 0; i < count; i++) {addData();}
-    optionConcurrent = {
+    var optionConcurrent = {
         title:{
             text:"HTTP并发连接数",
             top:40,
@@ -1138,30 +1159,22 @@ function httpConcurrent(){
 }
 //5.5HTTP创建新连接数
 function httpCreate(){
-    var HCreateChart = echarts.init(document.getElementById('http-create'));
-    var interval,count,now;
-    switch (arguments.length){
-        case 0:
-            interval=60000;//每一分钟一个数据
-            count=60;//一小时内有六十个数据
-            now=new Date(new Date()-3600*1000);
-            break;
-        case 1:
-            interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
-                :arguments[0]==3600000?60000//1小时前 1分钟一个数据
-                :arguments[0]==86400000?3600000//1天前 1小时一个数据
-                :(24*3600*1000);//1个月前 1天一个数据
-            count=arguments[0]/interval;
-            now=new Date(new Date()-arguments[0]);
+    var HCreateChart = echarts.init(document.getElementById('http-create')),
+        interval,count,now,date = [],data = [];
+    if(arguments[0]===undefined||arguments[0]===""){
+        interval=60000;//每一分钟一个数据
+        count=60;//一小时内有六十个数据
+        now=new Date(new Date()-3600*1000);
+    }else{
+        interval=arguments[0]==300000?30000//5分钟前 30秒一个数据
+            :arguments[0]==3600000?60000//1小时前 1分钟一个数据
+            :arguments[0]==86400000?3600000//1天前 1小时一个数据
+            :(24*3600*1000);//1个月前 1天一个数据
+        count=arguments[0]/interval;
+        now=new Date(new Date()-arguments[0]);
     }
-    var date = [];
-    var data = [];
     function addData(shift) {
-        if(interval<=60000){
-            date.push(format(now));
-        }else{
-            date.push(format1(now));
-        }
+        (interval<=60000)?date.push(format(now)):date.push(format1(now));
         data.push(random(0,999999));
         if (shift) {
             date.shift();
@@ -1170,7 +1183,7 @@ function httpCreate(){
         now = new Date(+new Date(now) + interval);
     }
     for (var i = 0; i < count; i++) {addData();}
-    optionCreate = {
+    var optionCreate = {
         title:{
             text:"HTTP新建连接数",
             top:40,
@@ -1271,8 +1284,8 @@ function httpCreate(){
 }
 //5.6攻击地图
 function attackMap(id){
-    var attackMapChart = echarts.init(document.getElementById(id));
-    var geoCoordMap = {
+    var attackMapChart = echarts.init(document.getElementById(id)),
+        geoCoordMap = {
         '上海': [121.4648,31.2891],
         '东莞': [113.8953,22.901],
         '东营': [118.7073,37.5513],
@@ -1387,9 +1400,9 @@ function attackMap(id){
         '阳泉': [113.4778,38.0951],
         '青岛': [120.4651,36.3373],
         '韶关': [113.7964,24.7028]
-    };
-    var BJData =tab("mapData");
-    var convertData = function (data) {
+        },
+        BJData =tab("mapData"),
+        convertData = function (data) {
         var res = [];
         for (var i = 0; i < data.length; i++) {
             var dataItem = data[i];
@@ -1404,9 +1417,9 @@ function attackMap(id){
             }
         }
         return res;
-    };
-    var color = ['#D7422C'];
-    var series = [];
+        },
+        color = ['#D7422C'],
+        series = [];
     [['北京', BJData]].forEach(function (item, i) {
         series.push({
                 name: item[0] + ' Top10',
@@ -1477,7 +1490,7 @@ function attackMap(id){
                 })
             });
     });
-    optionattackMap = {
+    var optionattackMap = {
         grid:{
             left:"3%",
             bottom:"3%",
@@ -1516,9 +1529,9 @@ function attackMap(id){
 }
 //5.7威胁安全趋势
 function securityTrend(id,time){
-    var securityTrendChart = echarts.init(document.getElementById(id));
-    var interval,count,now;
-    if(time===undefined){
+    var securityTrendChart = echarts.init(document.getElementById(id)),
+        interval,count,now,date = [],data = [];
+    if(time===undefined||time===""){
         interval=60000;//每一分钟一个数据
         count=60;//一小时内有六十个数据
         now=new Date(new Date()-3600*1000);
@@ -1530,14 +1543,8 @@ function securityTrend(id,time){
         count=time/interval;
         now=new Date(new Date()-time);
     }
-    var date = [];
-    var data = [];
     function addData(shift) {
-        if(interval<=60000){
-            date.push(format(now));
-        }else{
-            date.push(format1(now));
-        }
+        (interval<=60000)?date.push(format(now)):date.push(format1(now));
         data.push(random(0,999999));
         if (shift) {
             date.shift();
@@ -1546,7 +1553,7 @@ function securityTrend(id,time){
         now = new Date(+new Date(now) + interval);
     }
     for (var i = 0; i < count; i++) {addData();}
-    optionSecurityTrend = {
+    var optionSecurityTrend = {
         tooltip: {
             trigger: 'axis'
         },
@@ -1641,14 +1648,13 @@ function securityTrend(id,time){
 }
 //5.8攻击源排名
 function attackSourceRanking(id){
-    var attackSourceChart = echarts.init(document.getElementById(id));
-    var attackSource=tab("attackSource");
-    var ip=[],data=[];
+    var attackSourceChart = echarts.init(document.getElementById(id)),
+        attackSource=tab("attackSource"),ip=[],data=[];
     $.each(attackSource.data,function(i,n){
         ip.push(n.ip);
         data.push(n.account);
     });
-    optionAttackSource= {
+    var optionAttackSource= {
         tooltip : {
             trigger: 'axis'
         },
@@ -1716,14 +1722,13 @@ function attackSourceRanking(id){
 }
 //5.9攻击目的排名
 function attackPurposesRanking(id){
-    var attackPurposesChart = echarts.init(document.getElementById(id));
-    var attackSource=tab("attackPurposes");
-    var ip=[],data=[];
+    var attackPurposesChart = echarts.init(document.getElementById(id)),
+        attackSource=tab("attackPurposes"),ip=[],data=[];
     $.each(attackSource.data,function(i,n){
         ip.push(n.ip);
         data.push(n.account);
     });
-    optionAttackPurposes = {
+    var optionAttackPurposes = {
         tooltip : {
             trigger: 'axis'
         },
@@ -1792,10 +1797,9 @@ function attackPurposesRanking(id){
 //5.10攻击访问统计关系图
 var attackData;
 function attackRelationship(attackData){
-    var attackRelationshipChart = echarts.init(document.getElementById('attack-system-analysis-relationship'));
-    var link=[];
-    var sData=[];
-    var color=["#99C343","#87CDF9","#FF7F50","#E3B618","#31D45A","#7E8CF2","#E87F98","#D59421","#C586EA","#44CACA"];
+    var attackRelationshipChart = echarts.init(document.getElementById('attack-system-analysis-relationship')),
+        link=[],sData=[],
+        color=["#99C343","#87CDF9","#FF7F50","#E3B618","#31D45A","#7E8CF2","#E87F98","#D59421","#C586EA","#44CACA"];
     function addLink(){
         $.each(attackData.data,function(i,n){
             if(i<10){
@@ -1834,7 +1838,7 @@ function attackRelationship(attackData){
         });
         return sData;
     }
-    optionAttackRelationship = {
+    var optionAttackRelationship = {
         tooltip: {
             trigger:"axis"
         },
@@ -1923,16 +1927,12 @@ function attackRelationshipPie(attackData){
     function addData(){
         var value1=0,value2=0,value3=0,value4=0,value5=0;
         $.each(attackData.data,function(i,n){
-            if(n.type==="类型1"){
-                value1++;
-            }else if(n.type==="类型2"){
-                value2++;
-            }else if(n.type==="类型3"){
-                value3++;
-            }else if(n.type==="类型4"){
-                value4++;
-            }else if(n.type==="类型5"){
-                value5++;
+            switch (n.type){
+                case "类型1":value1++;break;
+                case "类型2":value3++;break;
+                case "类型3":value3++;break;
+                case "类型4":value4++;break;
+                case "类型5":value5++;break;
             }
         });
         value1>0&&data.push({value:value1, name:'类型1'});
@@ -1943,7 +1943,7 @@ function attackRelationshipPie(attackData){
         return data;
     }
     var attackRelationshipChart = echarts.init(document.getElementById('attack-system-analysis-relationship-pie'));
-    optionAttackRelationship = {
+    var optionAttackRelationship = {
         color:["#71C834","#52AFE5","#FEB71B","#884FFA","#9F81DD"],
         series: [
             {
@@ -2086,6 +2086,8 @@ var setting = {
             "detailed":"CVE编号:CVE-2009-1535</br>危害描述：IIS的WEBDAX功能再解析RUL并发送回数据时没有正确的处理Unicode令牌环，远程攻击者可以通过提交恶意HTPP GET请求绕过受口令保护的文件夹认证，或在受口令保护的WebDAV目录中列出、上传或下载文件。</br>配置建议：对于IIS6.0以及IIS5.1且没有安装补丁的系统建议检查此项。"
         }
     ],
+    //应用安全策略下自定义特征库数据
+    applicationSecurityCustom=[],
     lastValue = "",
     //查找出的节点选项
     nodeList = [],
@@ -2099,36 +2101,27 @@ var setting = {
     key = $("#typeTreeSearch"),
     key1 = $("#typeTreeSearch1");
 function focusKey() {
-    if ($(this).hasClass("empty")) {
-        $(this).removeClass("empty");
-    }
+    $(this).hasClass("empty")&&$(this).removeClass("empty");
 }
 function blurKey() {
-    if ($(this).get(0).value === "") {
-        $(this).addClass("empty");
-    }
+    ($(this).get(0).value === "")&&$(this).addClass("empty");
 }
 function searchNode() {
-    var option;
+    var option,value = $.trim($(this).get(0).value),SelectButton;
     if($(this)[0]===key[0]){
         zTree = $.fn.zTree.getZTreeObj("treeType");
-        selectButton=$("#characteristics .form-inline button");
+        SelectButton=selectButton;
         option=true;
     }else if($(this)[0]===key1[0]){
         zTree = $.fn.zTree.getZTreeObj("treeType1");
-        selectButton=$("#application-characteristics .form-inline button");
+        SelectButton=selectButton1;
         option=false;
     }
-    var value = $.trim($(this).get(0).value);
-    if ($(this).hasClass("empty")) {
-        value = "";
-    }else{
-        selectButton.attr("disabled","true");
-    }
+    ($(this).hasClass("empty"))?value = "":SelectButton.attr("disabled","true");
     if (lastValue === value) return;
     lastValue = value;
     if (value === ""){
-        selectButton.removeAttr("disabled");
+        SelectButton.removeAttr("disabled");
         updateNodes(false,option);
         return;
     }
@@ -2150,9 +2143,9 @@ function searchNodes() {
     }
 }
 function selectFilter(node) {
-    var type=$("#selectType").find("option:selected").text();
-    var name=$("#selectName").find("option:selected").text();
-    var level=$("#selectLevel").find("option:selected").text();
+    var type=$("#selectType").find("option:selected").text(),
+        name=$("#selectName").find("option:selected").text(),
+        level=$("#selectLevel").find("option:selected").text();
     if(type==="请选择"&&name==="请选择"&&level==="请选择"){
         return;
     }else if(type!=="请选择"&&name==="请选择"&&level==="请选择"){
@@ -2172,8 +2165,8 @@ function selectFilter(node) {
     }
 }
 function selectFilter1(node) {
-    var type=$("#selectType1").find("option:selected").text();
-    var level=$("#selectLevel1").find("option:selected").text();
+    var type=$("#selectType1").find("option:selected").text(),
+        level=$("#selectLevel1").find("option:selected").text();
     if(type==="请选择"&&level==="请选择"){
         return;
     }else if(type!=="请选择"&&level==="请选择"){
@@ -2185,17 +2178,11 @@ function selectFilter1(node) {
     }
 }
 function updateNodes(highlight,option) {
-    if(option){
-        zTree = $.fn.zTree.getZTreeObj("treeType");
-    }else{
-        zTree = $.fn.zTree.getZTreeObj("treeType1");
-    }
+    (option)?(zTree = $.fn.zTree.getZTreeObj("treeType")):(zTree = $.fn.zTree.getZTreeObj("treeType1"));
     for( var i=0, l=nodeList.length; i<l; i++) {
         nodeList[i].highlight = highlight;
         var node=zTree.getNodeByParam("id",nodeList[i].pId);
-        if(nodeList[i].pId!==null){
-            zTree.expandNode(node,highlight);
-        }
+        (nodeList[i].pId!==null)&zTree.expandNode(node,highlight);
         zTree.updateNode(nodeList[i]);
     }
 }
@@ -2233,11 +2220,7 @@ function delInformation(){
         }else if($("#exceptions-configuration").hasClass("active")){
             del(arguments[0],configuration,"featureID","configuration");
         }else if($("#WEB-leakage").hasClass("active")){
-            if(arguments[1].parents("table").attr("id")==="task"){
-                del(arguments[0],task,"name","task");
-            }else{
-                del(arguments[0],report,"name","report");
-            }
+            (arguments[1].parents("table").attr("id")==="task")?del(arguments[0],task,"name","task"):del(arguments[0],report,"name","report");
         }
     } else if($("#intrusion-protection-strategy").hasClass("active")) {
         if ($("#intrusion-protection").hasClass("active")) {
@@ -2246,4 +2229,113 @@ function delInformation(){
             del(arguments[0],exceptions,"featureID","exceptions");
         }
     }
+}
+
+//10.警告提示
+function tipWarning(tipC,tip1,tipP,text){
+    tipC.show();
+    tip1.show().siblings("div").hide();
+    $(".tip1 img").attr("src","imgs/jing.png");
+    tipP.text(text);
+}
+
+//11.弹出框位置
+var tip=$(".tip"),tipAll=$(".tip, .tip1");
+function position(){
+    var top = ($(window).height() - tip.height()-84)/ 2,
+        left = ($(window).width() - tip.width()-180)/ 2,
+        scrollTop = $(document).scrollTop(),
+        scrollLeft = $(document).scrollLeft();
+    tipAll.css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } );
+}
+
+//12.统计分析
+var analysisSelector=$(".filter-conditions ul li:first-child");
+function analysis(relationship,relationshipPie,me,source,filterName){
+    var href=me[0].hash,textP;//所点击a的href属性
+    analysisSelector.siblings("li").removeClass("active");//清空过滤项
+    attackData=tab(source);
+    $(href).addClass("active").siblings("div").removeClass("active");//显示关系图页面
+    (relationship.css("display")==="block")? attackRelationship(attackData):attackRelationshipPie(attackData);//画图
+    textP=(source==="attackSystemDataSource")?"当前源：":"当前目的：";
+    analysisSelector.children("p").text(textP+attackData.data[0].target);//在页面上显示当前
+    $("#"+source).addClass("active").siblings("table").removeClass("active");//显示排名表格
+    addData(source);//填充表格中内容
+    //图形切换按钮
+    $("#attack-system-analysis-relationship~button").click(function(){
+        $(this).siblings("button").removeAttr("disabled");//让另一个按钮可用
+        $(this).attr("disabled","true");//让自己不可用
+        if($(this)[0].className==="btn-right"){//画饼图
+            relationship.removeClass("active");
+            relationshipPie.addClass("active");
+            attackRelationshipPie(attackData);
+        }else{                                  //画关系图
+            relationshipPie.removeClass("active");
+            relationship.addClass("active");
+            attackRelationship(attackData);
+        }
+    });
+    $("#"+source+" tbody,#"+filterName+" tbody").delegate("a", "click", function(e){//表格过滤事件
+        e.preventDefault();
+        var href=$(this)[0].hash.slice(1),
+            value=$(this).text(),
+            arr=[];
+        $.each(attackData.data,function(i,n){ (n[href]===value)&& arr.push(n)});
+        attackData.data=arr;
+        (source==="attackSystemDataSource")?filter1=attackData:filter=attackData;
+        (relationship.css("display")==="block")?attackRelationship(attackData):attackRelationshipPie(attackData);
+        $("#"+filterName).addClass("active").siblings("table").removeClass("active");
+        addData(filterName);
+        $("#"+href+" p").text(value).parent().addClass("active");
+    });
+    $(".filter-conditions ul li i").click(function(){
+        attackData=tab(source);
+        var li=$(this).parent().siblings().has("i"),
+            lArr=[],
+            arr=[];
+        $.each(li,function(i,n){
+            (n.className==="active")&& lArr.push({name:n.id,value:n.childNodes[1].innerHTML});
+        });
+        if(lArr.length==2){
+            $.each(attackData.data,function(i,n){
+                (n[lArr[0]["name"]]===lArr[0]["value"]&&n[lArr[0]["name"]]===lArr[0]["value"])&& arr.push(n);
+            });
+            attackData.data=arr;
+        }else if(lArr.length==1){
+            $.each(attackData.data,function(i,n){
+                (n[lArr[0]["name"]]===lArr[0]["value"])&& arr.push(n);
+            });
+            attackData.data=arr;
+        }
+        (relationship.css("display")==="block")?attackRelationship(attackData):attackRelationshipPie(attackData);
+        $(this).parent().removeClass("active");
+        (source==="attackSystemDataSource")?filter1=attackData:filter=attackData;
+        addData(filterName);
+    })
+}
+
+function DelTree(start,end,id,custom,index){
+    $.each(custom, function (i, n) {
+        if (n.id == selectInput[index].value) {
+            for (var j = i; j < custom.length; j++) {
+                custom[j] = custom[j + 1];
+            }
+        }
+    });
+    custom.pop();
+    for (var i = start; i < end; i++) {
+        selectInput[i].value = ""
+    }
+    if(start===4){
+        selectTextarea[1].value = "";
+        selectTextarea[2].value = "";
+    }else if(start===0){
+        selectTextarea[0].value = "";
+    }
+    $.fn.zTree.init($(id), setting, custom);
+}
+
+function getFile(obj,inputName){
+    var file_name = $(obj).val();
+    $("input[name='"+inputName+"']").val(file_name);
 }
