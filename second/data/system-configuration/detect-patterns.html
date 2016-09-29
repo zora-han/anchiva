@@ -570,7 +570,9 @@
             });
         }
         serverGroupAdd=[];
-        input[0].value="";
+        $.each(input,function(i,n){
+            n.value=""
+        });
         $("#serverGroupAdd tbody").empty();
         $("#detect-patterns-details").addClass("active").siblings("div").removeClass("active");
         addData("serverGroup");
