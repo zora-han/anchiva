@@ -103,8 +103,8 @@
       <file leaf-file-name="radius.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/access-management/radius.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.8">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state vertical-scroll-proportion="10.177778">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -123,8 +123,8 @@
       <file leaf-file-name="detect-patterns.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/system-configuration/detect-patterns.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7128146">
-              <caret line="574" column="11" selection-start-line="574" selection-start-column="11" selection-end-line="574" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.62929064">
+              <caret line="719" column="17" selection-start-line="719" selection-start-column="17" selection-end-line="719" selection-end-column="17" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -149,12 +149,11 @@
                 <element signature="e#18296#18970#0" expanded="false" />
                 <element signature="e#19067#20505#0" expanded="false" />
                 <element signature="e#20607#22205#0" expanded="false" />
+                <element signature="e#22301#24377#0" expanded="false" />
                 <element signature="e#24445#24509#0" expanded="false" />
                 <element signature="e#24533#24597#0" expanded="false" />
                 <element signature="e#24625#28075#0" expanded="false" />
-                <element signature="e#28150#30294#0" expanded="false" />
-                <element signature="e#28641#30041#0" expanded="false" />
-                <element signature="e#30378#30975#0" expanded="false" />
+                <element signature="e#30507#31104#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -254,8 +253,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="width" value="1628" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -440,10 +440,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="0" width="1628" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16066998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.053125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -488,7 +488,7 @@
           <option name="timeStamp" value="224" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="225" />
+      <option name="time" value="226" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1199,14 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/access-management/access-control.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/access-management/website-administrator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1487,16 +1479,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/access-management/radius.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.8">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state vertical-scroll-proportion="10.177778">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access-management/access-control.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/system-configuration/detect-patterns.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7128146">
-          <caret line="574" column="11" selection-start-line="574" selection-start-column="11" selection-end-line="574" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.62929064">
+          <caret line="719" column="17" selection-start-line="719" selection-start-column="17" selection-end-line="719" selection-end-column="17" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -1521,12 +1521,11 @@
             <element signature="e#18296#18970#0" expanded="false" />
             <element signature="e#19067#20505#0" expanded="false" />
             <element signature="e#20607#22205#0" expanded="false" />
+            <element signature="e#22301#24377#0" expanded="false" />
             <element signature="e#24445#24509#0" expanded="false" />
             <element signature="e#24533#24597#0" expanded="false" />
             <element signature="e#24625#28075#0" expanded="false" />
-            <element signature="e#28150#30294#0" expanded="false" />
-            <element signature="e#28641#30041#0" expanded="false" />
-            <element signature="e#30378#30975#0" expanded="false" />
+            <element signature="e#30507#31104#0" expanded="false" />
           </folding>
         </state>
       </provider>

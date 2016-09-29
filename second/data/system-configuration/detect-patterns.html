@@ -678,7 +678,8 @@
             selAll=$("#server-group-add thead input[type=checkbox]"),
             addId=true,
             popMark=false,
-            tipMark=true;
+            tipMark=true,
+            reMark=true;
         if(selAll[0].checked===true){
             serverGroupAdd=[];
             selAll[0].checked=false;
@@ -698,6 +699,8 @@
                             });
                             m.service.serviceIP.pop();
                             m.service.note.pop();
+                            tipMark=true;
+                            reMark=false;
                         }
                         if(m.service.serviceIP.length==0){
                             for(var a=k;a<serverGroupAdd.length-1;a++){
@@ -713,10 +716,10 @@
                         }
                     });
                     popMark && serverGroupAdd.pop();
-                    tipMark=false;
+                    reMark && (tipMark=false);
                 }
             });
-            tipMark && tipWarning(tipC, tip1, tipP, "请选择要删除的选项！");
+            (tipMark==false)&& tipWarning(tipC, tip1, tipP, "请选择要删除的选项！");
         }
         tipMark && addData("serverGroupAdd");
     });
