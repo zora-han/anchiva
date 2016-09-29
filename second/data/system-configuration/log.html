@@ -1,0 +1,257 @@
+<!--9.6系统配置-日志-->
+<div id="log" class="page-content-wrapper log">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#system-log" aria-controls="home" role="tab" data-toggle="tab">系统日志设置</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#Syslog" aria-controls="home" role="tab" data-toggle="tab">Syslog设置</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--系统日志设置-->
+            <div role="tabpanel" class="tab-pane active" id="system-log">
+                <div class="portlet">
+                    <form>
+                        <div class="portlet-body portlet-body-default">
+                            <div class="system-configuration-row">
+                                <p class="current">日志管理</p>
+                                <div class="form-group">
+                                    <label>最大保存天数</label>
+                                    <input />
+                                    <span>（30-365）</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>最大磁盘空间</label>
+                                    <input />
+                                    <span>（5000-35000）MB</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>最大使用率</label>
+                                    <input />
+                                    <span>%</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>过滤关键字</label>
+                                    <input />
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p class="current">启用系统日志</p>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>攻击事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>病毒事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>访问事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>爬虫事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>管理事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>系统事件</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--Syslog设置-->
+            <div role="tabpanel" class="tab-pane" id="Syslog">
+                <div class="portlet">
+                    <form>
+                        <div class="portlet-body portlet-body-default">
+                            <div class="system-configuration-row">
+                                <p><input type="checkbox"/><span>启用Syslog日志</span></p>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>攻击事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>病毒事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>访问事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>爬虫事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>管理事件</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox"> <span>系统事件</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="system-configuration-row">
+                                <p class="current">启用系统日志</p>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <label>IP地址</label>
+                                        <input />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>端口</label>
+                                        <input />
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline log-select">
+                                    <div class="form-group">
+                                        <label>级别</label>
+                                        <select>
+                                            <option value="0">紧急事件</option>
+                                            <option value="1">警铃</option>
+                                            <option value="2">关键</option>
+                                            <option value="3">错误</option>
+                                            <option value="4">警告</option>
+                                            <option value="5">提示</option>
+                                            <option value="6">消息</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>指定日志方式</label>
+                                        <select>
+                                            <option value="0">本地0</option>
+                                            <option value="1">本地1</option>
+                                            <option value="2">本地2</option>
+                                            <option value="3">本地3</option>
+                                            <option value="4">本地4</option>
+                                            <option value="5">本地5</option>
+                                            <option value="6">本地6</option>
+                                            <option value="7">本地7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <label>IP地址</label>
+                                        <input />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>端口</label>
+                                        <input />
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline log-select">
+                                    <div class="form-group">
+                                        <label>级别</label>
+                                        <select>
+                                            <option value="0">紧急事件</option>
+                                            <option value="1">警铃</option>
+                                            <option value="2">关键</option>
+                                            <option value="3">错误</option>
+                                            <option value="4">警告</option>
+                                            <option value="5">提示</option>
+                                            <option value="6">消息</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>指定日志方式</label>
+                                        <select>
+                                            <option value="0">本地0</option>
+                                            <option value="1">本地1</option>
+                                            <option value="2">本地2</option>
+                                            <option value="3">本地3</option>
+                                            <option value="4">本地4</option>
+                                            <option value="5">本地5</option>
+                                            <option value="6">本地6</option>
+                                            <option value="7">本地7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <label>IP地址</label>
+                                        <input />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>端口</label>
+                                        <input />
+                                    </div>
+                                </div>
+                                <div class="form-group form-inline log-select">
+                                    <div class="form-group">
+                                        <label>级别</label>
+                                        <select>
+                                            <option value="0">紧急事件</option>
+                                            <option value="1">警铃</option>
+                                            <option value="2">关键</option>
+                                            <option value="3">错误</option>
+                                            <option value="4">警告</option>
+                                            <option value="5">提示</option>
+                                            <option value="6">消息</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>指定日志方式</label>
+                                        <select>
+                                            <option value="0">本地0</option>
+                                            <option value="1">本地1</option>
+                                            <option value="2">本地2</option>
+                                            <option value="3">本地3</option>
+                                            <option value="4">本地4</option>
+                                            <option value="5">本地5</option>
+                                            <option value="6">本地6</option>
+                                            <option value="7">本地7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                            <button>取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".nav-tabs li a").click(function () {
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+</script>
