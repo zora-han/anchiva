@@ -21,6 +21,7 @@ input[type=checkbox]{
     height: 18px;
     vertical-align: text-bottom;
 }
+input[type=radio]{  vertical-align: middle;  }
 
 /*按钮样式*/
 .btn-normal{
@@ -79,6 +80,11 @@ input[type=checkbox]{
     vertical-align: bottom;
 }
 .p-title img{margin-left: 30px}
+.p-title .btn-normal{
+    height: 25px;
+    margin-left: 10px;
+}
+
 
 /*模拟文件导入*/
 .simulation-upload{position: relative}
@@ -847,6 +853,7 @@ p.pull-right select,li.pull-right select{margin:3px}
 .host .system-configuration-row .form-inline input{width: 70px}
 
 /*7.3侦测模式*/
+.detect td[data-id]{cursor: pointer}
 .detect p,.detect p span{margin-left: 40px}
 .detect .portlet-body-default{margin-bottom: 0}
 .detect .portlet-wrapper>.tab-content{display: none}

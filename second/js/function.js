@@ -256,9 +256,9 @@ var filter,filter1,filter2,filter3={},serverGroupAdd=[],
     loadBalancing=[
         {id:0,name:"fontawesome.dashgame.com",agentIP:"192.168.1.5:80",service:"test1",algorithm:"IP哈希"},
         {id:1,name:"fontawesome.dashgame.com",agentIP:"172.168.1.5:80",service:"test2",algorithm:"轮询"},
-        {id:2,name:"fontawesome.dashgame.com",agentIP:"192.168.1.1:80",service:"test3",algorithm:"最小连接数"},
+        {id:2,name:"fontawesome.dashgame.com",agentIP:"192.168.1.1:80",service:"test3",algorithm:"最少连接数"},
         {id:3,name:"fontawesome.dashgame.com",agentIP:"192.136.1.1:80",service:"test4",algorithm:"轮询"},
-        {id:4,name:"fontawesome.dashgame.com",agentIP:"192.168.10.1:80",service:"test5",algorithm:"最小连接数"}
+        {id:4,name:"fontawesome.dashgame.com",agentIP:"192.168.10.1:80",service:"test5",algorithm:"最少连接数"}
     ],
     //服务器组
     serverGroup=[

@@ -19,10 +19,10 @@
                         <p>选择一个设备监控模式：<span>（改变模式需要重启设备）</span></p>
                         <div class="detect-row">
                             <label>
-                                <input type="checkbox"> 旁路监听模式: 离线部署模式，监测并报告病毒。
+                                <input type="radio" name="model" checked> 旁路监听模式: 离线部署模式，监测并报告病毒。
                             </label>
                             <label>
-                                <input type="checkbox"> 透明/反向代理模式: 在线部署模式，允许Anchiva WAF主动阻止病毒。
+                                <input type="radio" name="model"> 透明/反向代理模式: 在线部署模式，允许Anchiva WAF主动阻止病毒。
                             </label>
                         </div>
                         <div class="detect-row">
@@ -52,6 +52,7 @@
                             <select>
                                 <option value="0"></option>
                             </select>
+                            <button class="btn-normal">应用</button>
                         </p>
                         <ul class="bt-bars pull-left">
                             <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
@@ -180,7 +181,7 @@
                         <label>负载均衡算法</label>
                         <select id="algorithm" class="select-add">
                             <option value="0">IP哈希</option>
-                            <option value="1">最小连接数</option>
+                            <option value="1">最少连接数</option>
                             <option value="2">轮询</option>
                         </select>
                     </div>
@@ -530,19 +531,30 @@
     //服务器组配置应用键
     $("#server-group-add .button-group button:first-child").click(function(){
         var mark=true,input=$("#"+$(this).parents(".detect-add ")[0].id+" input:not([type='checkbox'])");
-        input[0].value="";
         if(input[0].getAttribute("disabled")==="true"){     //单个编辑的情况下
             input[0].removeAttribute("disabled");
-            $.each(serverGroup,function(i,n){
-                if(n.id===serverGroupAdd[0].id){
-                    $.each(serverGroupAdd[0].service.serviceIP,function(j,m){
-                        (n.service.serviceIP.indexOf(m)==-1) && n.service.serviceIP.push(m)
-                    });
-                    $.each(serverGroupAdd[0].service.note,function(p,q){
-                        (n.service.note.indexOf(q)==-1) && n.service.serviceIP.push(q)
-                    })
-                }
-            });
+            if(serverGroupAdd.length==0){
+                $.each(serverGroup,function(i,n){
+                    if(n.service.name===input[0].value){
+                        for(var k=i;k<serverGroup.length-1;k++){
+                            serverGroup[k]=serverGroup[k+1];
+                            serverGroup[k].id--;
+                        }
+                    }
+                });
+                serverGroup.pop();
+            }else{
+                $.each(serverGroup,function(i,n){
+                    if(n.id===serverGroupAdd[0].id){
+                        $.each(serverGroupAdd[0].service.serviceIP,function(j,m){
+                            (n.service.serviceIP.indexOf(m)==-1) && n.service.serviceIP.push(m)
+                        });
+                        $.each(serverGroupAdd[0].service.note,function(p,q){
+                            (n.service.note.indexOf(q)==-1) && n.service.serviceIP.push(q)
+                        })
+                    }
+                });
+            }
         }else{                                              //添加的情况下
             $.each(serverGroupAdd,function(i,n){
                 $.each(serverGroup,function(j,m){
@@ -558,6 +570,7 @@
             });
         }
         serverGroupAdd=[];
+        input[0].value="";
         $("#serverGroupAdd tbody").empty();
         $("#detect-patterns-details").addClass("active").siblings("div").removeClass("active");
         addData("serverGroup");
@@ -698,13 +711,6 @@
                         }
                     });
                     popMark && serverGroupAdd.pop();
-                }
-            });
-        }
-        //没有选择任何选项就点删除时，给出提示
-        if(selAll[0].checked===false){
-            $.each(chbs,function(i,n){
-                if(n.checked==true){
                     tipMark=false;
                 }
             });
