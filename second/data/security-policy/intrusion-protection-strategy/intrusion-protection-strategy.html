@@ -1,0 +1,109 @@
+<!--5.2.安全策略-入侵防护策略-->
+<div id="intrusion-protection-strategy" class="page-content-wrapper content-wrapper">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#intrusion-protection" aria-controls="home" role="tab" data-toggle="tab">入侵防护策略</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#characteristics" aria-controls="home" role="tab" data-toggle="tab">特征库</a>
+                        <span></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#exceptions-host" aria-controls="home" role="tab" data-toggle="tab">例外主机</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content tip-content">
+            <!--入侵防护策略-->
+            <div role="tabpanel" class="tab-pane active" id="intrusion-protection"></div>
+            <!--特征库-->
+            <div role="tabpanel" class="tab-pane" id="characteristics"></div>
+            <!--特例主机-->
+            <div role="tabpanel" class="tab-pane" id="exceptions-host"></div>
+            <!--提示框-->
+            <div class="tip-container">
+                <div class="tip">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img/>
+                    <p></p>
+                    <div class="tip-footer">
+                        <button type="button" class="btn">确定</button>
+                        <button type="button" class="btn">取消</button>
+                    </div>
+                </div>
+                <div class="tip1">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img/>
+                    <p></p>
+                    <div class="tip-footer">
+                        <button type="button" class="btn">知道了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tipC = $(".tip-container"),//提示框
+            tip = $(".tip"),
+            tip1 = $(".tip1");
+    position();
+    //加载入侵防护策略页
+    $("#intrusion-protection").load("data/security-policy/intrusion-protection-strategy/intrusion-protection.html");
+    //设置主内容框的高度
+    heightSet();
+    //页签切换
+    $(".nav-tabs li a").click(function () {
+        var href = $(this)[0].hash;
+        if (href === "#exceptions-host") {//例外主机
+            $(href).load("data/security-policy/intrusion-protection-strategy/exceptions-host.html")
+        } else if (href === "#intrusion-protection") {//入侵防护策略
+            $(href).load("data/security-policy/intrusion-protection-strategy/intrusion-protection.html")
+        }else if (href === "#characteristics") {//特征库
+            $(href).load("data/security-policy/intrusion-protection-strategy/characteristics.html")
+        }
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+    //提示面板取消和关闭按键
+    $(".tip-container .close,.tip-footer button").click(function () { tipC.hide(); });
+    //提示面板确认按键
+    $(".tip .tip-footer button:first-child").click(function () {
+        var text,li=$(".bt-bars li:last-child");
+        if (li.hasClass("active")) {
+            $.each(chb, function () {
+                text = $(this).parent().siblings("[data-name='name']").text();
+                if($("#intrusion-protection").hasClass("active")){
+                    del(text,intrusion,"name","intrusion");
+                }else if($("#exceptions-host").hasClass("active")){
+                    del(text,exceptions,"featureID","exceptions");
+                    if($("#filter3").hasClass("active")){
+                        del(text,exceptions,"featureID","filter3");
+                    }
+                }
+            });
+            li.removeClass("active");
+        } else {
+            text = child.parents("tr").children("[data-name='name']").text();
+            if($("#intrusion-protection").hasClass("active")){
+                del(text,intrusion,"name","intrusion");
+            }else if($("#exceptions-host").hasClass("active")){
+                del(text,exceptions,"featureID","exceptions");
+                if($("#filter3").hasClass("active")){
+                    del(text,filter3,"featureID","filter3");
+                }
+            }
+        }
+    });
+</script>
