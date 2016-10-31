@@ -1,0 +1,241 @@
+<!--3.3.状态监控-WAF-->
+<div id="WAF" class="page-content-wrapper analysis">
+    <div class="page-content condition-wrapper active" id="WAF-normal">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#attack-statistics" aria-controls="home" role="tab" data-toggle="tab">攻击统计</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#web-threats" aria-controls="home" role="tab" data-toggle="tab">WEB威胁</a>
+                        <span></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#web-caching" aria-controls="home" role="tab" data-toggle="tab">WEB缓存</a>
+                        <span></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#real-time-monitoring" aria-controls="home" role="tab" data-toggle="tab">实时监测</a>
+                        <span></span>
+                    </li>
+                    <li class="pull-right">
+                        <form>
+                            <span>查询区间</span>
+                            <select id="selectEd3">
+                                <option value="">请选择</option>
+                                <option value="300000">5分钟</option>
+                                <option value="3600000">1小时</option>
+                                <option value="86400000">1天</option>
+                                <option value="2592000000">1个月</option>
+                            </select>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--攻击统计-->
+            <div role="tabpanel" class="tab-pane active" id="attack-statistics"></div>
+            <!--WEB威胁-->
+            <div role="tabpanel" class="tab-pane" id="web-threats"></div>
+            <!--WEB缓存-->
+            <div role="tabpanel" class="tab-pane" id="web-caching"></div>
+            <!--实时监测-->
+            <div role="tabpanel" class="tab-pane" id="real-time-monitoring"></div>
+        </div>
+    </div>
+    <div class="page-content condition-wrapper" id="WAF-attack-system-analysis">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a>攻击统计分析</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--第一行 图表-->
+            <div class="portlet tab-pane-attack" >
+                <div class="portlet-body filter-conditions">
+                    <div id="attack-system-analysis-relationship" class="two-canvas active"></div>
+                    <div id="attack-system-analysis-relationship-pie" class="two-canvas "></div>
+                    <ul>
+                        <li class="active">
+                            <p></p>
+                        </li>
+                        <li id="source">
+                            <p></p>
+                            <i class="icon-close"></i>
+                        </li>
+                        <li id="type">
+                            <p>b</p>
+                            <i class="icon-close"></i>
+                        </li>
+                        <li id="name">
+                            <p>c</p>
+                            <i class="icon-close"></i>
+                        </li>
+                    </ul>
+                    <button class="btn-left" disabled="disabled">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-right">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!--第二行 攻击系统数据详情-->
+            <div class="portlet bordered" >
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="caption-subject bold uppercase">攻击系统数据详情</span>
+                    </div>
+                </div>
+                <table class="portlet-table active " id="attackSystemData">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="attackSystemDataAttack">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="attackSystemDataSource">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="filter">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击目标</td>
+                        <td>攻击源</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="filter1">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击目标</td>
+                        <td>攻击源</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#attack-statistics").load("data/condition-monitoring/WAF/attack-statistics.html");
+    //设置主内容框的高度
+    heightSet();
+    //页签切换
+    $(".nav-tabs li a").click(function () {
+        var href = $(this)[0].hash;
+        select3.val("");//清空选择框
+        if(href==="#attack-statistics"){                                         //攻击统计
+            $(href).load("data/condition-monitoring/WAF/attack-statistics.html");
+        }else if(href==="#web-threats"){                                         //WEB威胁
+            $(href).load("data/condition-monitoring/WAF/web-threats.html");
+        }else if(href==="#web-caching"){                                         //WEB缓存
+            $(href).load("data/condition-monitoring/WAF/web-caching.html");
+        }else if(href==="#real-time-monitoring"){                                         //实时监测
+            $(href).load("data/condition-monitoring/WAF/real-time-monitoring.html");
+        }
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+</script>

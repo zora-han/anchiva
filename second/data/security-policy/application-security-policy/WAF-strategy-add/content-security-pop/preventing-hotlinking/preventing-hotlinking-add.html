@@ -1,0 +1,120 @@
+<!--防盗链配置添加页-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span>防盗链配置</span>
+        <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="background-wapper">
+        <div class="panel-body label-center">
+            <div class="form-inline current">
+                <div class="form-group"><label>名称</label><input type="text" class="white"/></div>
+                <div class="form-group"><label>防盗链域名</label><input type="text" class="white"/><span>（支持通用域名，例如：*.baidu.com，不能带有/）</span></div>
+            </div>
+            <div class="form-inline row">
+                <div class="form-group col-xs-12" >
+                    <label class="label-blue">URL</label>
+                    <textarea class="white"></textarea>
+                </div>
+            </div>
+            <div class="form-inline row">
+                <div class="form-group col-xs-7">
+                    <label class="label-blue">盗链白名单</label>
+                    <textarea class="white"></textarea>
+                </div>
+                <div class="form-group col-xs-5">
+                    <label class="label-blue">文件类型白名单</label>
+                    <div class="checkbox-content white">
+                        <span>以下文件类型允许盗链</span>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>html</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>htm</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>shtml</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>css</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>xml</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>jpeg</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>jpg</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>png</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>tif</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>tiff</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>wbmp</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>ico</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>jng</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>bmp</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mid</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>midi</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mp3</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>3gpp</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>3gp</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mpeg</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mpg</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mov</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>mng</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>asx</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>asf</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>wmv</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>avi</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>swf</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>doc</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>xls</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>rtf</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>ppt</label></div>
+                        </div>
+                        <div class="form-inline row">
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>rpm</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>tcl</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>img</label></div>
+                            <div class="form-group col-xs-3"><label><input type="checkbox"/>msi</label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tip-footer">
+            <button type="button">确定</button>
+            <button type="button" class="white">添加下一个</button>
+        </div>
+    </div>
+</div>
+<script>
+    var tipC = $(".tip-container"),
+            tipC2 = $(".tip-container2"),
+            tip1 = $(".tip1"),
+            tipP = $(".tip-container p");
+    pop1Height();
+    $(".pop1 .tip-footer button:first-child").click(function(){
+        $(".pop").addClass("active")
+                .load("data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking/preventing-hotlinking.html")
+                .siblings("div").removeClass("active");
+    });
+    $(".pop1 .tip-footer button:last-child").click(function(){
+        var input=$(".pop1 input[type='text']"),
+                textarea=$("textarea"),
+                checkbox=$(".pop1 input[type='checkbox']:checked");
+        $.each(input,function(i,n){
+            n.value="";
+            textarea[i].value="";
+        });
+        $.each(checkbox,function(i,n){
+            n.checked=false;
+        });
+    });
+    $(".tip-container2 .pop1").delegate(".close","click",function () {
+        tipC2.hide();
+    });
+</script>

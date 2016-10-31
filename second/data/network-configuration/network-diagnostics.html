@@ -1,0 +1,86 @@
+<!--6.10网络配置-网络诊断-->
+<div id="network-diagnostics" class="page-content-wrapper diagnostics">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a>网络诊断</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content active">
+            <form>
+                <div class="portlet-body portlet-body-default portlet-body-default-none">
+                    <p class="p-title">
+                        <i></i>
+                        <span>详情</span>
+                    </p>
+                    <div class="system-configuration-row">
+                        <div class="form-group">
+                            <label>Ping</label>
+                            <input />
+                            <button class="btn-normal" type="button">执行</button>
+                        </div>
+                        <div class="form-group">
+                            <label>TraceRoute</label>
+                            <input />
+                            <button class="btn-normal" type="button">执行</button>
+                        </div>
+                        <div class="form-group">
+                            <label>Nslookup</label>
+                            <input />
+                            <button class="btn-normal" type="button">执行</button>
+                        </div>
+                        <div class="form-group">
+                            <label>TCPDump</label>
+                            数据包接口
+                            <select>
+                                <option value="0"></option>
+                            </select>
+                            <div class="select-group">
+                                协议
+                                <select>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <div class="form-group">
+                                <label>源IP地址</label>
+                                <input />
+                            </div>
+                            <div class="form-group">
+                                <label>原端口</label>
+                                <input />
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <div class="form-group">
+                                <label>目的IP地址</label>
+                                <input />
+                            </div>
+                            <div class="form-group">
+                                <label>目的端口</label>
+                                <input />
+                            </div>
+                            <button class="btn-normal" type="button">执行</button>
+                            <button class="btn-normal" type="button">停止</button>
+                            <button class="btn-normal" type="button">导出</button>
+                        </div>
+                        <div class="form-group">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button>应用</button>
+                    <button>取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

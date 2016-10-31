@@ -1,0 +1,1035 @@
+/*****************全局样式******************/
+body{font-family:"Microsoft YaHei" !important}
+a{color:#333}
+input,textarea,select{
+    background-color: #fafafa;
+    border-radius: 4px;
+    border: 1px solid #BDBDBD;
+}
+input,select{height:30px;}
+select{
+    padding:0 10px;
+}
+ul{list-style: none}
+textarea{resize: none}
+button{border-radius: 4px}
+img{vertical-align:middle}
+button[disabled]{cursor: not-allowed}
+a:focus, a:hover{text-decoration: none}
+input[type=checkbox]{
+    width: 18px;
+    height: 18px;
+    vertical-align: text-bottom;
+}
+input[type=radio]{  vertical-align: middle;  }
+iframe{
+    width: 100%;
+}
+
+/*按钮样式*/
+.btn-normal{
+    background-color: #A1BDEC;
+    border:1px solid #A1BDEC;
+    padding:1px 10px;
+    color:#fff;
+}
+.btn-normal:hover{
+    background-color:#366ED2;
+    border:1px solid #366ED2;
+}
+.f-btn-blue{
+    padding:5px;
+    width:100px;
+    border:none;
+    color:#fff;
+    background-color:#3176EC
+}
+.button-group{
+    margin:30px 10px 0 0;
+    text-align:right ;
+}
+.button-group button,.waf-add table button{
+    width:100px;
+    padding:2px 6px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border:1px solid #BDBDBD;
+    background-color: #fff;
+}
+.waf-add table button{
+    background-color: #fafafa;
+}
+
+/*在一行内的表单*/
+.form-inline{font-size: 14px}
+.form-inline label{margin-right:12px}
+.form-inline .form-group{margin-right: 25px}
+.form-inline .form-group select{
+    height:28px;
+    border-radius:4px;
+    border:1px solid #BDBDBD;
+}
+.form-group input[disabled],textarea[disabled]{cursor: not-allowed}
+
+/*带蓝色边框的标题*/
+.p-title,.patterns-details .p-title{
+    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.p-title i{
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background-color: #366ED2;
+    vertical-align: bottom;
+}
+.p-title img{margin-left: 30px}
+.p-title .btn-normal img{margin:0 10px 5px 0}
+.p-title button.btn-normal{
+    height: 25px;
+    margin:0 0 0 10px;
+}
+
+/*模拟文件导入*/
+.simulation-upload{position: relative}
+.simulation-upload .upload-file{
+    position: absolute;
+    left: 258px;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 54px;
+    height: 28px;
+    overflow: hidden;
+}
+
+/*字体颜色*/
+.green{color: #00B83F}
+.red{color:#9d1611}
+.text-blue{color:#006dcc}
+
+/*****************header样式******************/
+/*1.logo*/
+.page-logo a{margin-top:11px}
+
+/*2.框收缩按钮,响应式按钮*/
+.page-header.navbar .menu-toggler.sidebar-toggler,.menu-toggler.responsive-toggler{
+    margin-top:20px;
+    text-align:center;
+    font-size:24px;
+    color:#313F79
+}
+
+/*3.右侧导航栏时间显示框*/
+.clock{
+    background-color:#3971D1;
+    color:#fff;
+    border:none;
+    text-align: center;
+}
+
+/*4.右侧导航栏用户信息显示框*/
+.user li{
+    background-color:#B4D0FF;
+    border-top:1px solid #fff;
+    border-left:2px solid #B4D0FF;
+}
+.user li:hover{border-left:2px solid #4273CD}
+.user li:hover>a{background-color: #B4D0FF}
+
+/***************page-container样式*********************/
+/*before和after*/
+.portlet:before,.tab-content:before,.background-wapper:before{
+    display: table;
+    content: "";
+}
+.dashboard-stat:after,.progress-bar-group li:after,.bt-bars:after,.table-row .portlet-title:after,.progress-bar-group li:after,.portlet-title:after,.tip-container2 .pop .portlet-title .caption:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*1.左侧导航栏*/
+.fixed{position:fixed}
+.page-sidebar-menu-closed.page-sidebar-menu>li>a{background-color: #364150}
+
+/*2.右侧主内容*/
+.portlet-body,.portlet-table{background-color: #fff;}
+.portlet-body-chara{background-color: rgba(0,0,0,0)}
+.portlet-body-default{
+    border:1px solid #ddd;
+    margin:10px;
+    padding:10px;
+}
+.page-container .right-content .portlet-body-default-none{  margin-bottom: 0;}
+.page-content-wrapper .portlet-wrapper{padding:0}
+.page-content-wrapper .page-content{
+    height:100%;
+    overflow-y: auto;
+}
+.portlet-wrapper .tab-content{
+    height:100%;
+    overflow-y: auto;
+    background-color: #F4F4F4;
+}
+.condition-wrapper .tab-content>.tab-pane,.security-wrapper .tab-content>.tab-pane{
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.portlet-wrapper .portlet{margin-bottom: 0}
+.portlet-wrapper .portlet .portlet-title{border:none}
+.portlet-wrapper .portlet>.portlet-title>.caption{padding:12px 0 15px 10px}
+.portlet-wrapper .portlet>.portlet-title>.caption-none{padding-bottom:0}
+
+/*2.1页签*/
+.tab-border{border-bottom:4px solid #BDD1F2}
+.tab-border .portlet-title .nav-tabs{margin-left:10px}
+.portlet>.portlet-title>.nav-tabs>li>a{
+    width:160px;
+    padding: 4px 0;
+    font-size: 16px;
+    margin-right:1px;
+    text-align: center;
+}
+.tab-border .nav-tabs .active .selected{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 0;
+    border:none;
+    height: 4px;
+    width: 160px;
+    display: block;
+    background-color: #0F4BB2;
+}
+
+/*2.2dashboard-stat*/
+/*2.2.1蓝色边框*/
+.dashboard-stat{
+    position:relative;
+    margin-bottom: 25px;
+    background-color:#F5F5F5;
+    border-left:10px solid #7BA7DA;
+}
+.dashboard-stat .visual>div,.dashboard-stat .visual{
+    height:175px;
+    margin:0;
+}
+/*2.2.2灰色边角*/
+.dashboard-stat.waf{
+    border:1px solid #ddd;
+    border-radius: 0;
+}
+.angle{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #E1E1E1;
+}
+
+/*2.3标题样式*/
+.caption{width:100%}
+.caption>span{
+    float:left;
+    padding:10px;
+}
+
+/*2.4表格样式*/
+/*2.4.1独立表格*/
+.portlet-table{
+    width:100%;
+    display: none;
+    text-align: center;
+    border-collapse:collapse;
+}
+.portlet-table.active{display:table}
+.portlet-table td{
+    height:21px;
+    padding: 0 2px;
+    line-height:21px;
+    border:1px solid #ddd;
+}
+.portlet-table thead td{
+    border:none;
+    background-color:#D8E8FF;
+}
+.portlet-table tfoot ul,.table-footer{
+    margin:5px auto;
+    display:inline-block;
+}
+.portlet-table tfoot li,.table-footer li{
+    float:left;
+    margin:0 10px;
+}
+.portlet-table tbody td img{cursor: pointer}
+.act{
+    color:#BAC8FC;
+    text-decoration: underline;
+}
+/*2.4.2图表旁表格*/
+.portlet-body .portlet-table{
+    text-align: center;
+    margin-top: 25px;
+    margin-right:5px;
+    border-collapse:collapse;
+}
+/*2.4.3portlet-wrapper下的表格*/
+.portlet-wrapper .portlet-table{
+    width:99%;
+    margin:10px;
+}
+.portlet-wrapper .portlet-table thead td{
+    background-color:#F9F9FA;
+    border: 1px solid #CBCBCB;
+}
+.portlet-wrapper .portlet-table tbody td{height:28px}
+
+/*2.5.echarts绘图框大小*/
+.canvas{height:292px}
+.two-canvas{height:438px}
+.one-canvas{height:300px}
+
+/*2.6模拟按钮（增、删、改、查）*/
+.bt-bars{
+    padding:0;
+    height:30px;
+    font-size: 14px;
+    margin:0 40px 0 0;
+}
+.bt-bars li {
+    float: left;
+    width: 110px;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #A1BDEC;
+}
+.bt-bars li a{color:#fff}
+.bt-bars li:hover{background-color: #3B70D5}
+.bt-bars li img{
+    width:17px;
+    height:17px;
+    margin-right:5px;
+}
+
+/*2.7提示框*/
+.tip-content,.tip-container2{
+    position: relative;
+}
+.tip-container,.tip-container2{
+    background-color: rgba(0,0,0,.4);
+    top:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.tip-container p{
+    padding: 10px;
+    margin: 30px auto;
+    text-align: center;
+}
+.tip-container span{padding:12px}
+.tip,.tip1{
+    width:322px;
+    height:180px;
+    background-color:#fff;
+    border-radius: 4px;
+    position: absolute;
+    border:1px solid #ddd;
+    display: none;
+}
+.tip button{margin-top: 5px}
+.tip1 img{
+    display: block;
+    margin:27px auto 10px;
+}
+.tip1 p{margin: 5px auto}
+.tip-footer{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tip-footer button{
+    width:100px;
+    background-color: #f8f8f8;
+    border: 1px solid #EAEAEA;
+}
+.tip-footer button:first-child{
+    margin-right: 18px;
+    color: #ffffff;
+    background-color: #2596f2;
+    border: 1px solid #2596f2;
+}
+.tip-container2 .pop .portlet-title{  margin-left: 10px;  }
+.tip-container2 .panel-default>.panel-heading{
+    background-color: #F2F6FC;
+    border-color: #BFD7FF;
+    font-size: 16px;
+}
+.tip-container2 .panel-default>.panel-heading .close{
+    font-size: 25px;
+}
+.tip-container2 .pop .portlet-title .caption .bt-bars,.tip-container2 .pop .portlet-title .caption .form-inline{  margin:0;  }
+.tip-container2 .pop .portlet-title .caption .form-group{margin-right: 10px}
+.tip-container2 .pop .portlet-title .caption .form-inline button{
+    width: 35px;
+    padding: 2px 5px;
+}
+.tip-container2 .tip-footer{
+    text-align: right;
+    margin: 0;
+    padding-bottom:20px;
+    padding-right:20px;
+}
+.tip-container2 .pop .portlet-table td{  padding: 0;}
+.tip-container2 .pop .table-content{
+    overflow-y: auto;
+    margin-top: 10px;
+}
+.tip-container2 .pop .table-content table{
+     margin-top: 0;
+ }
+.tip-container2 .pop .panel{  margin-bottom: 0;  }
+.tip-container2 .pop .panel-body .form-inline label{
+    width: 150px;
+    text-align: right;
+}
+.tip-container2 .pop1 .panel-body .form-inline.current{
+    margin-left: 48px;
+}
+.tip-container2 .pop .panel-body .form-group span{
+    display: inline-block;
+    width: 140px;
+    margin-left: 5px;
+}
+.tip-container2 .pop1 .panel-body .form-group img{
+    margin-left: 5px;
+}
+.tip-container2 .pop .panel-body .p-title{
+    font-weight: bold;
+}
+.tip-container2>div{
+    display: none;
+}
+.tip-container2>div.active{
+    display: block;
+}
+.tip-container2 .add-content{
+    height: 250px;
+    overflow-y: auto;
+}
+.tip-container2 .background-wapper{
+    background-color: #fafafa;
+}
+.tip-container2 .background-wapper .body-white.panel-body{
+    background-color: #fff;
+    border: 1px solid #bdbdbd;
+}
+.tip-container2 .panel-body{
+    padding: 0;
+    margin:15px;
+}
+.tip-container2 .white{background-color: #fff}
+.tip-container2 .form-wapper{
+    background-color: #fff;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 10px;
+}
+.tip-container2 .add-check .form-inline{
+    position: relative;
+}
+.tip-container2 .add-check .form-inline .tip-p{
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    border: 1px solid #2596f2;
+    background-color: #fff;
+    padding: 5px;
+    z-index: 1;
+    word-break:break-all;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #2596f2;
+}
+.tip-container2 .add-check .form-inline .tip-p.fields-tip{
+    left: 33%;
+}
+.tip-container2 .add-check .form-inline .tip-p.range-tip{
+    left: 27%;
+}
+.tip-container2 .add-check .form-group{
+    width: 49%;
+    margin-right: 0;
+}
+.tip-container2 .add-check input[type="text"]{
+    width: 39%;
+}
+.tip-container2 .add-check .tip-bar{
+    width: 20px !important;
+    height: 20px;
+    text-align: center;
+    padding-top: 1px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    color: #fff;
+}
+.tip-container2 .add-check .tip-bar:hover{
+    background-color: #3B73CE;
+}
+.tip-container2 .add-check .tip-arrow-top{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -15px;
+    left: 47%;
+    border-left: 14px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+}
+.tip-container2 .add-check .panel-body-form{
+    overflow-y: auto;
+}
+.tip-container2 .add-control .form-group{
+    width: 49%;
+    margin: 0;
+    text-align: center !important;
+}
+.tip-container2 .add-control .form-group input{
+    margin-right: 5px;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-top: 0;
+}
+.tip-container2 .panel-body.label-center .form-inline label{
+    text-align: center;
+}
+.tip-container2 .panel-body.label-center .form-inline label.label-blue{
+    background-color: #EEF3FC;
+    display: block;
+    margin: 0;
+    border: 1px solid #bdbdbd;
+    border-bottom: none;
+    line-height: 24px;
+}
+.tip-container2 .panel-body.label-center .form-inline.row>.form-group{
+    padding:2px 14px;
+}
+.tip-container2 .panel-body.label-center .form-inline.row .form-group,.tip-container2 .panel-body.label-center .form-inline.row .form-group label{
+    margin: 0;
+}
+.tip-container2 .panel-body.label-center .form-inline.row .form-group textarea,.tip-container2 .panel-body.label-center .form-inline.row .form-group .checkbox-content{
+    border: 1px solid #bdbdbd;
+    width: 100%;
+    border-top: none;
+    border-radius: 0;
+    height: 155px;
+    overflow-y: auto;
+}
+.tip-container2 .panel-body.label-center .checkbox-content span{
+    color: #CFCFCF;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.tip-container2 .add-protection .form-group:first-child{
+    margin-top: 15px;
+}
+.tip-container2 .add-protection .form-group label{
+    margin-left: 100px;
+}
+.tip-container2 .add-protection .form-group.current label{
+    margin-left: 210px;
+}
+.tip-container2 .add-protection .form-group span{
+    text-align: left;
+    width: 85px;
+}
+
+/*2.8ztree样式*/
+.ztree ul span{color:#888}
+.ztree li a:hover{text-decoration: none}
+
+/*2.9表格中图片按钮样式*/
+.portlet-table td img{
+    width:20px;
+    height:20px;
+}
+.portlet-wrapper .portlet-table td img{
+    width: 18px;
+    height: 18px;
+}
+
+/*2.10状态图片样式*/
+.state-img{height: 12px}
+
+/*2.11添加按钮后的提示文字*/
+.portlet-wrapper .tab-content .add-img{
+    cursor: pointer;
+}
+.portlet-wrapper .tab-content .add-img+span{
+    color:#6893DE;
+    display: none;
+}
+/*******************各个模块的特殊样式*****************/
+/*1.配置导向*/
+.portlet .portlet-title.wizard-step{
+    padding:25px 10%;
+    margin: 10px 10px 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.wizard-step>div{position:relative}
+.wizard-step .line{
+    border:1px solid #ddd;
+    margin: 65px 0;
+}
+.wizard-step .step{
+    position: absolute;
+    top:-70px;
+    left:0;
+    text-align: center;
+}
+.wizard-step .step:nth-child(3){left:18%}
+.wizard-step .step:nth-child(4){left:37%}
+.wizard-step .step:nth-child(5){left:56%}
+.wizard-step .step:nth-child(6){left:75%}
+.wizard-step .step:nth-child(7){left:93%}
+.wizard-content{
+    width:40%;
+    margin:0 auto;
+}
+.wizard-content span{color:#999}
+
+/*2.控制面板*/
+/*2.1自身健康的标识*/
+.legend{
+    position:absolute;
+    top:40px;
+    left:0;
+    font-size: 10px;
+    padding-left:15px;
+}
+.legend i{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    margin-right:5px;
+}
+.dangerous{background-color:#E8635D}
+.sub-health{background-color:#4F5BB4}
+.health{background-color:#1EA506}
+
+/*2.2数字显示*/
+.details-control{
+    top:30%;
+    left:40%;
+    font-size:35px;
+    position:absolute;
+    padding-right:15px;
+}
+
+/*2.3表格切换按钮*/
+.table-bars{
+    margin:0;
+    padding:1px 0;
+    float:left;
+    width:100%;
+}
+.caption .table-bars{
+    width:80%;
+    padding:0;
+}
+.table-bars>li{
+    width:33%;
+    float:left;
+    padding:9px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+}
+.portlet-title .table-bars>li img{
+    width:25px;
+    height:25px;
+    margin:0 5px;
+}
+.table-bars>li:hover a,.table-bars .active a{color:#fff}
+.table-bars>li:hover,.table-bars .active{background-color:#3B70D5}
+
+/*2.3自身状态*/
+.separate{margin-top:90px}
+.inner-box{
+    padding-top:10px;
+    padding-bottom:10px;
+    border:1px solid #BACAFF;
+}
+.state{
+    padding:20px 5px;
+    margin:60px 10px 13px;
+    border:1px solid #CDCDCD;
+}
+.state span{padding:2px 2px 0 2px}
+.state span img{ display: table-cell}
+
+/*3.状态监控*/
+.analysis .condition-wrapper{display: none}
+.analysis .condition-wrapper.active{display: block}
+.page-content.condition-wrapper{padding-top:0}
+.condition-wrapper .tab-border{margin: 0 -20px 20px}
+.condition-wrapper .tab-border .pull-right{margin-right: 20px}
+.condition-wrapper input,.condition-wrapper select{height: 24px;}
+/*3.1.pull-right*/
+p.pull-right{
+    margin: 5px;
+    font-size: 16px;
+}
+p.pull-right input{width:150px}
+p.pull-right select,li.pull-right select{margin:3px}
+
+/*3.2进度条+历史时间*/
+.host-text,.progress-bar-group{
+    padding: 10px 0;
+    margin: 10px 5px;
+}
+.host-text li{margin:5px}
+.progress-bar-group{border-left:1px solid #D9D9D9}
+.progress-bar-group p,.progress-bar-group .progress{
+    float:left;
+    padding: 2px;
+}
+.progress-bar-group p{margin:10px}
+.progress-bar-group li div{margin:0}
+.progress{
+    width:450px;
+    height:15px;
+    border-radius: 50px;
+    border:1px solid #D9D9D9;
+}
+.progress-bar{border-radius:50px}
+.success-color{background-color:#93D36C}
+.warning-color{background-color:#E1CD7B}
+.danger-color{background-color:#F49994}
+
+/*3.3 版本信息+许可状态*/
+.v-information,.s-license{
+    background-size:cover !important;
+    -webkit-background-size:cover !important;
+    background:url(../imgs/v-information.png) no-repeat;
+}
+.s-license{background:url(../imgs/s-license.png) no-repeat}
+.information{padding:10px}
+.information-btn{
+    padding:5px;
+    width:120px;
+    border:none;
+    color:#fff;
+    margin:40px 35px;
+    background-color:#3871D1;
+}
+
+/*3.4第一行有数据变化的模块*/
+.visual img{margin:45px 25px}
+.condition-details{
+    position:absolute;
+    top:25%;
+    right:15%;
+    text-align: right;
+}
+.condition-details:not(.h) span{font-size:48px}
+.condition-details.h{
+    top:30%;
+    right:5%;
+}
+.condition-details.h span{font-size:25px}
+
+/*3.5有表格的canvas*/
+.canvas.pull-left{width:60%}
+.map .canvas.pull-left{width:70%}
+.portlet-table.pull-right{width:39%}
+.map .portlet-table.pull-right{width:29%}
+
+/*3.6攻击统计分析*/
+.tab-pane-attack .portlet-body{
+    background-size: cover;
+    background:url(../imgs/1_04.jpg);
+}
+.filter-conditions ul{
+    padding: 0;
+    position: relative;
+    bottom: 400px;
+    width: 215px;
+}
+.filter-conditions ul li{
+    display: none;
+    padding: 5px 15px;
+    margin-bottom:5px;
+    text-align: center;
+    background-color: #C1D6FB;
+}
+.filter-conditions ul .active{display: block}
+.filter-conditions ul li p{
+    margin:0 5px 0 0;
+    display: inline-block;
+}
+.filter-conditions ul li i{cursor: pointer}
+.filter-conditions>div{display: none}
+.filter-conditions .active{display: block}
+.btn-left,.btn-right{
+    position: relative;
+    bottom: 265px;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 3px 31px;
+    background: #C6D8FB;
+    border-radius: 18px;
+}
+.btn-right{left: 65%}
+.btn-left{margin-left:11%}
+
+/*4安全策略*/
+/*4.1特征库*/
+.feature{width:240px}
+.portlet-wrapper .row{
+    margin-left: 10px;
+    margin-right: 0;
+}
+.portlet-wrapper .col-xs-3{padding:0}
+.portlet-wrapper .col-xs-3 .portlet-title{
+    line-height:30px;
+    text-align: center;
+    background-color: #DBE6F9;
+}
+.portlet-wrapper .col-xs-3 .portlet-body{
+    height:278px;
+    overflow: auto
+}
+.portlet-wrapper .col-xs-9{padding-left: 10px}
+.portlet-wrapper .col-xs-9 .portlet-body{border: 1px solid #ddd;}
+.portlet-wrapper .row:first-child .col-xs-9 .portlet-body{height:310px}
+.portlet-wrapper .row:last-child{margin-top: 10px}
+.portlet-wrapper .row:last-child .col-xs-3 .portlet-body{height:338px}
+.portlet-wrapper .row:last-child .col-xs-3 .portlet-title a{margin-left: 20px}
+.portlet-wrapper .row:last-child .col-xs-3 a.current{margin-left: 12px}
+.portlet-wrapper .row:last-child .col-xs-9 .portlet-body{height:370px}
+.portlet-wrapper .row:last-child .col-xs-9 .portlet-body .add-btn{
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.portlet-wrapper .row:last-child .col-xs-9 .portlet-body .add-btn:hover{
+    background-color: #2E98EE;
+    border-color:#2E98EE;
+    color: #fff;
+}
+.portlet-wrapper .row .form-group,.pack .row{margin-bottom: 15px}
+.portlet-wrapper .row .portlet-body form,.pack{
+    width: 90%;
+    margin-top: 19px;
+    text-align: right;
+}
+.portlet-wrapper .row .portlet-body form .row:first-child input{width:620px}
+.portlet-wrapper .row .portlet-body form .row:nth-child(2) .col-xs-4{
+    padding-left:20px;
+    padding-right: 0;
+}
+.portlet-wrapper .row .portlet-body form .row:nth-child(2) input{width:66%}
+.portlet-wrapper .row .portlet-body label{margin-right: 10px}
+.portlet-wrapper .row .cur{margin: 10px 0 20px 25px}
+.pack .cur span,.cur textarea{
+    width: 89%;
+    height: 150px;
+    overflow-y: auto;
+    border:1px solid #BDBDBD;
+}
+.cur label{vertical-align: top}
+.cur+button{margin-right: 40px}
+.pack span{
+    display: inline-block;
+    border: 1px solid #BDBDBD;
+    background-color: #fafafa;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-left:10px;
+    height:24px;
+    text-align: left;
+    padding:0 3px;
+}
+.pack .row .col-xs-4{
+    padding-left:22px;
+    padding-right:0;
+}
+.pack .row .col-xs-4:nth-child(3){padding-right:14px}
+.pack .row:first-child span,.portlet-wrapper .row .portlet-body form .row:first-child input{width: 87%}
+.pack .row:nth-child(2) span{width:62%}
+.pack .row .col-xs-6 span, .portlet-wrapper .row .portlet-body form .row .col-xs-6 input,.portlet-wrapper .row .curr textarea{width: 73%}
+.chara .cur textarea{
+    width: 85%;
+    margin-right: 15px;
+}
+.chara .cur span,.chara .cur textarea{height: 95px;}
+.portlet-wrapper .row .curr div{margin-bottom: 0}
+.portlet-wrapper .row .curr textarea {
+    height: 75px;
+    vertical-align: top;
+}
+.portlet-wrapper .row .curr .denger{margin-bottom: 15px}
+.portlet-wrapper .portlet>.f-btn-blue{
+    margin-left: 90%;
+}
+
+/*4.2标题*/
+.portlet-wrapper .caption>p{margin:5px 30px 0 0}
+
+/*4.3带滚动条的表格*/
+.tContainer{
+    margin-left: 59px;
+    margin-top: 10px;
+    width: 85%;
+    height: 275px;
+    overflow-y: auto;
+}
+
+/*4.4自学习配置*/
+.stu .portlet-body{
+    border:1px solid #ddd;
+    background-color: #fff;
+    margin:0 10px;
+    padding:10px;
+    text-align: right;
+}
+.stu .portlet-body .stu-row div:first-child button{
+    background-color: #F9F9F9;
+    border: 1px solid #ddd;
+}
+.stu .portlet-body:last-child{
+    text-align: left;
+    margin-top: 10px;
+}
+.stu .portlet-body p{
+    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.stu .portlet-body .stu-row{margin-bottom: 20px}
+.stu .portlet-body .stu-row textarea{
+    height: 150px;
+    width: 40%;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+.stu .portlet-body .stu-row div:first-child input{
+    margin-right: 9%;
+    width: 40%;
+}
+.stu .portlet-body .stu-row div:first-child button,.stu .portlet-body:last-child input{margin-right: 10px}
+.stu .portlet-body .stu-row div:first-child button:last-child{margin-right: 29%}
+.stu .portlet-body .stu-row div:last-child{margin-top: 14px}
+.stu .portlet-body .stu-row:last-child div:last-child span{margin-left: 14px}
+.stu .portlet-body .stu-row div:last-child span{vertical-align: top}
+.stu .portlet-body:last-child>div{
+    margin-left: 73px;
+    margin-bottom: 30px;
+    width: 40%;
+    text-align: right;
+    vertical-align: middle;
+}
+.stu .portlet-body:last-child button{
+    margin-left: 31%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.stu .portlet-body:last-child span{
+    margin-right: 120px;
+    text-align: left;
+}
+
+/*4.5例外配置添加页*/
+.con-add .form-inline{margin:12px 20px}
+.con-add input,.con-add select{
+    width:230px;
+    height:28px;
+}
+.row-add{margin-left: 10px}
+.row-add:first-child{margin-bottom: 10px}
+.row-add label{margin-left: 10px}
+.row-add:last-child label{margin-left: -3px}
+.row-add input{margin-right: 10px}
+.row-add .portlet-table{margin:0 11px}
+
+/*4.6WAF策略添加页*/
+.waf-add{
+    position: relative;
+}
+.waf-add input{
+    text-align: center;
+    height: 25px;
+}
+.waf-add input[type="checkbox"]{
+    vertical-align: middle;
+
+}
+.waf-add thead input[type="checkbox"]{
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: 0;
+}
+.waf-add .portlet-table{
+    margin: 10px;
+    width: 98%;
+    text-align: center;
+}
+.waf-add .form-inline{margin: 5px 20px}
+.waf-add .portlet-table td{padding: 5px}
+.waf-add .portlet-title .portlet-table tr:first-child{font-weight: bold;}
+.waf-add .portlet-title .portlet-table a{
+    padding: 2px 40px;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    background-color: #fafafa;
+}
+.waf-add .portlet-table td.active a{background-color: #C7DBFB}
+.waf-add table.treetable{  font-size: 14px;  }
+
+/*******************page-footer样式*****************/
+.blue{
+    width:180px;
+    height:5px;
+    background-color:#3A6FD1;
+    margin-top:25px;
+}
+.left{
+    margin-left:180px;
+    padding-top:2px;
+    background-color:#ECEFF6;
+}
+
+/*****************大屏样式*****************/
+.bg-screen{
+    display: none;
+}
+.bg-screen-jump{
+    position: relative;
+}
+.bg-screen-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*****************通过媒体查询进行的自适应********************/
+@media (min-width: 1400px){.v-information,.s-license{padding:5px}}
+@media (min-width: 1600px){.v-information,.s-license{padding:15px}}
+@media (min-width: 1760px){.v-information,.s-license{padding:20px}}
+@media (min-width: 1920px){.v-information,.s-license{padding:30px}}
