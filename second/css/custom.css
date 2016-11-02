@@ -1066,11 +1066,11 @@ p.pull-right select,li.pull-right select{margin:3px}
 }
 .bg-screen>.row:first-child{
     margin: 0;
-    height: 65%;
+    height: 60%;
 }
 .bg-screen>.row:nth-child(2){
     margin: 0;
-    height: 35%;
+    height: 40%;
 }
 
 .traffic-wapper select{
