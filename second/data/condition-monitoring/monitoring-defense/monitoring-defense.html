@@ -1,0 +1,227 @@
+<!--3.2.状态监控-监测防御-->
+<div id="monitoring-defense" class="page-content-wrapper analysis">
+    <div class="page-content condition-wrapper active" id="defense-normal">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#defense-basic-situation" aria-controls="home" role="tab" data-toggle="tab">基本概况</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#defense-time-monitoring" aria-controls="home" role="tab" data-toggle="tab">实时监控</a>
+                        <span></span>
+                    </li>
+                    <li class="pull-right">
+                        <span>查询区间</span>
+                        <select id="selectEd2">
+                            <option value="">请选择</option>
+                            <option value="300000">5分钟</option>
+                            <option value="3600000">1小时</option>
+                            <option value="86400000">1天</option>
+                            <option value="2592000000">1个月</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--基本概况块-->
+            <div role="tabpanel" class="tab-pane active" id="defense-basic-situation">
+
+            </div>
+            <!--实时监控块-->
+            <div role="tabpanel" class="tab-pane" id="defense-time-monitoring">
+
+            </div>
+        </div>
+    </div>
+    <!--防御检测对应的攻击统计-->
+    <div class="page-content condition-wrapper" id="defense-attack-system-analysis">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a>攻击统计分析</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 主内容块-->
+        <div class="tab-content">
+            <!--第一行 图表-->
+            <div class="portlet tab-pane-attack" >
+                <div class="portlet-body filter-conditions">
+                    <div id="attack-system-analysis-relationship" class="two-canvas active"></div>
+                    <div id="attack-system-analysis-relationship-pie" class="two-canvas "></div>
+                    <ul>
+                        <li class="active">
+                            <p></p>
+                        </li>
+                        <li id="source">
+                            <p></p>
+                            <i class="icon-close"></i>
+                        </li>
+                        <li id="type">
+                            <p>b</p>
+                            <i class="icon-close"></i>
+                        </li>
+                        <li id="name">
+                            <p>c</p>
+                            <i class="icon-close"></i>
+                        </li>
+                    </ul>
+                    <button class="btn-left" disabled="disabled">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-right">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!--第二行 攻击系统数据详情-->
+            <div class="portlet bordered" >
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="caption-subject bold uppercase">攻击系统数据详情</span>
+                    </div>
+                </div>
+                <table class="portlet-table active " id="attackSystemData">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="attackSystemDataAttack">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="attackSystemDataSource">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击源</td>
+                        <td>攻击目标</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="filter">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击目标</td>
+                        <td>攻击源</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <table class="portlet-table " id="filter1">
+                    <thead>
+                    <tr>
+                        <td>事件编号</td>
+                        <td>攻击目标</td>
+                        <td>攻击源</td>
+                        <td>攻击类型</td>
+                        <td>次数</td>
+                        <td>匹配事件</td>
+                        <td colspan="3">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#defense-basic-situation").load("data/condition-monitoring/monitoring-defense/defense-basic-situation.html");
+    //设置主内容框的高度
+    heightSet();
+    //页签切换
+    $(".nav-tabs li a").click(function () {
+        var href = $(this)[0].hash;
+        select2.val("");//置空下拉框
+        if (href === "#defense-basic-situation") {//状态监控——检测防御——基本概况
+            $(href).load("data/condition-monitoring/monitoring-defense/defense-basic-situation.html");
+        } else if (href === "#defense-time-monitoring") {//状态监控——检测防御——实时监控
+            $(href).load("data/condition-monitoring/monitoring-defense/defense-time-monitoring.html");
+        }
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+</script>

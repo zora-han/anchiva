@@ -1,0 +1,259 @@
+<!--安全策略-应用安全策略-例外配置-->
+<div class="portlet" >
+    <div class="portlet-title">
+        <div class="caption caption-none">
+            <ul class="bt-bars pull-left">
+                <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
+                <li><a href="javascript:;"><img src="imgs/delete.png"/>删除</a></li>
+            </ul>
+            <form class="form-inline pull-left">
+                <div class="form-group">
+                    <label>URL：</label>
+                    <input>
+                </div>
+                <div class="form-group">
+                    <label>特征ID：</label>
+                    <input>
+                </div>
+                <div class="form-group">
+                    <label>IP地址：</label>
+                    <input>
+                </div>
+                <button type="button" class="f-btn-blue"><img src="imgs/41.png"/>查找</button>
+            </form>
+        </div>
+    </div>
+    <table class="portlet-table active portlet-body-default-none" id="configuration">
+        <thead>
+        <tr>
+            <td>选择</td>
+            <td>特征ID</td>
+            <td>特征名称</td>
+            <td>攻击类型</td>
+            <td>例外IP</td>
+            <td>例外URL</td>
+            <td>启用</td>
+            <td colspan="3">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="10">
+                <ul>
+                </ul>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <table class="portlet-table portlet-body-default-none" id="filter2">
+        <thead>
+        <tr>
+            <td>选择</td>
+            <td>特征ID</td>
+            <td>特征名称</td>
+            <td>攻击类型</td>
+            <td>例外IP</td>
+            <td>例外URL</td>
+            <td>启用</td>
+            <td colspan="3">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="10">
+                <ul>
+                </ul>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    addData("configuration");//例外配置表格
+    var tbody = $(".portlet-wrapper .tab-pane tbody"),//表格主体
+    //提示框
+            tipC = $(".tip-container"),
+            tip = $(".tip"),
+            tip1 = $(".tip1"),
+            tipAll=$(".tip, .tip1"),
+            tipP = $(".tip-container p"),
+            li = $(".bt-bars li:last-child"),//多选删除按钮
+            child;
+    //删除按键
+    tbody.delegate("tr td:last-child img", "click", function () {
+        child=$(this);
+        tableDel(child,tipC,tip,tipP);
+    })
+        //复制按键
+            .delegate("tr td:nth-last-child(2) img", "click", function () {
+                var name = $(this).parent().siblings("[data-name='name']").text(),//对应行的名称
+                        copy = {},//复制的预备对象
+                        index = 0,
+                        length = configuration.data.length,
+                        arr = [];
+                $.each(configuration.data, function (i, n) {
+                    if (n.featureID === name) {
+                        copy = {
+                            id: n.id + 1,
+                            type: n.type,
+                            featureName: n.featureName,
+                            exceptionIp: n.exceptionIp,
+                            exceptionURL: n.exceptionURL
+                        };
+                        index = i;
+                    }
+                    if (name.indexOf("副本") == -1) {
+                        (n.featureID.indexOf(name + "副本") != -1) && arr.push(n.featureID);
+                    } else if (n.featureID.indexOf(name.slice(0, name.indexOf("副本") + 2)) != -1) {
+                        arr.push(n.featureID);
+                    }
+                    arr.sort(function (a, b) {
+                        return parseInt(b.slice(b.indexOf("副本") + 3)) - parseInt(a.slice(a.indexOf("副本") + 3))
+                    })
+                });
+                $.each(configuration.data, function (i, n) {
+                    (n.featureID === arr[0]) && (index = i);
+                });
+                (arr.length == 0) ?
+                        copy.featureID = name + "副本(1)"
+                        : copy.featureID = arr[0].slice(0, arr[0].indexOf("副本") + 2) + "(" + (parseInt(arr[0].slice(arr[arr.length - 1].indexOf("副本") + 3)) + 1) + ")";
+                for (var j = length - 1; j > index; j--) {
+                    configuration.data[j + 1] = configuration.data[j];
+                    configuration.data[j + 1].id = configuration.data[j].id + 1;
+                }
+                configuration.data[index + 1] = copy;
+                addData("configuration");
+            })
+        //修改按键
+            .delegate("tr td:nth-last-child(3) img", "click", function () {
+                var name = $(this).parent().siblings("[data-name='name']").text();
+                $("#exceptions-configuration-add").addClass("active")
+                        .load("data/security-policy/application-security-policy/exceptions-configuration-add.html")
+                        .siblings("div").removeClass("active");
+            })
+        //选择框
+            .delegate("tr td:first-child input", "click", function () {
+                checkBox(li);
+            });
+    //多选删除按钮/
+    li.click(function () {
+        var me=$(this);
+        liDel(me,tipC,tip,tipP,tip1);
+    });
+    //气泡提示框
+    $("#exceptions-configuration,#filter2").delegate("td", "mousemove", function () {
+        var td = $(this).has("span");
+        if (td.length != 0) {
+            var content = $(this).text().replace(/ .../, ""), str = "", j,
+                    name = $(this).siblings("[data-name='name']").text()
+            if (td[0].dataset.name === "ip") {
+                $.each(configuration.data, function (i, n) {
+                    if (n.exceptionIp[0] === content && n.featureID === name) {
+                        for (j = 0; j < n.exceptionIp.length; j++) {
+                            str += n.exceptionIp[j];
+                            (j != n.exceptionIp.length - 1) && (str += "、");
+                        }
+                    }
+                });
+            } else if (td[0].dataset.name === "url") {
+                $.each(configuration.data, function (i, n) {
+                    if (n.exceptionURL[0] === content && n.featureID === name) {
+                        for (j = 0; j < n.exceptionURL.length; j++) {
+                            str += n.exceptionURL[j];
+                            (j != n.exceptionURL.length - 1) && (str += "、");
+                        }
+                    }
+                });
+            }
+            td.poshytip({
+                className: "tip-yellowsimple",
+                content: str.replace(/、/g, "</br>"),
+                alignTo: 'target',
+                alignX: 'right',
+                alignY: 'center',
+                offsetX: 0,
+                offsetY: 5
+            });
+        }
+    });
+    //过滤按钮
+    $("#exceptions-configuration .f-btn-blue").click(function () {
+        var input = $(this).siblings().children("input"), arr = [],featureID=[],mark=false;
+        if (input[0].value === "" && input[1].value === "" && input[2].value === "") {
+            tipWarning(tipC, tip1, tipP, "请先输入要处理的数据信息！");
+            return;
+        } else if (input[0].value !== "" && input[1].value === "" && input[2].value === "") {
+            $.each(configuration.data, function (i, n) {
+                $.each(n.exceptionURL, function (j, m) {
+                    if (m === input[0].value && featureID.indexOf(n.featureID)==-1) {
+                        arr.push(n);
+                        featureID.push(n.featureID);
+                    }
+                })
+            });
+        } else if (input[0].value === "" && input[1].value !== "" && input[2].value === "") {
+            $.each(configuration.data, function (i, n) {
+                (n.featureID === input[1].value) && arr.push(n);
+            });
+        } else if (input[0].value === "" && input[1].value === "" && input[2].value !== "") {
+            $.each(configuration.data, function (i, n) {
+                $.each(n.exceptionIp,function(j,m){
+                    (m === input[2].value) && arr.push(n);
+                })
+            });
+        } else if (input[0].value !== "" && input[1].value !== "" && input[2].value === "") {
+            $.each(configuration.data, function (i, n) {
+                if(n.featureID === input[1].value){
+                    $.each(n.exceptionURL, function (j, m){
+                        (m===input[0].value) && arr.push(n);
+                    })
+                }
+            });
+        } else if (input[0].value === "" && input[1].value !== "" && input[2].value !== "") {
+            $.each(configuration.data, function (i, n) {
+                if(n.featureID === input[1].value){
+                    $.each(n.exceptionIp, function (j, m){
+                        (m===input[2].value) && arr.push(n);
+                    })
+                }
+            });
+        } else if (input[0].value !== "" && input[1].value !== "" && input[2].value !== "") {
+            $.each(configuration.data, function (i, n) {
+                if(n.featureID === input[1].value){
+                    $.each(n.exceptionURL, function (j, m){
+                        (m===input[0].value) && (mark=true);
+                    });
+                    $.each(n.exceptionIp, function (k, q){
+                        if(q===input[2].value && mark && featureID.indexOf(n.featureID)){
+                            arr.push(n);
+                            featureID.push(n.featureID);
+                        }
+                    });
+                }
+            });
+        }
+        if (arr.length == 0) {
+            tipWarning(tipC, tip1, tipP, "没有所查数据信息！")
+        } else {
+            filter2={
+                record_count:configuration.record_count,
+                page_size:configuration.page_size,
+                page_count : configuration.page_count,
+                cur_page : configuration.cur_page,
+                data : arr
+            };
+            $("#configuration").removeClass("active").siblings("table").addClass("active");
+            addData("filter2");
+        }
+    });
+    //例外配置添加页
+    $("#exceptions-configuration .bt-bars li:first-child").click(function () {
+        $("#exceptions-configuration-add").addClass("active")
+                .load("data/security-policy/application-security-policy/exceptions-configuration-add.html")
+                .siblings("div").removeClass("active");
+    });
+</script>

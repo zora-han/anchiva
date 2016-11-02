@@ -1,0 +1,23 @@
+<!--安全策略-应用安全策略-WAF策略添加页-内容安全-->
+<table class="portlet-table active" id="contentsecurity">
+    <thead>
+    <tr>
+        <td>启用<input type="checkbox" onclick="selectAll(this)" name='mainChb'/></td>
+        <td>名称</td>
+        <td>动作<input type="checkbox" name="moveChb"/></td>
+        <td>日志<input type="checkbox" name="logChb"/></td>
+        <td>匹配次数</td>
+        <td>操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<button class="f-btn-blue">确定</button>
+<script>
+    addData("contentsecurity");
+    checkSelect();
+    var chbs=$("#contentsecurity tbody [name='checkIP']");
+    $.each(chbs,function(i,n){ n.onclick=selectOne; });
+    popContent();
+</script>
