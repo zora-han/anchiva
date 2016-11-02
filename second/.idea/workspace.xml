@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective-add.html" line="93" mnemonic="4" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fafb1c73-69f6-43a6-927f-9237d1b52194" name="Default" comment="" />
+    <ignored path="second.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="second" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="function.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/function.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3116" column="38" selection-start-line="3116" selection-start-column="36" selection-end-line="3116" selection-end-column="42" />
+              <folding>
+                <element signature="e#1786#5915#0" expanded="false" />
+                <element signature="e#6523#6775#0" expanded="false" />
+                <element signature="e#7705#8312#0" expanded="false" />
+                <element signature="e#8340#11252#0" expanded="false" />
+                <element signature="e#11274#11940#0" expanded="false" />
+                <element signature="e#11976#12684#0" expanded="false" />
+                <element signature="e#12715#13250#0" expanded="false" />
+                <element signature="e#14513#14773#0" expanded="false" />
+                <element signature="e#15937#17428#0" expanded="false" />
+                <element signature="e#17486#18190#0" expanded="false" />
+                <element signature="e#17640#18184#0" expanded="false" />
+                <element signature="e#18218#18922#0" expanded="false" />
+                <element signature="e#18958#19662#0" expanded="false" />
+                <element signature="e#19692#19970#0" expanded="false" />
+                <element signature="e#19998#20276#0" expanded="false" />
+                <element signature="e#20312#20590#0" expanded="false" />
+                <element signature="e#20621#21070#0" expanded="false" />
+                <element signature="e#21107#21701#0" expanded="false" />
+                <element signature="e#21741#22335#0" expanded="false" />
+                <element signature="e#22879#25352#0" expanded="false" />
+                <element signature="e#25403#26701#0" expanded="false" />
+                <element signature="e#26753#28051#0" expanded="false" />
+                <element signature="e#28096#28845#0" expanded="false" />
+                <element signature="e#28884#29629#0" expanded="false" />
+                <element signature="e#29666#30362#0" expanded="false" />
+                <element signature="e#30402#31522#0" expanded="false" />
+                <element signature="e#31528#33496#0" expanded="false" />
+                <element signature="n#!!block;n#addData#0" expanded="false" />
+                <element signature="e#39937#40398#0" expanded="false" />
+                <element signature="n#!!block;n#timeDifference#0" expanded="false" />
+                <element signature="n#!!block;n#random#0" expanded="false" />
+                <element signature="n#!!block;n#format#0" expanded="false" />
+                <element signature="n#!!block;n#format1#0" expanded="false" />
+                <element signature="n#!!block;n#health#0" expanded="false" />
+                <element signature="e#48879#48954#0" expanded="false" />
+                <element signature="e#49364#50927#0" expanded="false" />
+                <element signature="e#50356#50466#0" expanded="false" />
+                <element signature="e#50492#50879#0" expanded="false" />
+                <element signature="n#!!block;n#event#0" expanded="false" />
+                <element signature="e#51800#51858#0" expanded="false" />
+                <element signature="e#51881#54233#0" expanded="false" />
+                <element signature="e#52628#54223#0" expanded="false" />
+                <element signature="e#53147#53576#0" expanded="false" />
+                <element signature="e#53614#54209#0" expanded="false" />
+                <element signature="e#54259#54577#0" expanded="false" />
+                <element signature="n#!!block;n#hInformation#0" expanded="false" />
+                <element signature="n#!!block;n#httpConcurrent#0" expanded="false" />
+                <element signature="n#!!block;n#httpCreate#0" expanded="false" />
+                <element signature="n#!!block;n#attackMap#0" expanded="false" />
+                <element signature="e#66291#70169#0" expanded="false" />
+                <element signature="e#70241#70804#0" expanded="false" />
+                <element signature="e#70527#70756#0" expanded="false" />
+                <element signature="e#70985#73447#0" expanded="false" />
+                <element signature="e#73476#73677#0" expanded="false" />
+                <element signature="e#74731#75325#0" expanded="false" />
+                <element signature="n#!!block;n#securityTrend#0" expanded="false" />
+                <element signature="e#76406#76445#0" expanded="false" />
+                <element signature="n#!!block;n#gengS#0;n#!!block;n#securityTrend#0" expanded="false" />
+                <element signature="e#76883#76924#0" expanded="false" />
+                <element signature="e#76946#77139#0" expanded="false" />
+                <element signature="e#77161#77780#0" expanded="false" />
+                <element signature="e#78325#79100#0" expanded="false" />
+                <element signature="e#79180#79219#0" expanded="false" />
+                <element signature="e#79240#80003#0" expanded="false" />
+                <element signature="e#80024#80450#0" expanded="false" />
+                <element signature="e#80472#81586#0" expanded="false" />
+                <element signature="n#!!block;n#attackSourceRanking#0" expanded="false" />
+                <element signature="n#!!block;n#attackPurposesRanking#0" expanded="false" />
+                <element signature="n#!!block;n#attackRelationship#0" expanded="false" />
+                <element signature="n#!!block;n#attackRelationshipPie#0" expanded="false" />
+                <element signature="n#!!block;n#progressBar#0" expanded="false" />
+                <element signature="n#!!block;n#dataM#0" expanded="false" />
+                <element signature="n#!!block;n#dataM1#0" expanded="false" />
+                <element signature="e#93602#93763#0" expanded="false" />
+                <element signature="e#93810#94612#0" expanded="false" />
+                <element signature="e#94713#95430#0" expanded="false" />
+                <element signature="n#!!block;n#focusKey#0" expanded="false" />
+                <element signature="n#!!block;n#blurKey#0" expanded="false" />
+                <element signature="n#!!block;n#searchNode#0" expanded="false" />
+                <element signature="n#!!block;n#searchNodes#0" expanded="false" />
+                <element signature="n#!!block;n#selectFilter#0" expanded="false" />
+                <element signature="n#!!block;n#selectFilter1#0" expanded="false" />
+                <element signature="n#!!block;n#updateNodes#0" expanded="false" />
+                <element signature="n#!!block;n#getFontCss#0" expanded="false" />
+                <element signature="n#!!block;n#del#0" expanded="false" />
+                <element signature="n#!!block;n#delInformation#0" expanded="false" />
+                <element signature="n#!!block;n#tipWarning#0" expanded="false" />
+                <element signature="n#!!block;n#position#0" expanded="false" />
+                <element signature="n#!!block;n#analysis#0" expanded="false" />
+                <element signature="n#!!block;n#DelTree#0" expanded="false" />
+                <element signature="n#!!block;n#getFile#0" expanded="false" />
+                <element signature="n#!!block;n#addSpan#0" expanded="false" />
+                <element signature="n#!!block;n#selectAll#0" expanded="false" />
+                <element signature="n#!!block;n#selectOne#0" expanded="false" />
+                <element signature="n#!!block;n#tableDel#0" expanded="false" />
+                <element signature="n#!!block;n#checkBox#0" expanded="false" />
+                <element signature="n#!!block;n#liDel#0" expanded="false" />
+                <element signature="n#!!block;n#heightChange#0" expanded="false" />
+                <element signature="n#!!block;n#heightSet#0" expanded="false" />
+                <element signature="n#!!block;n#checkSelect#0" expanded="false" />
+                <element signature="n#!!block;n#popContent#0" expanded="false" />
+                <element signature="n#!!block;n#popHeight#0" expanded="false" />
+                <element signature="n#!!block;n#pop1Height#0" expanded="false" />
+                <element signature="e#116011#116264#0" expanded="false" />
+                <element signature="e#116766#117587#0" expanded="false" />
+                <element signature="e#117601#118422#0" expanded="false" />
+                <element signature="e#118436#119257#0" expanded="false" />
+                <element signature="n#!!block;n#geng#0;n#!!block;n#bgSelfState#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="135" column="33" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#1;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#2;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32225913">
+              <caret line="1075" column="26" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="e#355#910#0" expanded="false" />
+                <element signature="e#1240#5894#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WAF.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/condition-monitoring/WAF/WAF.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="e#8619#9448#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="system-state.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/condition-monitoring/system-state/system-state.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="28" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="policy-references.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/security-policy/policy-references.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="78" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="control.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/control.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="528" column="30" selection-start-line="528" selection-start-column="30" selection-end-line="528" selection-end-column="30" />
+              <folding>
+                <element signature="n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="e#13904#14178#0" expanded="false" />
+                <element signature="e#14344#14721#0" expanded="false" />
+                <element signature="e#14818#14879#0" expanded="false" />
+                <element signature="e#14919#17516#0" expanded="false" />
+                <element signature="e#17556#20347#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bg-screen.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/bg-screen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8666666">
+              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Html5" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/characteristics.html" />
+        <option value="$PROJECT_DIR$/css/layout.min.css" />
+        <option value="$PROJECT_DIR$/data/condition-monitoring/monitoring-defense/monitoring-defense.html" />
+        <option value="$PROJECT_DIR$/data/system-configuration/log.html" />
+        <option value="$PROJECT_DIR$/data/system-configuration/host.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/exceptions-host.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WEB-leakage.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/study-configuration.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/exceptions-configuration.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/exceptions-configuration-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/application-characteristics.html" />
+        <option value="$USER_HOME$/Desktop/style_cn.css" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/1.js" />
+        <option value="$PROJECT_DIR$/data/condition-monitoring/system-state/system-state.html" />
+        <option value="$PROJECT_DIR$/data/configuration-wizard/configuration-wizard.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/intrusion-protection.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/intrusion-protection-strategy.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/basic-characteristics.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/application-security-policy.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/WAF-strategy-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/HTTP-methods-control.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/URL-disable-word.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/Overflow-check.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-methods-control.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-agreement-check.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/CSRF-check.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/scanner-protection.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking/preventing-hotlinking.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/crawler-protection/crawler-protection.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/crawler-protection/crawler-protection-add.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking/preventing-hotlinking-add.html" />
+        <option value="$PROJECT_DIR$/data/control.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/data/condition-monitoring/traffic-statistics.html" />
+        <option value="$PROJECT_DIR$/data/condition-monitoring/WAF/WAF.html" />
+        <option value="$PROJECT_DIR$/data/condition-monitoring/WAF/real-time-monitoring.html" />
+        <option value="$PROJECT_DIR$/data/security-policy/policy-references.html" />
+        <option value="$PROJECT_DIR$/js/function.js" />
+        <option value="$PROJECT_DIR$/data/bg-screen.html" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
+    <option name="y" value="5" />
+    <option name="width" value="1649" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>HtmlFormInputWithoutLabel</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condition-monitoring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condition-monitoring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condition-monitoring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system-state" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="xpath.settings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Secret\WebstormProjects\second\data\security-policy\application-security-policy\WAF-strategy-add\content-security-pop\preventing-hotlinking" />
+      <recent name="C:\Users\Secret\WebstormProjects\second\data\security-policy\application-security-policy\WAF-strategy-add\security-agreement-pop" />
+      <recent name="C:\Users\Secret\WebstormProjects\second\data\security-policy\application-security-policy\WAF-strategy-add\security-agreement-pop\HTTP-Parameters-protective" />
+      <recent name="C:\Users\Secret\WebstormProjects\second\data\security-policy\application-security-policy\WAF-strategy-add" />
+      <recent name="C:\Users\Secret\WebstormProjects\second\data\security-policy\application-security-policy\WAF-strategy-add\security-agreement" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fafb1c73-69f6-43a6-927f-9237d1b52194" name="Default" comment="" />
+      <created>1468390992037</created>
+      <option name="number" value="Default" />
+      <updated>1468390992037</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="13" y="5" width="1649" height="1040" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13043478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/data/system-configuration/detect-patterns.html</url>
+          <line>65</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/data/access-management/website-administrator.html</url>
+          <line>25</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="277" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/WAF/web-caching.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04118993">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-maintenance/license.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/host-iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2883295">
+          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/log/Syslog-iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0411899">
+          <caret line="164" column="6" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/log/system-log-iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9359268">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/layout.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="184.83333">
+          <caret line="0" column="47184" selection-start-line="0" selection-start-column="47149" selection-end-line="0" selection-end-column="47184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/exceptions-host.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08391608">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/characteristics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04195804">
+          <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WEB-leakage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4125874">
+          <caret line="85" column="45" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/study-configuration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04195804">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/monitoring-defense/monitoring-defense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26887873">
+          <caret line="213" column="4" selection-start-line="213" selection-start-column="4" selection-end-line="214" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/host.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82379866">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67048055">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/darkblue.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/WAF/web-threats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04118993">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/configuration-wizard/configuration-wizard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20022884">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/exceptions-configuration-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32951945">
+          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/intrusion-protection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4888887">
+          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/intrusion-protection-strategy/intrusion-protection-strategy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8">
+          <caret line="1" column="84" selection-start-line="1" selection-start-column="84" selection-end-line="1" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/application-security-policy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62929064">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="96" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/system-configuration/detect-patterns.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7002288">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="65" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#6;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#12007#12364#0" expanded="false" />
+            <element signature="e#18322#18996#0" expanded="false" />
+            <element signature="e#19093#20531#0" expanded="false" />
+            <element signature="e#20633#22231#0" expanded="false" />
+            <element signature="e#22327#24403#0" expanded="false" />
+            <element signature="e#24471#24535#0" expanded="false" />
+            <element signature="e#24559#24623#0" expanded="false" />
+            <element signature="e#24651#28101#0" expanded="false" />
+            <element signature="e#28176#30449#0" expanded="false" />
+            <element signature="e#30533#31130#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/exceptions-configuration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/basic-characteristics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5354691">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.027459955">
+          <caret line="40" column="29" selection-start-line="38" selection-start-column="12" selection-end-line="42" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/application-characteristics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82379866">
+          <caret line="196" column="44" selection-start-line="196" selection-start-column="42" selection-end-line="196" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.123569794">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.193364">
+          <caret line="95" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/WAF-strategy-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62929064">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="4" selection-end-line="52" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/URL-disable-word.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2883295">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/CSRF-check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3707094">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/Overflow-check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24713959">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-methods-control.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24713959">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-agreement-check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7631579">
+          <caret line="156" column="6" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/scanner-protection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08237986">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking/preventing-hotlinking-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24713959">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/preventing-hotlinking/preventing-hotlinking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49427918">
+          <caret line="30" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/crawler-protection/crawler-protection-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/application-security-policy/WAF-strategy-add/content-security-pop/crawler-protection/crawler-protection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25174826">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/traffic-statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04195804">
+          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/WAF/real-time-monitoring.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6293706">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/security-policy/policy-references.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="78" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/WAF/WAF.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#8619#9448#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/condition-monitoring/system-state/system-state.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/control.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="528" column="30" selection-start-line="528" selection-start-column="30" selection-end-line="528" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#13904#14178#0" expanded="false" />
+            <element signature="e#14344#14721#0" expanded="false" />
+            <element signature="e#14818#14879#0" expanded="false" />
+            <element signature="e#14919#17516#0" expanded="false" />
+            <element signature="e#17556#20347#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="e#355#910#0" expanded="false" />
+            <element signature="e#1240#5894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="135" column="33" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#1;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#2;n#ul#0;n#div#0;n#aside#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3116" column="38" selection-start-line="3116" selection-start-column="36" selection-end-line="3116" selection-end-column="42" />
+          <folding>
+            <element signature="e#1786#5915#0" expanded="false" />
+            <element signature="e#6523#6775#0" expanded="false" />
+            <element signature="e#7705#8312#0" expanded="false" />
+            <element signature="e#8340#11252#0" expanded="false" />
+            <element signature="e#11274#11940#0" expanded="false" />
+            <element signature="e#11976#12684#0" expanded="false" />
+            <element signature="e#12715#13250#0" expanded="false" />
+            <element signature="e#14513#14773#0" expanded="false" />
+            <element signature="e#15937#17428#0" expanded="false" />
+            <element signature="e#17486#18190#0" expanded="false" />
+            <element signature="e#17640#18184#0" expanded="false" />
+            <element signature="e#18218#18922#0" expanded="false" />
+            <element signature="e#18958#19662#0" expanded="false" />
+            <element signature="e#19692#19970#0" expanded="false" />
+            <element signature="e#19998#20276#0" expanded="false" />
+            <element signature="e#20312#20590#0" expanded="false" />
+            <element signature="e#20621#21070#0" expanded="false" />
+            <element signature="e#21107#21701#0" expanded="false" />
+            <element signature="e#21741#22335#0" expanded="false" />
+            <element signature="e#22879#25352#0" expanded="false" />
+            <element signature="e#25403#26701#0" expanded="false" />
+            <element signature="e#26753#28051#0" expanded="false" />
+            <element signature="e#28096#28845#0" expanded="false" />
+            <element signature="e#28884#29629#0" expanded="false" />
+            <element signature="e#29666#30362#0" expanded="false" />
+            <element signature="e#30402#31522#0" expanded="false" />
+            <element signature="e#31528#33496#0" expanded="false" />
+            <element signature="n#!!block;n#addData#0" expanded="false" />
+            <element signature="e#39937#40398#0" expanded="false" />
+            <element signature="n#!!block;n#timeDifference#0" expanded="false" />
+            <element signature="n#!!block;n#random#0" expanded="false" />
+            <element signature="n#!!block;n#format#0" expanded="false" />
+            <element signature="n#!!block;n#format1#0" expanded="false" />
+            <element signature="n#!!block;n#health#0" expanded="false" />
+            <element signature="e#48879#48954#0" expanded="false" />
+            <element signature="e#49364#50927#0" expanded="false" />
+            <element signature="e#50356#50466#0" expanded="false" />
+            <element signature="e#50492#50879#0" expanded="false" />
+            <element signature="n#!!block;n#event#0" expanded="false" />
+            <element signature="e#51800#51858#0" expanded="false" />
+            <element signature="e#51881#54233#0" expanded="false" />
+            <element signature="e#52628#54223#0" expanded="false" />
+            <element signature="e#53147#53576#0" expanded="false" />
+            <element signature="e#53614#54209#0" expanded="false" />
+            <element signature="e#54259#54577#0" expanded="false" />
+            <element signature="n#!!block;n#hInformation#0" expanded="false" />
+            <element signature="n#!!block;n#httpConcurrent#0" expanded="false" />
+            <element signature="n#!!block;n#httpCreate#0" expanded="false" />
+            <element signature="n#!!block;n#attackMap#0" expanded="false" />
+            <element signature="e#66291#70169#0" expanded="false" />
+            <element signature="e#70241#70804#0" expanded="false" />
+            <element signature="e#70527#70756#0" expanded="false" />
+            <element signature="e#70985#73447#0" expanded="false" />
+            <element signature="e#73476#73677#0" expanded="false" />
+            <element signature="e#74731#75325#0" expanded="false" />
+            <element signature="n#!!block;n#securityTrend#0" expanded="false" />
+            <element signature="e#76406#76445#0" expanded="false" />
+            <element signature="n#!!block;n#gengS#0;n#!!block;n#securityTrend#0" expanded="false" />
+            <element signature="e#76883#76924#0" expanded="false" />
+            <element signature="e#76946#77139#0" expanded="false" />
+            <element signature="e#77161#77780#0" expanded="false" />
+            <element signature="e#78325#79100#0" expanded="false" />
+            <element signature="e#79180#79219#0" expanded="false" />
+            <element signature="e#79240#80003#0" expanded="false" />
+            <element signature="e#80024#80450#0" expanded="false" />
+            <element signature="e#80472#81586#0" expanded="false" />
+            <element signature="n#!!block;n#attackSourceRanking#0" expanded="false" />
+            <element signature="n#!!block;n#attackPurposesRanking#0" expanded="false" />
+            <element signature="n#!!block;n#attackRelationship#0" expanded="false" />
+            <element signature="n#!!block;n#attackRelationshipPie#0" expanded="false" />
+            <element signature="n#!!block;n#progressBar#0" expanded="false" />
+            <element signature="n#!!block;n#dataM#0" expanded="false" />
+            <element signature="n#!!block;n#dataM1#0" expanded="false" />
+            <element signature="e#93602#93763#0" expanded="false" />
+            <element signature="e#93810#94612#0" expanded="false" />
+            <element signature="e#94713#95430#0" expanded="false" />
+            <element signature="n#!!block;n#focusKey#0" expanded="false" />
+            <element signature="n#!!block;n#blurKey#0" expanded="false" />
+            <element signature="n#!!block;n#searchNode#0" expanded="false" />
+            <element signature="n#!!block;n#searchNodes#0" expanded="false" />
+            <element signature="n#!!block;n#selectFilter#0" expanded="false" />
+            <element signature="n#!!block;n#selectFilter1#0" expanded="false" />
+            <element signature="n#!!block;n#updateNodes#0" expanded="false" />
+            <element signature="n#!!block;n#getFontCss#0" expanded="false" />
+            <element signature="n#!!block;n#del#0" expanded="false" />
+            <element signature="n#!!block;n#delInformation#0" expanded="false" />
+            <element signature="n#!!block;n#tipWarning#0" expanded="false" />
+            <element signature="n#!!block;n#position#0" expanded="false" />
+            <element signature="n#!!block;n#analysis#0" expanded="false" />
+            <element signature="n#!!block;n#DelTree#0" expanded="false" />
+            <element signature="n#!!block;n#getFile#0" expanded="false" />
+            <element signature="n#!!block;n#addSpan#0" expanded="false" />
+            <element signature="n#!!block;n#selectAll#0" expanded="false" />
+            <element signature="n#!!block;n#selectOne#0" expanded="false" />
+            <element signature="n#!!block;n#tableDel#0" expanded="false" />
+            <element signature="n#!!block;n#checkBox#0" expanded="false" />
+            <element signature="n#!!block;n#liDel#0" expanded="false" />
+            <element signature="n#!!block;n#heightChange#0" expanded="false" />
+            <element signature="n#!!block;n#heightSet#0" expanded="false" />
+            <element signature="n#!!block;n#checkSelect#0" expanded="false" />
+            <element signature="n#!!block;n#popContent#0" expanded="false" />
+            <element signature="n#!!block;n#popHeight#0" expanded="false" />
+            <element signature="n#!!block;n#pop1Height#0" expanded="false" />
+            <element signature="e#116011#116264#0" expanded="false" />
+            <element signature="e#116766#117587#0" expanded="false" />
+            <element signature="e#117601#118422#0" expanded="false" />
+            <element signature="e#118436#119257#0" expanded="false" />
+            <element signature="n#!!block;n#geng#0;n#!!block;n#bgSelfState#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/bg-screen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8666666">
+          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32225913">
+          <caret line="1075" column="26" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

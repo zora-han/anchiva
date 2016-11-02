@@ -1,0 +1,106 @@
+<!--6.7网络配置-路由表-->
+<div id="routing-table" class="page-content-wrapper access">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#routing-4" aria-controls="home" role="tab" data-toggle="tab">路由表</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#routing-6" aria-controls="home" role="tab" data-toggle="tab">路由表（IPv6）</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--网络接口-->
+            <div role="tabpanel" class="tab-pane detect-add active" id="routing-4">
+                <div class="portlet">
+                    <form>
+                        <div class="portlet-body portlet-body-default">
+                            <div class="system-configuration-row">
+                                <div class="portlet-title">
+                                    <p class="p-title pull-left" >
+                                        <i></i>
+                                        <span>设备路由表</span>
+                                    </p>
+                                    <ul class="bt-bars pull-left">
+                                        <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
+                                        <li><a href="javascript:;"><img src="imgs/delete.png"/>删除</a></li>
+                                    </ul>
+                                    <ul class="table-footer pull-right"></ul>
+                                </div>
+                                <table class="portlet-table active portlet-body-default">
+                                    <thead>
+                                    <tr>
+                                        <td><input type="checkbox" onclick="selectAll(this)"/></td>
+                                        <td>编号</td>
+                                        <td>目的</td>
+                                        <td>子网掩码</td>
+                                        <td>网关</td>
+                                        <td>接口</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--网络接口（IPv6）-->
+            <div role="tabpanel" class="tab-pane detect-add" id="routing-6">
+                <div class="portlet">
+                    <form>
+                        <div class="portlet-body portlet-body-default">
+                            <div class="system-configuration-row">
+                                <div class="portlet-title">
+                                    <p class="p-title pull-left" >
+                                        <i></i>
+                                        <span>设备路由表</span>
+                                    </p>
+                                    <ul class="bt-bars pull-left">
+                                        <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
+                                        <li><a href="javascript:;"><img src="imgs/delete.png"/>删除</a></li>
+                                    </ul>
+                                    <ul class="table-footer pull-right"></ul>
+                                </div>
+                                <table class="portlet-table active portlet-body-default">
+                                    <thead>
+                                    <tr>
+                                        <td><input type="checkbox" onclick="selectAll(this)"/></td>
+                                        <td>编号</td>
+                                        <td>目的</td>
+                                        <td>子网掩码</td>
+                                        <td>网关</td>
+                                        <td>接口</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>应用</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".nav-tabs li a").click(function () {
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+</script>

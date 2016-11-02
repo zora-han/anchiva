@@ -1,0 +1,67 @@
+<!--第一行 会话信息-->
+<div class="portlet bordered tab-pane" >
+    <div class="portlet-title">
+        <div class="caption">
+            <span class="bold">会话信息</span>
+            <p class="pull-right">
+                <span>查询区间</span>
+                <select id="selectEd1">
+                    <option value="">请选择</option>
+                    <option value="300000">5分钟</option>
+                    <option value="3600000">1小时</option>
+                    <option value="86400000">1天</option>
+                    <option value="2592000000">1个月</option>
+                </select>
+            </p>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <div id="http-concurrent" class="two-canvas"></div>
+            </div>
+            <div class="col-xs-6">
+                <div id="http-create" class="two-canvas"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--第二行 接口信息-->
+<div class="portlet bordered tab-pane" >
+    <div class="portlet-title">
+        <div class="caption">
+            <span class="caption-subject bold uppercase">接口信息</span>
+        </div>
+    </div>
+    <table class="portlet-table active " id="session">
+        <thead>
+        <tr>
+            <td>接口</td>
+            <td>IP</td>
+            <td>状态</td>
+            <td>工作模式</td>
+            <td>TX packet</td>
+            <td>Error packet</td>
+            <td>Rx packet</td>
+            <td>Error</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        <tr><td colspan="8"><ul></ul></td></tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    //选择展示的时间区间
+    var select1=$("#selectEd1");
+    select1.on("change", function () {
+        httpConcurrent($(this).val());
+        httpCreate($(this).val());
+    });
+    setTimeout(httpConcurrent, 200);//HTTP并发连接数
+    setTimeout(httpCreate, 200);//HTTP新建连接数
+    addData("session");//接口信息表
+    select1.val("");//置空下拉框
+</script>

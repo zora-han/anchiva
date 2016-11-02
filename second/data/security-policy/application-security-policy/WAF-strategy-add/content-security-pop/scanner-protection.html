@@ -1,0 +1,34 @@
+<!--扫描器防护配置-->
+<div class="panel panel-default add-protection">
+    <div class="panel-heading">
+        <span>扫描器防护配置</span>
+        <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="background-wapper">
+        <div class="panel-body body-white">
+            <div class="form-group current">
+                <label><input type="checkbox"/>特征值匹配</label>
+            </div>
+            <div class="form-group current">
+                <label><input type="checkbox"/>浏览阈值匹配</label>
+            </div>
+            <div class="form-group">
+                <label>两次浏览间隔小于</label>
+                <input type="text"/>
+                <span>（1-1024）秒</span>
+            </div>
+        </div>
+        <div class="tip-footer">
+            <button type="button">确定</button>
+            <button type="button" class="white">取消</button>
+        </div>
+    </div>
+</div>
+<script>
+    popHeight();
+    $(".tip-container2 .pop").delegate(".close,.tip-footer button","click",function () {
+        $(this).parents(".tip-container2").hide();
+    });
+</script>
