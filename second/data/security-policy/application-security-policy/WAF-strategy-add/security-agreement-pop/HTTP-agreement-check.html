@@ -1,0 +1,161 @@
+<!--HTTP协议检查-->
+<div class="panel panel-default add-check">
+    <div class="panel-heading">
+        <span>HTTP协议配置</span>
+        <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="background-wapper">
+        <div class="panel-body panel-body-form">
+            <div class="form-wapper">
+                <p class="p-title">Request-Header</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(16-65535)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Request Line</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(64-32768)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^(GET|POST|HEAD|OPTIONS|PUT|DELETE|TRACE|CONNECT)\x20((http|https)://[a-zA-Z0-9\-]{1,63}(\.[a-zA-Z0-9\-]{1,63})*([:80|:443])?)?/([^\cx\x20\x22#%<>]|%[0-9A-Fa-f][0-9A-Fa-f])*\x20HTTP/\d\.\d$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Host</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(8-64)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^[a-zA-Z0-9\-]{1,63}(\.[a-zA-Z0-9\-]{1,63})*(:(80|443|4433))?$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">User-Agent</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(16-1024)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^([^\cx\(\)<>@,;:\\\x22/\[\]\?=\{\}\x20\t]+(/[^\cx\(\)<>@,;:\\\x22/\[\]\?=\{\}\x20\t]+)?\x20?|\(([^\cx\(\)]|/s)*\)\x20?)+$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Referer</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(64-32768)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^([hH][tT][tT][pP]s?://[a-zA-Z0-9\-]{1,63}(\.[a-zA-Z0-9\-]{1,63})*(:80|:443)?)?(/([^\cx\x20\x22#%<>]|%[0-9A-Fa-f][0-9A-Fa-f])*)?$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Accept</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(1-1024)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^((,\x20?)?(\*/\*|(text|image|application|audio|video)/\*|(text|image|application|audio|video)/[a-zA-Z0-9\-+\.]*)(;\x20?q=[01]\.\d*)?)+$</p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Accept-Language</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(8-64)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^([a-zA-Z][a-zA-Z](-[a-zA-Z][a-zA-Z]|\*)?(;q=\d\.\d)?(,\x20?[a-zA-Z][a-zA-Z](-[a-zA-Z][a-zA-Z]|\*)?(;q=\d\.\d)?)*)$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Accept-Charset</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(1-64)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^(([a-zA-Z0-9\-]+|\*)(;q=\d\.\d)?(,\x20?([a-zA-Z0-9\-]+|\*)(;q=\d\.\d)?)*)$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Accept-Encoding</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(8-64)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p">^((chunked|compress|deflate|gzip|identity|default|sdch|\*)(;q=\d\.\d)?)(,\x20?(chunked|compress|deflate|gzip|identity|default|sdch|\*)(;q=\d\.\d)?)*$|^$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Other Request Header Fields</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大长度</label><input type="text"/><span>(1-1024)</span></div>
+                    <div class="form-group"><input type="checkbox"/><label>引用学习结果</label><input type="text"/></div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group"><label>正则表达式</label><input type="text"/><span class="tip-bar"><i class="fa-exclamation fa"></i></span></div>
+                    <p class="tip-p fields-tip">^[^\cx]*$</p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Post File</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大大小</label><input type="text"/><span>(1-10) MB </span></div>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Range</p>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label>正则表达式</label>
+                        <input type="text"/>
+                        <span class="tip-bar"><i class="fa-exclamation fa"></i></span>
+                    </div>
+                    <p class="tip-p range-tip">(?<=bytes=)(?:\d+-\d+,?){1,5}$ </p>
+                </div>
+            </div>
+            <div class="form-wapper">
+                <p class="p-title">Post File Count In One Request</p>
+                <div class="form-inline">
+                    <div class="form-group"><label>最大个数</label><input type="text"/><span>(1-10) </span></div>
+                </div>
+            </div>
+        </div>
+        <div class="tip-footer">
+            <button type="button">引用学习结果</button>
+            <button type="button" class="white">确定</button>
+            <button type="button" class="white">取消</button>
+        </div>
+    </div>
+</div>
+<script>
+    popHeight();
+    $(".tip-bar").hover(
+            function(){
+                $(this).parents(".form-group").siblings(".tip-p").show();
+            },
+            function(){
+                $(this).parents(".form-group").siblings(".tip-p").hide();
+            }
+    );
+    $(".tip-container2 .pop").delegate(".close,.tip-footer button","click",function () {
+        $(this).parents(".tip-container2").hide();
+    });
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>安信华下一代安全防御系统</title>
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <script src="js/excanvas.min.js"></script>
+    <![endif]-->
+    <!--IE8专有属性-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--页面初始样式-->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!--关键字搜索-->
+    <meta name="keywords" content="安信华下一代安全防御系统"/>
+    <!--主要内容描述-->
+    <meta name="description" content="安信华下一代安全防御系统"/>
+    <!--网站版权信息-->
+    <META NAME="copyright" content="北京安信华科技有限公司">
+    <!--样式列表-->
+    <link rel="icon" href="imgs/an.ico" />
+    <!--框架-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/layout.min.css"/>
+    <link rel="stylesheet" href="css/darkblue.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/components.min.css" id="style_components"/>
+    <!--自己写的样式-->
+    <link rel="stylesheet" href="css/custom.css"/>
+    <style>
+        html{height:100%}
+    </style>
+</head>
+<body class="page-header-fixed page-content-login">
+<header class="page-header navbar navbar-fixed-top">
+    <div class="page-header-inner ">
+        <!--logo-->
+        <div class="page-logo">
+            <a>
+                <img src="imgs/logo.png" alt="安信华下一代安全防御系统" class="logo-default" />
+            </a>
+        </div>
+    </div>
+</header>
+<section class="login-content">
+    <div class="login-panel">
+        <div class="login-border"></div>
+        <p class="login-title">—— 用户登录 ——</p>
+        <input type="text" placeholder="登录名"/>
+        <input type="password" placeholder="密码"/>
+        <div class="login-select">
+            <div class="login-select-show div_select">
+                <div class="select-show-text" id="select-show-text">请选择语言</div>
+                <span class="select_dropdown fa fa-chevron-down"></span>
+            </div>
+            <ul class="select_ul" id="ul_select1">
+                <li>英文</li>
+                <li>中文</li>
+                <li>繁体中文</li>
+            </ul>
+        </div>
+        <button type="button" class="login-btn" id="login">登录</button>
+    </div>
+</section>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".login-select-show").click(function(){
+            $("#ul_select1").show();
+        });
+        $("#ul_select1 li").click(function(){
+            $("#ul_select1").hide();
+            $("#select-show-text").html(($(this).text()));
+        });
+        $("#login").click(function(){
+            window.location.href="index.html";
+        })
+    })
+</script>
+</body>
+</html>

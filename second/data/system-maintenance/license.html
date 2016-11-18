@@ -1,0 +1,54 @@
+<!--8.2系统维护-许可证-->
+<div id="license" class="page-content-wrapper access detect-add">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a>许可证</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="portlet">
+                <form>
+                    <div class="portlet-body portlet-body-default">
+                        <div class="system-configuration-row row-inline">
+                            <p class="p-title">
+                                <i></i>
+                                <span>许可证状态</span>
+                            </p>
+                            <table class="portlet-table active portlet-body-default" id="licenseState">
+                                <thead>
+                                <tr>
+                                    <td>许可证</td>
+                                    <td>状态</td>
+                                    <td>有效日期</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <label>更新许可证</label>
+                                <input type="text"/>
+                                <button class="btn-normal">浏览</button>
+                                <button class="btn-normal">应用</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button>后退</button>
+                        <button>刷新</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    addData("licenseState");
+</script>

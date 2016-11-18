@@ -1,0 +1,100 @@
+<!--9.2访问管理-访问控制-->
+<div id="access-control" class="page-content-wrapper access">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a>访问控制</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content detect-add">
+            <div class="portlet">
+                <form>
+                    <div class="portlet-body portlet-body-default">
+                        <div class="system-configuration-row">
+                            <div class="form-group">
+                                <label>空闲超时值</label>
+                                <input />
+                                <span>（5-1440）分钟</span>
+                            </div>
+                            <div class="form-group">
+                                <label>登录重试次数</label>
+                                <input />
+                                <span>（0-5）次（0指无限制）</span>
+                            </div>
+                            <div class="form-group">
+                                <label>锁定时间</label>
+                                <input />
+                                <span>（5-30）分钟</span>
+                            </div>
+                            <div class="form-group">
+                                <label>锁定类型</label>
+                                <label class="radio-label"><input type="radio" name="lock" checked/>帐号锁定</label>
+                                <label class="radio-label"><input type="radio" name="lock"/>IP锁定</label>
+                            </div>
+                            <div class="form-group">
+                                <label>HTTPS端口</label>
+                                <input />
+                            </div>
+                            <div class="form-group">
+                                <label>SSH端口</label>
+                                <input />
+                            </div>
+                            <div class="form-group">
+                                <label>口令使用周期</label>
+                                <input />
+                                <span>（0-365）天（0指无限制）</span>
+                            </div>
+                        </div>
+                        <div class="system-configuration-row">
+                            <p class="p-title">
+                                <i></i>
+                                <span>信任主机</span>
+                            </p>
+                            <div class="form-group form-inline">
+                                <div class="form-group">
+                                    <label>IP/MASK：</label>
+                                    <input />
+                                    <label>MAC：</label>
+                                    <input />
+                                </div>
+                                <div class="form-group">
+                                    <label>时间：</label>
+                                    <select>
+                                        <option value="0">0时</option>
+                                    </select>
+                                    ——
+                                    <select>
+                                        <option value="0">0分</option>
+                                    </select>
+                                    <button class="f-btn-blue"><img src="imgs/8.png"/>添加</button>
+                                </div>
+                            </div>
+                            <table class="portlet-table active portlet-body-default" id="serverGroupAdd">
+                                <thead>
+                                <tr>
+                                    <td>IP/MASK</td>
+                                    <td>MAC</td>
+                                    <td>事件</td>
+                                    <td>操作</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button>应用</button>
+                        <button>取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

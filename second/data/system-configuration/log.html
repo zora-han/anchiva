@@ -1,0 +1,42 @@
+<!--7.6系统配置-日志-->
+<div id="log" class="page-content-wrapper iframe-content">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#system-log" aria-controls="home" role="tab" data-toggle="tab">系统日志设置</a>
+                        <span class="selected"></span>
+                    </li>
+                    <li role="presentation">
+                        <a href="#Syslog" aria-controls="home" role="tab" data-toggle="tab">Syslog设置</a>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--第二行 页签切换块-->
+        <div class="tab-content">
+            <!--系统日志设置-->
+            <div role="tabpanel" class="tab-pane active" id="system-log">
+                <iframe src="data/system-configuration/log/system-log-iframe.html" frameborder="0"></iframe>
+            </div>
+            <!--Syslog设置-->
+            <div role="tabpanel" class="tab-pane" id="Syslog">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".nav-tabs li a").click(function () {
+        var href = $(this)[0].hash;
+        if (href === "#Syslog") {//Syslog设置
+            $(href+" iframe").attr("src","data/system-configuration/log/Syslog-iframe.html")
+        }
+        $(this).siblings("span").addClass("selected");//标签下标识
+    });
+    //设置主内容框的高度
+    heightSet();
+</script>

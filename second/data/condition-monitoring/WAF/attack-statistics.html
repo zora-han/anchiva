@@ -1,0 +1,204 @@
+<!--状态监控-WAF-攻击统计-->
+<!--第一行 三个模块-->
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="dashboard-stat waf">
+            <div class="visual">
+                <img src="imgs/waf-5.png"/>
+            </div>
+            <div class="condition-details f">
+                <p><span></span>连接数</p>
+                <p>当前访问</p>
+            </div>
+            <span class="angle"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="dashboard-stat waf">
+            <div class="visual">
+                <img src="imgs/waf-6.png"/>
+            </div>
+            <div class="condition-details l">
+                <p><span></span>次</p>
+                <p>拦截事件</p>
+            </div>
+            <span class="angle"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="dashboard-stat waf">
+            <div class="visual">
+                <img src="imgs/waf-7.png"  />
+            </div>
+            <div class="condition-details b">
+                <p><span></span>次</p>
+                <p>病毒事件</p>
+            </div>
+            <span class="angle"></span>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!--第二行 攻击地图+攻击源排名-->
+<div class="row">
+    <!--攻击地图-->
+    <div class="col-md-6 col-sm-6">
+        <div class="portlet bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject bold uppercase">攻击地图</span>
+                    <form>
+                        <p class="pull-right">
+                            <span>本地外网IP</span>
+                            <input/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="portlet-body map">
+                <div id="attack-map1" class="canvas pull-left"></div>
+                <table class="portlet-table pull-right active" id="mapData2">
+                    <thead>
+                    <tr>
+                        <td>来源</td>
+                        <td>次数</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--URL-TOP10-->
+    <div class="col-md-6 col-sm-6">
+        <div class="portlet bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject bold uppercase">URL-TOP10</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="attack-source-ranking1" class="canvas pull-left"></div>
+                <table id="attackSource2" class="portlet-table pull-right active">
+                    <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>URL</td>
+                        <td>次数</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--第三行-->
+<div class="row">
+    <!--威胁安全趋势-->
+    <div class="col-md-6 col-sm-6">
+        <div class="portlet bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject bold uppercase">攻击数量统计-URL</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="security-trend1" class="canvas"></div>
+            </div>
+        </div>
+    </div>
+    <!--源URL-TOP10-->
+    <div class="col-md-6 col-sm-6">
+        <div class="portlet bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject bold uppercase">源URL-TOP10</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="attack-purposes-ranking1" class="canvas pull-left"></div>
+                <table class="portlet-table pull-right active" id="attackPurposes2">
+                    <thead>
+                    <tr>
+                        <td>排名</td>
+                        <td>IP</td>
+                        <td>次数</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var dataMTime1,//WAF数据更新定时器标记
+            select3=$("#selectEd3");//WAF界面时间区间选择框
+
+    //攻击统计——第一行三个实时更新的数据
+    dataM1();
+    clearInterval(dataMTime1);
+    dataMTime1 = setInterval(dataM1, 1000);
+
+    securityTrend("security-trend1");//威胁安全趋势
+    //攻击地图（图+表）
+    attackMap("attack-map1");
+    addData("mapData2");
+    //URL-TOP10（图+表）
+    attackSourceRanking('attack-source-ranking1');
+    addData("attackSource2");
+    //源URL-TOP10（图+表）
+    attackPurposesRanking('attack-purposes-ranking1');
+    addData("attackPurposes2");
+
+    //时间区间选择
+    select3.on("change", function () {securityTrend("security-trend1", $(this).val())});
+
+    var analysisSelector=$(".filter-conditions ul li:first-child"),//过滤条件
+            relationship = $("#attack-system-analysis-relationship"),//关系图
+            relationshipPie = $("#attack-system-analysis-relationship-pie");//饼图
+    //攻击地图统计分析（功能有待完善）
+    $("#mapData2").delegate("a", "click", function (e) {
+        e.preventDefault();
+        var href = $(this)[0].hash;
+        attackData = tab("attackSystemData");
+        $(href).addClass("active").siblings("div").removeClass("active");
+//        console.log($(this).text());
+//        console.log($(this).parent().prev().text());
+        attackRelationship(attackData);
+        analysisSelector.children("p").text("当前源：" + attackData.data[0].target);
+        $("#attackSystemData").addClass("active").siblings("table").removeClass("active");
+        addData("attackSystemData");
+        //左右切换按钮
+        $(".filter-conditions button").click(function () {
+            $(this).siblings("button").removeAttr("disabled");
+            $(this).attr("disabled", "true");
+            var div = $(this).siblings("div");
+            if ($(this)[0].className === "btn-right") {
+                relationship.removeClass("active");
+                relationshipPie.addClass("active");
+                attackRelationshipPie(tab("attackSystemData"));
+            } else {
+                relationshipPie.removeClass("active");
+                relationship.addClass("active");
+                attackRelationship(tab("attackSystemData"));
+            }
+        });
+    });
+    //攻击源统计分析
+    $("#attackSource2").delegate("a", "click", function (e) {
+        e.preventDefault();//阻止跳转
+        var me = $(this);
+        analysis(relationship, relationshipPie, me, "attackSystemDataSource", "filter1",analysisSelector);
+    });
+    //攻击目的统计分析
+    $("#attackPurposes2").delegate("a", "click", function (e) {
+        e.preventDefault();//阻止跳转
+        var me = $(this);
+        analysis(relationship, relationshipPie, me, "attackSystemDataAttack", "filter",analysisSelector);
+    });
+</script>

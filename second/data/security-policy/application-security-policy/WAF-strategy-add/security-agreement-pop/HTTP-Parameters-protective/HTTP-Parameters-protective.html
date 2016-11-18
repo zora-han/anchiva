@@ -1,0 +1,75 @@
+<!--HTTP参数防护-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span>HTTP参数防护配置</span>
+        <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="background-wapper">
+        <div class="panel-body">
+            <div class="portlet-title">
+                <div class="caption">
+                    <ul class="bt-bars pull-left">
+                        <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
+                        <li><a href="javascript:;"><img src="imgs/delete.png"/>删除</a></li>
+                    </ul>
+                    <form class="form-inline pull-right">
+                        <div class="form-group">
+                            <input class="white">
+                            <button type="button" class="f-btn-blue"><img src="imgs/41.png"/></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="table-content">
+                <table class="portlet-table active portlet-body-default-none" id="HTTPParametersProtective">
+                    <thead>
+                    <tr>
+                        <td><input type="checkbox" onclick="selectAll(this)" name="mainChb"/></td>
+                        <td>名称</td>
+                        <td>域名</td>
+                        <td>URL</td>
+                        <td>参数个数</td>
+                        <td>启用 <input type="checkbox" onclick="selectAll(this)" name="upCheck"/></td>
+                        <td colspan="2">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="8">
+                            <ul>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="tip-footer">
+            <button type="button">确定</button>
+            <button type="button" class="white">取消</button>
+        </div>
+    </div>
+</div>
+<script>
+    addData("HTTPParametersProtective");
+    popHeight();
+    var chbs=$("#HTTPParametersProtective tbody [name='checkIP'],#HTTPParametersProtective tbody [name='checkIP2']");
+    $.each(chbs,function(i,n){ n.onclick=selectOne; });
+    $(".panel .bt-bars li:first-child").click(function(){
+        $(".pop1").addClass("active")
+                .load("data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective-add.html")
+                .siblings("div").removeClass("active");
+    });
+    $("#HTTPParametersProtective tbody tr td:nth-last-child(2) img").click(function(){
+        $(".pop1").addClass("active")
+                .load("data/security-policy/application-security-policy/WAF-strategy-add/security-agreement-pop/HTTP-Parameters-protective/HTTP-Parameters-protective-add.html")
+                .siblings("div").removeClass("active");
+    });
+    $(".tip-container2 .pop").delegate(".close,.tip-footer button","click",function () {
+        $(this).parents(".tip-container2").hide();
+    });
+</script>

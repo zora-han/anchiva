@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-6" id="bg-attack"></div>
+    <div class="col-xs-6" id="bg-threat"></div>
+</div>
+<div class="row">
+    <div class="col-xs-6" id="bg-self-state"></div>
+    <div class="col-xs-6" id="bg-security-trend"></div>
+</div>
+<script>
+    $("#bg-screen").height($(window).height());
+    attackMap("bg-attack");
+    event("bg-threat");
+    securityTrend("bg-security-trend");
+    bgSelfState();
+</script>
