@@ -1,0 +1,57 @@
+<!--安全策略-应用安全策略-WAF策略添加页-->
+<div class="portlet-title">
+    <table class="portlet-table active">
+        <tr>
+            <td>名称</td>
+            <td>特征库</td>
+            <td>协议安全</td>
+            <td>内容安全</td>
+        </tr>
+        <tr role="tablist">
+            <td>
+                <input id="addName"/>
+            </td>
+            <td role="presentation" class="active">
+                <a href="#basic-characteristics" role="tab" data-toggle="tab">基本特征库</a>
+            </td>
+            <td role="presentation">
+                <a href="#security-agreement" role="tab" data-toggle="tab">安全选项 <span>10</span></a>
+            </td>
+            <td role="presentation">
+                <a href="#content-security" role="tab" data-toggle="tab">安全选项 <span>9</span></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="tab-content tip-content">
+    <div role="tabpanel" class="portlet tab-pane active" id="basic-characteristics"></div>
+    <div role="tabpanel" class="portlet tab-pane" id="security-agreement"></div>
+    <div role="tabpanel" class="portlet tab-pane" id="content-security"></div>
+</div>
+<!--提示框-->
+<div class="tip-container2">
+    <div class="pop active"></div>
+    <div class="pop1"></div>
+</div>
+<script>
+    var tipC=$(".tip-container2");
+    $("#basic-characteristics").load("data/security-policy/application-security-policy/WAF-strategy-add/basic-characteristics.html")
+    //WAF添加页下的页签切换
+    $("#WAF-strategy-add [role='tablist'] [role='presentation']").click(function () {
+        $(this).addClass("active").siblings("[role='presentation']").removeClass("active");
+        var hash=$(this).children("a")[0].hash;
+        if(hash==="#security-agreement"){
+            $("#security-agreement").load("data/security-policy/application-security-policy/WAF-strategy-add/security-agreement.html")
+        }else if(hash==="#content-security"){
+            $("#content-security").load("data/security-policy/application-security-policy/WAF-strategy-add/content-security.html")
+        }else if(hash==="#basic-characteristics"){
+            $("#basic-characteristics").load("data/security-policy/application-security-policy/WAF-strategy-add/basic-characteristics.html")
+        }
+    });
+    $(".tip-container2 .pop").delegate(".close,.tip-footer button","click",function () {
+        tipC.hide();
+    });
+    $(".tip-container2 .pop1").delegate(".close","click",function () {
+        tipC.hide();
+    });
+</script>

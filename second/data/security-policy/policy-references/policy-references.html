@@ -1,0 +1,26 @@
+<!--5.1.安全策略-策略引用-->
+<div id="policy-references" class="page-content-wrapper content-wrapper">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a>策略引用</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content patterns-details">
+            <div role="tabpanel" class="tab-pane active" id="policy-references-normal"></div>
+            <!--WAF策略添加页-->
+            <div role="tabpanel" class="tab-pane" id="policy-references-add"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#policy-references-normal").load("data/security-policy/policy-references/policy-references-normal.html");
+    //设置主内容框的高度
+    heightSet();
+</script>

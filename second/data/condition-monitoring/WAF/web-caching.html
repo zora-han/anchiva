@@ -1,0 +1,60 @@
+<!--状态监控-WAF-WEB缓存-->
+<div class="tab-content">
+    <div class="portlet-body portlet-body-default portlet-body-default-title">
+        <div class="chart-title">WEB缓存</div>
+        <div id="webCachingLine" class="chart-body"></div>
+    </div>
+    <div class="portlet-body portlet-body-default portlet-body-default-none">
+        <div class="form-inline">
+            <div class="form-group">
+                <label>URL</label>
+                <input type="text"/>
+            </div>
+            <div class="form-group">
+                <label>端口</label>
+                <input type="text"/>
+            </div>
+            <div class="form-group">
+                <label>缓存内容</label>
+                <select>
+                    <option value="0">全部内容</option>
+                    <option value="1">篡改内容</option>
+                </select>
+                <select>
+                    <option value="0">—  搜索  —</option>
+                    <option value="1">同步服务器</option>
+                    <option value="2">清除缓存</option>
+                </select>
+            </div>
+            <button class="f-btn-blue">运行</button>
+        </div>
+        <div class="portlet-title">
+            <div class="form-group pull-left encode">
+                <label><input type="checkbox"/>启用编码自动转换</label>
+            </div>
+            <ul class="table-footer pull-right"></ul>
+        </div>
+        <table class="portlet-table active" id="webCaching">
+            <thead>
+            <tr>
+                <td>开始监控时间</td>
+                <td>URL</td>
+                <td>端口</td>
+                <td>缓存文件时间</td>
+                <td>服务器文件时间</td>
+                <td>缓存文件</td>
+                <td>服务器文件</td>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    addData("webCaching");
+    webCachingLine("webCachingLine");
+    select3.on("change", function () {
+        webCachingLine("webCachingLine", $(this).val());
+    });
+</script>

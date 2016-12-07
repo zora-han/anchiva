@@ -1,0 +1,75 @@
+<!--安全策略-应用安全策略-例外配置添加-->
+<div class="portlet" >
+    <div class="portlet-title">
+        <p class="p-title">
+            <i></i>
+            <span>添加/编辑</span>
+        </p>
+        <form class="form-inline">
+            <div class="form-group">
+                <label>类型：</label>
+                <select>
+                    <option value="">请选择</option>
+                    <option value="1">Web_Server_Bug</option>
+                    <option value="2">类型1</option>
+                    <option value="3">类型2</option>
+                    <option value="4">类型3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>特征：</label>
+                <select>
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>ID：</label>
+                <input >
+            </div>
+            <button type="button" class="f-btn-blue">确定</button>
+        </form>
+    </div>
+    <div>
+        <div class="row-add">
+            <label>例外IP：</label>
+            <input />
+            <img src="imgs/ad.png"/>
+            <div class="tContainer">
+                <table class="portlet-table active">
+                    <thead>
+                    <tr>
+                        <td>编号</td>
+                        <td>例外IP</td>
+                        <td colspan="2">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row-add">
+            <label>例外URL：</label>
+            <input />
+            <img src="imgs/ad.png"/>
+            <div class="tContainer">
+                <table class="portlet-table active">
+                    <thead>
+                    <tr>
+                        <td>编号</td>
+                        <td>例外URL</td>
+                        <td colspan="2">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var str = "";
+    for (var i = 0; i < 10; i++) {
+        str += gridFour;
+    }
+    $('.con-add .row-add .tContainer tbody').html(str);
+</script>

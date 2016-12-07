@@ -1,0 +1,56 @@
+<!--6.5网络配置-虚拟局域网-->
+<div id="detect-patterns" class="page-content-wrapper lan">
+    <div class="page-content portlet-wrapper">
+        <!--第一行 页签-->
+        <div class="portlet tab-border">
+            <div class="portlet-title">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a>虚拟局域网</a>
+                        <span class="selected"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content active">
+            <form>
+                <div class="portlet-body portlet-body-default portlet-body-default-none">
+                    <p class="p-title">
+                        <i></i>
+                        <span>详情</span>
+                    </p>
+                    <div class="system-configuration-row">
+                        <p><input type="radio" name="lan"/><span>访问VLAN</span></p>
+                        <div><input type="text"/><span>(ID 2-4094)</span></div>
+                    </div>
+                    <div class="system-configuration-row">
+                        <p>
+                            <input type="radio" name="lan"/><span>802.1Q VLAN</span>
+                            <i></i>
+                        </p>
+                        <div>
+                            <input type="text"/><span>(ID 2-4094)</span>
+                            <div>
+                                <label class="cur-label"><input type="radio" name="operation"/>添加</label>
+                                <label><input type="radio" name="operation"/>删除</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" name="operation"/>添加VLAN到</label>
+                                <select>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="system-configuration-row">
+                        <p><input type="radio" name="lan"/><span>Native VLAN</span></p>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button>应用</button>
+                    <button>取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

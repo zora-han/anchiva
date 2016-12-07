@@ -1,0 +1,48 @@
+<div class="portlet-body portlet-body-default portlet-body-default-none">
+    <div class="portlet-title">
+        <ul class="bt-bars pull-left">
+            <li class="active"><a href="javascript:;"><img src="imgs/8.png"/>添加</a></li>
+            <li><a href="javascript:;"><img src="imgs/delete.png"/>删除</a></li>
+        </ul>
+        <ul class="table-footer pull-right"></ul>
+    </div>
+    <table class="portlet-table active" id="policyReferences">
+        <thead>
+        <tr>
+            <td><input type="checkbox" onclick="selectAll(this)" name="mainChb"/></td>
+            <td>访问源</td>
+            <td>上联接口</td>
+            <td>下联接口</td>
+            <td>WEB防护</td>
+            <td>入侵检测</td>
+            <td>防攻击</td>
+            <td colspan="3">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="button-group">
+    <button>确定</button>
+    <button>取消</button>
+</div>
+<script>
+    addData("policyReferences");
+    $.each($("tbody [name='checkIP']"),function(i,n){ n.onclick=selectOne; });
+    $(".portlet-table tbody").delegate("td:nth-last-child(3)","click",function(){
+        var tag=$(this).children()[0].alt;
+        if(tag==="start"){
+            $(this).children()[0].src="imgs/p.png";
+            $(this).children()[0].alt="suspend";
+        }else{
+            $(this).children()[0].src="imgs/7.png";
+            $(this).children()[0].alt="start";
+        }
+    });
+    $(".bt-bars li:first-child").click(function(){
+        $("#policy-references-add").addClass("active")
+                .load("data/security-policy/policy-references/policy-references-add.html")
+                .siblings("div").removeClass("active");
+    })
+</script>
